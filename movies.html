@@ -14,31 +14,49 @@
         background-color: #000000;
         text-decoration: none;
       }
+          div { 
+        white-space: nowrap; 
+        margin-right: 1em;
+        margin-left: 1em;
+          }
+      
+       #zoom {
+  padding: 50px;
+  transition: transform .2s;
+  width: 300px;
+  height: 200px;
+  
+}
+
+#zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+
+      
     </style>
   </head>
   <body>
-    <p><a href="more.html">Romance</a></p>
+    <p>Movies</p>
+    <p>Romance</p>
   <table>
     <tr>
-      <td><a href="seeyouonvenus.html"><img src="See You On Venus.jpeg" height="300px" width="250px"></a></td>
-      <td><img src="other-zoey.jpg" height="300px" width="250px"></td>
-      <td><img src="thenotebook.jpg" height="300px" width="250px"></td>
-      <td><img src="theperfectfind.jpeg" height="300px" width="250px"></td>
-      <td><img src="words-on-bathroom-walls.jpeg" height="300px" width="250px"></td>
-      <td><img src="the-broken-hearts-gallery.jpg" height="300px" width="250px"></td>
-    </tr>
-    <tr>
-      <td><p><a href="seeyouonvenus.html">See You On Venus</a></p></td>
-      <td><p>The Other Zoey</p></td>
-      <td><p>The Notebook</p></td>
-      <td><p> The Perfect Find</p></td> 
-      <td><p> Words On Bathroom Walls</p></td>
-      <td><p>The Brokenhearts Gallery</p></td>
+      <div>
+      <td><a href="seeyouonvenus.html"><img id="zoom" src="See You On Venus.jpeg" height="300px" width="250px"></a></td>
+      <td><img id="zoom" src="other-zoey.jpg" height="300px" width="250px"></td>
+      <td><img id="zoom" src="thenotebook.jpg" height="300px" width="250px"></td>
+      <td><img id="zoom" src="theperfectfind.jpeg" height="300px" width="250px"></td>
+      <td><img id="zoom" src="words-on-bathroom-walls.jpeg" height="300px" width="250px"></td>
+      <td><img id="zoom" src="the-broken-hearts-gallery.jpg" height="300px" width="250px"></td>
+      </div>
     </tr>
   </table>  
     <table>
       <tr>
-        <td></td>
+        <td>
+          <p>Comedy</p>
+        </td>
       </tr>
     </table>
   </body>
