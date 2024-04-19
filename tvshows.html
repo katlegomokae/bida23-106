@@ -15,6 +15,21 @@
         white-space: nowrap; 
         margin-right: 2em;
           }
+      
+       #zoom {
+  padding: 50px;
+  transition: transform .2s;
+  width: 800px;
+  height: 850px;
+  margin: 0 auto;
+  
+}
+
+#zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
 
     </style>
   </head>
@@ -22,7 +37,7 @@
     <table>
   <tr>
       <p>TV Shows</p>
-      <td><div><img src="outer-banks.jpeg" height="300px" width="250px"></div></td>
+      <td><div><img id="zoom" src="outer-banks.jpeg" height="300px" width="250px"></div></td>
       <td><div><img src="the-society.jpg" height="300px" width="250px"></div></td>
       <td><div><img src="i-am-not-okay-with-this.jpg" height="300px" width="250px"></div></td>
       <td><div><img src="freeridge.jpg" height="300px" width="250px"></div></td>
