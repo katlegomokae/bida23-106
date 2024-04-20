@@ -8,8 +8,9 @@ body {
   position: absolute;
   top: 8px;
   right: 16px;  
+  width: 3px;
+  height: 6px;
 }
-
 
  header{ 
   width: 25%;
