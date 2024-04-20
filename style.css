@@ -10,12 +10,22 @@ body {
   left: 16px;  
 }
 
+
  header{ 
   width: 25%;
   height: auto;
   opacity: 0.8;
 }
-
+a { 
+   text-decoration: none;
+   color: black;
+   font-style: Arial, Helvetica, sans-serif;
+   font-size: 10px;
+  }
+       a:hover {
+                background-color: rgba(255,255,255,0);
+                color: black;
+            }
 .topnav {
   overflow: hidden;
   background-color: #000000;
