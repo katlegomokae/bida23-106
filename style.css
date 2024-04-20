@@ -12,6 +12,11 @@ body {
   height: 6px;
 }
 
+aside {
+       font-weight: bold;
+     }
+       
+
  header{ 
   width: 25%;
   height: auto;
