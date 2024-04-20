@@ -10,7 +10,7 @@ body {
   left: 16px;  
 }
 
-img { 
+ header{ 
   width: 25%;
   height: auto;
   opacity: 0.8;
@@ -64,15 +64,27 @@ img {
     border: 1px solid #ccc;  
   }
 }
-.zoom {
+img { 
+          width: 10%;
+          height: 5%;
+          opacity: 0.8;
+        }
+      
+      div { 
+        white-space: nowrap; 
+        margin-right: 1em;
+        margin-left: 1em;
+          }
+      
+       #zoom {
   padding: 50px;
   transition: transform .2s;
-  width: 800px;
-  height: 850px;
-  margin: 0 auto;
+  width: 300px;
+  height: 200px;
+  
 }
 
-.zoom:hover {
+#zoom:hover {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.5); 
