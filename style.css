@@ -14,6 +14,10 @@ body {
 
 aside {
        font-weight: bold;
+       float: right;
+      width: 30%;
+      padding-left: 10px;
+      margin-left: 10px; 
      }
        
 
