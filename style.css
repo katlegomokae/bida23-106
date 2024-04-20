@@ -63,9 +63,9 @@ a {
 
 @media screen and (max-width: 600px) {
   .topnav a, .topnav input[type=text] {
-    float: none;
+    float: right;
     display: block;
-    text-align: left;
+    text-align: right;
     width: 100%;
     margin: 0;
     padding: 14px;
