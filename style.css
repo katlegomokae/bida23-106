@@ -4,10 +4,10 @@ body {
   background-color: #000000;
   color: #ffffff;
      }
-.topleft {
+.topright {
   position: absolute;
   top: 8px;
-  left: 16px;  
+  right: 16px;  
 }
 
 
