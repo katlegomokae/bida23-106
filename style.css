@@ -119,9 +119,6 @@ footer {
      color: white;
      font-size: 15px; 
 }
-#aside
-    { float: right !important;
-    }
 .zoom {
   padding: 10px;
   transition: transform .2s;
