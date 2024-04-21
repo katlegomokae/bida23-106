@@ -158,13 +158,12 @@ footer {
 #slider figure {
   position: relative;
   width: 500%;
-  margin: auto;
+  margin: 0;
   left: 0;
   animation: slider 20s infinite;
 }
 #slider figure img {
   width: 20%;
-  height: 60%;
   float: left;
 }
 @keyframes slider {
