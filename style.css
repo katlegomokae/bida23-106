@@ -7,7 +7,7 @@ body {
 .topright {
   position: absolute;
   top: 8px;
-  right: 16px;  
+  right: 6px;  
   width: 3px;
   height: 6px;
 }
@@ -88,48 +88,6 @@ a {
     border: 1px solid #ccc;  
   }
 }
-#slider {
-      overflow: hidden;
-}
-#slider figure {
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  animation: slider 20s infinite;
-}
-#slider figure img {
-  width: 20%;
-  float: left;
-}
-@keyframes slider {
-  0% {
-    left: 0;
-  }
-  20% {
-    left: 0;
-  }
-  25% {
-    left: -100%;
-  }
-  45% {
-    left: -100%;
-  }
-  50% {
-    left: -200%;
-  }
-  70% {
-    left: -200%
-  }
-  75% {
-    left: -300%;
-  }
-  95% {
-    left: -300%;
-  }
-  100% {
-    left: -400%
-  }
 img { 
           width: 10%;
           height: 5%;
@@ -197,21 +155,45 @@ footer {
 .pin-icon:hover {
          color: #FF0000;
                }
-  
-video { 
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100;
-      height: 50;
-      object-fit: cover;
-      z-index: -1;
+  #slider {
+      overflow: hidden;
 }
-.content { 
-      position: relative;
-      z-index: 1;
-      tet-align: center;
-      color: white;
-      padding: 20px;
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: slider 20s infinite;
 }
-
+#slider figure img {
+  width: 20%;
+  float: left;
+}
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%
+  }
