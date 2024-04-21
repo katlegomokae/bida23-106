@@ -22,8 +22,11 @@ aside {
      .fa-regular fa-bell {
                      float: right;
                      font-size: 20px;
-     }
- header{ 
+                      width: 30%;
+                      padding-left: 10px;
+                      margin-left: 10px; 
+                  }
+ header { 
   width: 25%;
   height: auto;
   opacity: 0.8;
