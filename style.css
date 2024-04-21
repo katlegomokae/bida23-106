@@ -15,7 +15,7 @@ body {
 aside {
        font-weight: bold;
        float: right;
-      width: 30%;
+       width: 30%;
       padding-left: 10px;
       margin-left: 10px; 
      }
@@ -120,13 +120,15 @@ footer {
      font-size: 15px;
      text-align: center; 
 }
+#aside
+    { float: right !important;
+    }
 .zoom {
   padding: 10px;
   transition: transform .2s;
   width: 10px;
   height: 5px;
   margin: 0 auto;
-  white-space:nowrap;
 }
 
 .zoom:hover {
