@@ -22,7 +22,7 @@ body {
   animation: slider 20s infinite;
 }
 #slider figure img {
-  width: 100%;
+  width: 20%;
   float: left;
 }
 aside {
