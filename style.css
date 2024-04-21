@@ -11,7 +11,12 @@ aside {
       padding-left: 10px;
       margin-left: 10px; 
      }
-     .fa-regular fa-bell {
+  .topright {
+    overflow: hidden;
+    background-color: #000000;
+    float: right;
+  }
+     .topright fa-bell {
                      float: right;
                      font-size: 20px;
                       width: 30%;
