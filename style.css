@@ -21,6 +21,10 @@ body {
   left: 0;
   animation: slider 20s infinite;
 }
+#slider figure img {
+  width: 20%;
+  float: left;
+}
 aside {
        font-weight: bold;
        float: right;
