@@ -99,6 +99,7 @@ img {
         white-space: nowrap; 
         margin-right: 1em;
         margin-left: 1em;
+        
           }
       
        #zoom {
@@ -117,7 +118,7 @@ img {
 footer {
      color: white;
      font-size: 15px;
-     text-align: center;
+     text-align: center; 
 }
 .zoom {
   padding: 10px;
@@ -125,6 +126,7 @@ footer {
   width: 10px;
   height: 5px;
   margin: 0 auto;
+  white-space:nowrap;
 }
 
 .zoom:hover {
