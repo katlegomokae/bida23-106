@@ -137,6 +137,7 @@ footer {
 }
 i { 
    margin: 0 10px;
+  white-space: nowrap;
 }
 
 .insta-icon {
