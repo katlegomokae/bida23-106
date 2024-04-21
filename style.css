@@ -4,13 +4,6 @@ body {
   background-color: #000000;
   color: #ffffff;
      }
-.topright {
-  position: absolute;
-  top: 8px;
-  right: 6px;  
-  width: 3px;
-  height: 6px;
-}
 aside {
        font-weight: bold;
        float: right;
@@ -98,7 +91,6 @@ img {
         white-space: nowrap; 
         margin-right: 1em;
         margin-left: 1em;
-        
           }
       
        #zoom {
