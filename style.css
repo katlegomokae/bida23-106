@@ -163,7 +163,7 @@ footer {
   animation: slider 20s infinite;
 }
 #slider figure img {
-  width: auto;
+  width: 20%;
   height: 60%;
   float: left;
 }
