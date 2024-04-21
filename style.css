@@ -125,9 +125,24 @@ footer {
             transition: color 0.2s;
 
               }
-.inasta-icon:hover {
+.insta-icon:hover {
                color: #DA70D6;
            }
+.fb-icon {
+      color: #4169E1;
+      transition: color 0.2s;
+}
+ .fb-icon:hover {
+         color: #00008B;
+ }
+.pin-icon { 
+       color: DC143C;
+       transition: color 0.2s;
+          }
+.pin-icon:hover {
+         color: #FF0000;
+               }
+  
 video { 
       position: fixed;
       top: 0;
