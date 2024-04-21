@@ -19,7 +19,7 @@ body {
   width: 500%;
   margin: 0;
   left: 0;
-  animation: 20s slider infinite;
+  animation: slider 20s infinite;
 }
 aside {
        font-weight: bold;
