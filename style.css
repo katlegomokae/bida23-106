@@ -114,6 +114,16 @@ img {
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.5); 
 }
+footer {
+     color: white;
+     font-size: 15px;
+     text-align: center;
+}
+
+.fa-instagram {
+             white-space: nowrap;
+             size: 20px;
+}
 
 video { 
       position: fixed;
