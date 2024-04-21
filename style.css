@@ -133,6 +133,7 @@ footer {
   transform: scale(1.5); 
 }
 i { 
+  position: relative;
    margin: 0 10px;
 }
 
