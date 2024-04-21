@@ -44,6 +44,15 @@ body {
   70% {
     left: -200%
   }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%
+  }
 aside {
        font-weight: bold;
        float: right;
