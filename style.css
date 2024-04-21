@@ -120,6 +120,12 @@ footer {
      text-align: center;
 }
 
+.insta-icon {
+            color: white;
+}
+.inasta-icon:hover {
+               color: purple;
+}
 video { 
       position: fixed;
       top: 0;
