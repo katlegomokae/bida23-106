@@ -121,11 +121,13 @@ footer {
 }
 
 .insta-icon {
-            color: white;
-}
+            color: #EE82EE;
+            transition: color 0.2s;
+
+              }
 .inasta-icon:hover {
-               color: purple;
-}
+               color: #DA70D6;
+           }
 video { 
       position: fixed;
       top: 0;
