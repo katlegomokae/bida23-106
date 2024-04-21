@@ -142,7 +142,7 @@ i {
 
               }
 .insta-icon:hover {
-               color: #DA70D6;
+               color: #800080;
            }
 .fb-icon {
       color: #4169E1;
@@ -152,7 +152,7 @@ i {
          color: #00008B;
  }
 .pin-icon { 
-       color: #DC143C;
+       color: #B22222;
        transition: color 0.2s;
           }
 .pin-icon:hover {
