@@ -102,7 +102,7 @@ img {
        #zoom {
   padding: 50px;
   transition: transform .2s;
-  width: 200px !important;
+  width: 300px !important;
   height: 200px;
   
 }
