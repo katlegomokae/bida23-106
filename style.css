@@ -99,7 +99,7 @@ img {
           }
       
        #zoom {
-  padding: 20px;
+  padding: 60px;
   transition: transform .2s;
   width: 300px;
   height: 200px;
