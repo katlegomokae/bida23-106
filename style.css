@@ -165,6 +165,10 @@ footer {
 #slider figure img {
             width: 20%;
           float: left;
+           height: 60%; 
+        background-position: center;
+       background-repeat: no-repeat;
+      background-size: cover;
            }
 @keyframes slider {
   0% {
