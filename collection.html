@@ -61,6 +61,25 @@
       color: white;
       padding: 20px;
 }
+        div { 
+        white-space: nowrap; 
+        margin-right: 1em;
+        margin-left: 1em;
+          }
+       
+          #zoom {
+  padding: 50px;
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  
+}
+
+#zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+} 
     </style>
   </head>
   <body> 
@@ -76,5 +95,12 @@
     <video autoplay loop id="myVideo">
     <source src="dune trailer 2 - Made with Clipchamp.mp4" type="video/mp4">
 </video> 
+    <table>
+      <tr>
+        <div>
+        <td><img id="zoom" src="theperfectfind.jpeg"></td>
+        </div>
+      </tr>
+    </table>
   </body>
 </html>
