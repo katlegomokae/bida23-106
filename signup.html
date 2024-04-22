@@ -31,11 +31,36 @@ img {
   color: #ffffff;
 } 
 </style> 
+  <script>
+function validateForm() {
+  let x = document.forms["myForm"]["firstname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+    let x = document.forms["myForm"]["Email"].value;
+  if (x == "") {
+    alert("Email must be filled out");
+    return false; 
+     let x = document.forms["myForm"]["password"].value;
+  if (x == "") {
+    alert("Password must be filled out");
+    return false;
+     let x = document.forms["myForm"]["Password Confirmation"].value;
+  if (x == "") {
+    alert("Password must be filled out");
+    return false;
+     let x = document.forms["myForm"]["Mobile Phone Number"].value;
+  if (x == "") {
+    alert("Phone Number must be filled out");
+    return false;
+  }
+}
+</script>  
   </head>
   <body>
     <div class="topleft">
       <a href="index.html"><img src="Warner-Bros-Logo.png" width="15px" height="25px"></a>
-    <form>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
       <p>Name:<input type= "text" placeholder="Enter name" name="firstname" required></p><br>
       <br><p>Email:<input type= "text" placeholder="Enter Email" name="Email" required></p>
       <br><p>Password:<input type="password" placeholder="Enter Password" name="password" required></p>
