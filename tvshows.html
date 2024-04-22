@@ -11,15 +11,31 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
       }
-      
-  <div class="topnav">
-      <p><a href="games&apps.html">Games&Apps</a></p>
-      <p><a href="collection.html">Collection</a></p>
-       <p><a href="feedback.html">Feedback</a></p>
-       <p><a href="tvshows.html">TV Shows</a></p>
-       <p><a href="movies.html">Movies</a></p>
-      <p><a class="active" href="index.html">Home</a></p>
-    </div> 
+      .topnav {
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.topnav a:hover {
+  background-color: rgba(255,255,255,0);
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #000000;
+  color: grey;
+}
+
         header {
                  position: absolute;
                  top: 8px;
