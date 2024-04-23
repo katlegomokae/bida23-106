@@ -42,6 +42,7 @@ a {
 .topnav {
   overflow: hidden;
   background-color: #000000;
+ justify-content: center;
 }
 
 .topnav a {
