@@ -78,7 +78,53 @@
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.5); 
 }
+ #slider {
+      overflow: hidden;
+}
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: slider 20s infinite;
+}
 
+#slider figure img {
+            width: 20%;
+          float: left;
+           height: 60%; 
+        background-position: center;
+       background-repeat: no-repeat;
+      background-size: cover;
+           }
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%
+  }
     </style>
   </head>
   <body>
@@ -93,6 +139,15 @@
     <header>
      <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
     </header>
+    <div id="slider">
+      <figure>
+        <img src="OneDay.jpg">
+        <img src="YOU.jpg">
+        <img src="fleabag.jpg">
+        <img src="the-society.jpg">
+        <img src="swarm.png">
+      </figure>
+    </div>
     <br>
     <table> 
   <tr>
