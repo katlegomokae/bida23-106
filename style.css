@@ -102,10 +102,7 @@ img {
        #zoom {
   padding: 50px;
   transition: transform .2s;
-  width: 250px;
-  height: 250px;
-  
-}
+           }
 
 #zoom:hover {
   -ms-transform: scale(1.5); /* IE 9 */
