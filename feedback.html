@@ -120,12 +120,12 @@
 	    .btn-group .btn-cancel:hover {
 		    background: var(--light);
 	    }    		    
-       .topnav {
+       #topnav {
   overflow: hidden;
   background-color: #000000;
 }
 
-.topnav a {
+#topnav a {
   float: right;
   display: block;
   color: white;
@@ -135,17 +135,17 @@
   font-size: 15px;
 }
 
-.topnav a:hover {
+#topnav a:hover {
   background-color: rgba(255,255,255,0);
   color: white;
 }
 
-.topnav a.active {
+#topnav a.active {
   background-color: #000000;
   color: grey;
 }
       @media screen and (max-width: 600px) {
-  .topnav a {
+  #topnav a {
     float: none;
     display: block;
     text-align: left;
@@ -168,7 +168,7 @@
     </style>
   </head>
   <body>
-    <div class="topnav">
+    <div id="topnav">
       <p><a href="games&apps.html">Games&Apps</a></p>
       <p><a href="collection.html">Collection</a></p>
        <p><a class="active" href="feedback.html">Feedback</a></p>
@@ -188,8 +188,7 @@
 			  <i class="bx bx-star star" style="--i: 1;"></i>
 			  <i class="bx bx-star star" style="--i: 2;"></i>
 			  <i class="bx bx-star star" style="--i: 3;"></i>
-			  <i class="bx bx-star star" style="--i: 4;"></i>
-			 
+			  <i class="bx bx-star star" style="--i: 4;"></i> 
 		  </div>
 		  <textarea name="opinion" cols="30" rows="5" placeholder="Feedback...."></textarea>
 		  <div class="btn-group">
