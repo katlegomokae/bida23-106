@@ -115,7 +115,9 @@ img {
 footer {
      color: white;
      font-size: 15px; 
-     text-align: center;
+}
+.footer p {
+  text-align: center;
 }
 .zoom {
   padding: 10px;
