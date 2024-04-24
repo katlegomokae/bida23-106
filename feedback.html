@@ -40,6 +40,25 @@
 	    .rating .star {
 		    cursor: pointer;
 	    }
+	    .rating .star.active {
+		    opacity:0;
+		    animation: animate .5s ease-in-out forwards;
+	    }
+	    @keyframes animate {
+		    0% {
+			    opacity: 0;
+			    transform: scale(1);
+		    }
+		    50% {
+			    opacity: 1;
+			    transform: scale(1.2);
+		    }
+		    100% {
+			    opacity: 1;
+			    transform: scale(1);
+		    }
+	    }
+		    
 	    .rating .star:hover {
 		    transform: scale(1.1);
 	    }
