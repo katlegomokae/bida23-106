@@ -114,10 +114,9 @@ img {
 }
 footer {
      color: white;
-     font-size: 15px; 
-}
-.footer p {
-  text-align: center;
+     font-size: 15px;
+    display: flex;
+   flex-direction: row;
 }
 .zoom {
   padding: 10px;
