@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8"> 
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0"> 
+    	<link rel="stylesheet" href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+	<link rel="stylesheet" href="index.css"> 
     <title>Feedback</title>
     <style> 
       body { background-color: #000000;}
@@ -61,8 +67,8 @@
     <div class="topnav">
       <p><a href="games&apps.html">Games&Apps</a></p>
       <p><a href="collection.html">Collection</a></p>
-       <p><a href="feedback.html">Feedback</a></p>
-       <p><a class="active" href="tvshows.html">TV Shows</a></p>
+       <p><a class="active" href="feedback.html">Feedback</a></p>
+       <p><a href="tvshows.html">TV Shows</a></p>
        <p><a href="movies.html">Movies</a></p>
       <p><a href="index.html">Home</a></p>
     </div> 
@@ -70,7 +76,61 @@
      <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
     </header>
     <form>
-      
+<body> 
+	<h1>Warner Bros.</h1> 
+	<h3>Feedback Form</h3> 
+	<div class="form-box"> 
+		<div class="textup"> 
+			<i class="fa fa-solid fa-clock"></i> 
+    </div>
+		<form> 
+			<label for="uname"> 
+				<i class="fa fa-solid fa-user"></i> 
+				Name 
+			</label> 
+			<input type="text" id="uname"
+				name="uname" required> 
+
+			<label for="email"> 
+				<i class="fa fa-solid fa-envelope"></i> 
+				Email Address 
+			</label> 
+			<input type="email" id="email"
+				name="email" required> 
+
+			<label for="phone"> 
+				<i class="fa-solid fa-phone"></i> 
+				Phone No 
+			</label> 
+			<input type="tel" id="phone"
+				name="phone" required> 
+
+			<label> 
+				<i class="fa-solid fa-face-smile"></i> 
+				Do you satisfy with our service? 
+			</label> 
+			<div class="radio-group"> 
+				<input type="radio" id="yes"
+					name="satisfy" value="yes" checked> 
+				<label for="yes">Yes</label> 
+
+				<input type="radio" id="no"
+					name="satisfy" value="no"> 
+				<label for="no">No</label> 
+			</div> 
+
+			<label for="msg"> 
+				<i class="fa-solid fa-comments"
+				style="margin-right: 3px;"></i> 
+				Write your Suggestions: 
+			</label> 
+			<textarea id="msg" name="msg"
+					rows="4" cols="10" required> 
+			</textarea> 
+			<button type="submit"> 
+				Submit 
+			</button> 
+	</div>     
     </form>
   </body>
 </html>
