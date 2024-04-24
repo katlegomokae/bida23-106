@@ -7,6 +7,23 @@
 	   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
      <title>Feedback</title>
     <style> 
+	    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+	    * {
+		    margin: 0;
+		    paddding: 0;
+		    box-sizing: border-box;
+		    font-family: 'Poppins', sans-serif;
+	    }
+	    :root {
+		    --yellow: #FFBD13;
+		    --blue: #4383FF;
+		    --blue-d-1: #3278FF;
+		    --light: #F5F5F5;
+		    --grey: #AAA;
+		    --white: #FFF;
+		    --shadow: 8px 8px 30px rgba(0,0,0,.05);
+	    }
+		    
 	    body { 
 		   background: var(--white);
 		    display: flex;
@@ -172,7 +189,7 @@
 			  <i class="bx bx-star star" style="--i: 4;"></i>
 			 
 		  </div>
-		  <textarea name="opinion" cols="30" rows="5" placeholder="Your opinion...."></textarea>
+		  <textarea name="opinion" cols="30" rows="5" placeholder="Feedback...."></textarea>
 		  <div class="btn-group">
 			  <button type="submit" class="btn submit">Submit</button>
 			  <button class="btn cancel">Cancel</button>
