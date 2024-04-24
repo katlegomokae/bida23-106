@@ -115,7 +115,9 @@ img {
 footer {
      color: white;
      font-size: 15px;
-    display: flex;
+}
+.footer p {
+  display: flex;
    flex-direction: row;
 }
 .zoom {
