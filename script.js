@@ -6,7 +6,7 @@ allStar.forEach((item, idx)=> {
     ratingValue.value = idx + 1
     console.log(ratingValue.value)
     allStar.forEach(i=> {
-      i.classList.replace('bx-star' , 'bx-star')
+      i.classList.replace('bxs-star' , 'bx-star')
        i.classList.remove('active')
     })
     for(let i=0; i<allStar.length; i++) {
@@ -16,5 +16,7 @@ allStar.forEach((item, idx)=> {
       } else {
         allStar{i+1}.style.setProperty('--i', click )
         click++
+      }
+    }
   })
 })
