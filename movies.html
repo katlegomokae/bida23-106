@@ -10,11 +10,51 @@
           font-size: 20px;
           margin-top: 2em;
         }
-      a {
-        color: #ffffff;
-        background-color: #000000;
-        text-decoration: none;
+       .topnav {
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.topnav a:hover {
+  background-color: rgba(255,255,255,0);
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #000000;
+  color: grey;
+}
+      @media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
       }
+      header {
+                 position: absolute;
+                 top: 8px;
+                 right: 16px;  
+              }
+
+    img { 
+          width: 7%;
+          height: 2%;
+          opacity: 0.8;
+        }
           div { 
         white-space: nowrap; 
         margin-right: 1em;
@@ -54,13 +94,77 @@
   background-color: rgba(255,255,255,0);
   color: white;
 }
+       #slider {
+      overflow: hidden;
+}
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin-top: 16px;
+  left: 0;
+  animation: slider 20s infinite;
+}
+
+#slider figure img {
+            width: 20%;
+          float: left;
+           height: 60%; 
+        background-position: center;
+       background-repeat: no-repeat;
+      background-size: cover;
+           }
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%
+  }
 
     </style>
   </head>
   <body>
-    <div class="topnav">
-    <a href="movies.html">Movies</a>
-    <br>
+   <div class="topnav">
+      <p><a href="games&apps.html">Games&Apps</a></p>
+      <p><a href="collection.html">Collection</a></p>
+       <p><a href="feedback.html">Feedback</a></p>
+       <p><a class="active" href="tvshows.html">TV Shows</a></p>
+       <p><a href="movies.html">Movies</a></p>
+      <p><a href="index.html">Home</a></p>
+    </div> 
+    <header>
+     <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
+    </header>
+    <div id="slider">
+      <figure>
+        <img src="5feetapart.jpeg">
+        <img src="Anyone But You 2023.jpeg">
+        <img src="dorevenge.jpg">
+        <img src="girlstrip.jpg">
+        <img src="17again.jpg">
+      </figure>
+    </div>
   <table>
     <tr>
       <br>
@@ -70,8 +174,6 @@
       <td><img id="zoom" src="other-zoey.jpg"></td>
       <td><img id="zoom" src="thenotebook.jpg"></td>
       <td><img id="zoom" src="theperfectfind.jpeg"></td>
-      <td><img id="zoom" src="words-on-bathroom-walls.jpeg"></td>
-      <td><img id="zoom" src="the-broken-hearts-gallery.jpg"></td>
       </div>
     </tr>
   </table>  
@@ -82,14 +184,7 @@
           <td><img id="zoom" src="17again.jpg"></td>
           <td><img id="zoom" src="JUNO.png"></td>
           <td><img id="zoom" src="dorevenge.jpg"></td>
-          <td><img id="zoom" src="duedate.jpg"></td>
           <td><img id="zoom" src="girlstrip.jpg"></td>
-          <td><img id="zoom" src="he'sallthat.jpg"></td>
-          <td><img id="zoom" src="joy.jpg"></td>
-          <td><img id="zoom" src="littlemiss-sunshine.webp"></td>
-          <td><img id="zoom" src="love&gelato.jpeg"></td>
-          <td><img id="zoom" src="meangirls.jpg"></td>
-          <td><img id="zoom" src="bridesmaids.jpg"></td>
         </div>
       </tr>
     </table>
@@ -98,14 +193,9 @@
           <p>Indie Movies</p>
           <div>
             <td><img id="zoom" src="the-florida-project.jpg"></td>
-            <td><img id="zoom" src="5feetapart.jpeg"></td>
             <td><img id="zoom" src="hillbilly elegy.webp"></td>
-            <td><img id="zoom" src="thirteen.png"></td>
-            <td><img id="zoom" src="to-the-bone.jpg"></td>
-            <td><img id="zoom" src="waves.jpg"></td>
             <td><img id="zoom" src="ladybird.jpg"></td>
             <td><img id="zoom" src="cmbyn.jpeg"></td>
-            <td><img id="zoom" src="edgeof17.jpeg"></td>
           </div>
         </tr>
       </table>
