@@ -21,7 +21,71 @@
 		    width: 100%;
 		    border-radius: .75rem;
 		    box-shadow: var(--shadow);
+		    text-align: center;
 	    }
+	    .wrapper h3{
+		    font-size: 20px;
+		    font-weight: 600;
+		    margin-bottom: 1rem;
+	    }
+	    .rating {
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    grid-gap: .5rem;
+		    font-size: 2rem;
+		    color: var(--yellow);
+		    margin-bottom: 2rem;
+	    }
+	    .rating .star {
+		    cursor: pointer;
+	    }
+	    .rating .star:hover {
+		    transform: scale(1.1);
+	    }
+	    textarea {
+		    width: 100%;
+		    background: var(--white);
+		    padding: 1rem;
+		    border-radius: .5rem;
+		    border: none;
+		    outline: none;
+		    resize: none;
+		    margin-bottom: .5rem;
+	    }
+	    .btn-group {
+		    display: flex;
+		    grid-gap: .5rem;
+		    align-items: center;
+	    }
+	    .btn-group .btn {
+		    padding: .75rem 1rem;
+		    border-radius: .5rem;
+		    border: none;
+		    outline: none;
+		    cursor: pointer;
+		    font-size: .875rem;
+		    font-weight: 500;
+	    }
+	    .btn-group .btn-submit {
+		    background: var(--blue);
+		    color: var(--white);
+	    }
+	    .btn-group .btn-submit:hover {
+		    background: var(--blue-d-1);
+	    }
+		        
+	    .btn-group .btn-cancel {
+		    background: var(--white);
+		    color: var(--blue);
+	    }
+	    .btn-group .btn-cancel:hover {
+		    background: var(--light);
+	    }
+		    
+		    
+		    
+			    
        .topnav {
   overflow: hidden;
   background-color: #000000;
@@ -86,11 +150,12 @@
 	  <form action="#">
 		  <div class="rating">
 			  <input type="number" name="rating" hidden> 
-			  <box-icon name='star'></box-icon>
-			  <box-icon name='star'></box-icon>
-			  <box-icon name='star'></box-icon>
-			  <box-icon name='star'></box-icon>
-			  <box-icon name='star'></box-icon>
+			  <i class="bx bx-star star"></i>
+			  <i class="bx bx-star star"></i>
+			  <i class="bx bx-star star"></i>
+			  <i class="bx bx-star star"></i>
+			  <i class="bx bx-star star"></i>
+			 
 		  </div>
 		  <textarea name="opinion" cols="30" rows="5" placeholder="Your opinion...."></textarea>
 		  <div class="btn-group">
