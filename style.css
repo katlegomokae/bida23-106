@@ -135,26 +135,26 @@ footer {
 }
 
 .insta-icon {
-            color: #EE82EE;
+            color: #FFFFFF;
             transition: color 0.2s;
 
               }
 .insta-icon:hover {
-               color: #800080;
+               color: #FFFFFF;
            }
 .fb-icon {
-      color: #4169E1;
+      color: #FFFFFF;
       transition: color 0.2s;
 }
  .fb-icon:hover {
-         color: #00008B;
+         color: #FFFFFF;
  }
 .pin-icon { 
-       color: #B22222;
+       color: #FFFFFF;
        transition: color 0.2s;
           }
 .pin-icon:hover {
-         color: #FF0000;
+         color: #FFFFFF;
                }
  
  #slider {
