@@ -5,120 +5,143 @@
 	<meta name="viewport"
 		content="width=device-width,initial-scale=1.0"> 
 	   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-     <title>Feedback</title>
-    <style> 
-	    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-	    * {
-		    margin: 0;
-		    paddding: 0;
-		    box-sizing: border-box;
-		    font-family: 'Poppins', sans-serif;
-	    }
-	    :root {
-		    --yellow: #FFBD13;
-		    --blue: #4383FF;
-		    --blue-d-1: #3278FF;
-		    --light: #F5F5F5;
-		    --grey: #AAA;
-		    --white: #FFF;
-		    --shadow: 8px 8px 30px rgba(0,0,0,.05);
-	    }
-		    
-	
+     <title>Feedback</title>	
+	  <style>
 
-	    
-	    .wrapper {
-		      background: var(--white);
-		    padding: 2rem;
-		    max-width: 576px;
-		    width: 100%;
-		    border-radius: .75rem;
-		    box-shadow: var(--shadow);
-		    text-align: center;
-		    background: var(--light);
-		    justify-content: center;
-		    align-items: center;
-		    min-height: 100vh;
-	    }
-	    .wrapper h3{
-		    font-size: 1.5rem;
-		    font-weight: 600;
-		    margin-bottom: 1rem;
-	    }
-	    .rating {
-		    display: flex;
-		    justify-content: center;
-		    align-items: center;
-		    grid-gap: .5rem;
-		    font-size: 2rem;
-		    color: var(--yellow);
-		    margin-bottom: 2rem;
-	    }
-	    .rating .star {
-		    cursor: pointer;
-	    }
-	    .rating .star.active {
-		    opacity:0;
-		    animation: animate .5s  calc(var(--iease-in-out) * .1s)forwards;
-	    }
-	    @keyframes animate {
-		    0% {
-			    opacity: 0;
-			    transform: scale(1);
-		    }
-		    50% {
-			    opacity: 1;
-			    transform: scale(1.2);
-		    }
-		    100% {
-			    opacity: 1;
-			    transform: scale(1);
-		    }
-	    }
-		    
-	    .rating .star:hover {
-		    transform: scale(1.1);
-	    }
-	    textarea {
-		    width: 100%;
-		    background: var(--light);
-		    padding: 1rem;
-		    border-radius: .5rem;
-		    border: none;
-		    outline: none;
-		    resize: none;
-		    margin-bottom: .5rem;
-	    }
-	    .btn-group {
-		    display: flex;
-		    grid-gap: .5rem;
-		    align-items: center;
-	    }
-	    .btn-group .btn {
-		    padding: .75rem 1rem;
-		    border-radius: .5rem;
-		    border: none;
-		    outline: none;
-		    cursor: pointer;
-		    font-size: .875rem;
-		    font-weight: 500;
-	    }
-	    .btn-group .btn-submit {
-		    background: var(--blue);
-		    color: var(--white);
-	    }
-	    .btn-group .btn-submit:hover {
-		    background: var(--blue-d-1);
-	    }
-		        
-	    .btn-group .btn-cancel {
-		    background: var(--white);
-		    color: var(--blue);
-	    }
-	    .btn-group .btn-cancel:hover {
-		    background: var(--light);
-	    }    		    
-      
+	  * {
+	  margin: 0;
+	  padding: 0;
+	  border-sizing: box-box;
+	  font-family: Arial, Helvetica, sans-serif;
+	 } 	  
+		  
+	  html, body {
+		  display:grid;
+		  height:100%;
+		  place-items: center;
+		  text-align:center ;
+		  background: #000000;
+		 } 
+        .container {
+		position: relative;
+		width:400px;
+                background:#111;
+		padding:20px 30px;
+		border: 1px solid #444;
+		border-radius: 5px;
+                display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+		.container .post {
+			display:none;
+		} 
+		.container .text{
+			font-size:25px;
+	                color:#666;
+			font-weight:500;
+		} 
+                .container .edit{
+			position:absolute;
+			right:10px;
+                        top:5px;
+			font-size:25px;
+	                color:#666;
+			font-weight:500;
+                        cursor:pointer;
+		} 
+   .container .edit:hover {
+	   text-decoration:underline;
+	  } 
+.container star-widget input {
+	display:none;
+}
+ .star-widget label {
+	 font-size: 20px;
+         color:#444;
+	 padding:10px;
+         float:right;
+	 transition: all 0.2s ease;
+	} 
+ input:not (:checked) ~ label:hover 
+ input:not (:checked) ~ label:hover ~ label {
+	color: #fd4;
+	} 
+input#rate-5:checked ~ label{
+	color: #fe7;
+	text-shadow: 0 0 20px #952;
+} 
+		  #rate-1:checked ~ form header:before {
+			  content:"Terrible";
+			 } 
+		    #rate-2:checked ~ form header:before {
+			  content:"Poor";
+			 } 
+                    #rate-3:checked ~ form header:before {
+			  content:"Fair";
+			 } 
+                    #rate-4:checked ~ form header:before {
+			  content:"Good";
+			 } 
+                   #rate-5:checked ~ form header:before {
+			  content:"Awesome!";
+			 } 
+.container form {
+	display: none;
+} 
+input:checked ~ form {
+		display: block;
+} 
+form header {
+	width:100%;
+	font-size:25px;
+       color:fe7;
+	font-weight:500;
+	margin: 5px 0 20px 0;
+	text-align:center;
+        transition: all 0.2s ease;
+
+} 
+form .textarea {
+	height:100px;
+        width:100%;
+	overflow:hidden;
+}
+form .textarea textarea{
+	height:100%;
+	width:100%;
+	outline:none;
+	color:eee;
+	border: 1px solid #333;
+	background-color: #222;
+	padding:10px;
+        font-size:17px;
+	resize:none;
+} 
+form .btn {
+	height:45px;
+        width:100%;
+	margin: 15px 0;
+}
+		  
+form .btn button {
+	height:100%;
+        width:100%;
+	border: 1px solid #444;
+	outline:none;
+	background-color: #222
+        color: #999;
+	font-size: 17px;
+        font-weight: 500;
+	text-transform: uppercase;
+	cursor: pointer;
+        transition: all 0.3s ease;
+} 
+form .btn button:hover {
+	background-color: #1b1b1b;
+} 
+  
       header {
                  position: absolute;
                  top: 8px;
@@ -177,24 +200,38 @@
     <header>
      <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
     </header>
-  <div class="wrapper">
-	  <h3>Please Give Feedback On Your Level Of Satisfaction</h3>
+<div class="container">
+	<div class="post">
+		<div class="text"> Thanks For Your Feedback!</div>
+		<div class="edit"> Edit Response</div>
+	</div>
+	  <div class="container">
+		<div class="star-widget">
+			<input type="radio" name="rate" id="rate-5">
+			<label for="rate-5" class="fas fa-star" ></label>
+			<input type="radio" name="rate" id="rate-5">
+			<label for="rate-4" class="fas fa-star"></label>
+			<input type="radio" name="rate" id="rate-5">
+			<label for="rate-3" class="fas fa-star"></label>
+			<input type="radio" name="rate" id="rate-5">
+			<label for="rate-2" class="fas fa-star" ></label>
+			<input type="radio" name="rate" id="rate-5">
+			<label for="rate-1" class="fas fa-star"></label>
+		</div>
+		  
+	  </div>
 	  <form action="#">
-		  <div class="rating">
-			  <input type="number" name="rating" hidden> 
-			  <i class="bx bx-star star" style="--i: 0;"></i>
-			  <i class="bx bx-star star" style="--i: 1;"></i>
-			  <i class="bx bx-star star" style="--i: 2;"></i>
-			  <i class="bx bx-star star" style="--i: 3;"></i>
-			  <i class="bx bx-star star" style="--i: 4;"></i> 
+		<header> </header>  
+		  <div class="textarea">
+			  <textarea cols="30" placeholder="Feedback....."></textarea>
 		  </div>
-		  <textarea name="opinion" cols="30" rows="5" placeholder="Feedback...."></textarea>
-		  <div class="btn-group">
-			  <button type="submit" class="btn submit">Submit</button>
-			  <button class="btn cancel">Cancel</button>
+		  <div class="btn">
+			  <button type="submit">Post</button>
+		  </div>
+			  
 	  </form>
-  </div>
-	  <script src="script.js"></script>
+	<script src="script.js">
+	</script>
 		  </body>
 		  </html>
 
