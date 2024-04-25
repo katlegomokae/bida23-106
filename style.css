@@ -115,7 +115,8 @@ img {
 footer {
      color: white;
      font-size: 15px;
-     display: flex;
+     display: inline;
+     list-style-type: none;
    justify-content: space-between;
 }
 .zoom {
