@@ -106,13 +106,15 @@ img {
   transform: scale(1.5); 
 }
 footer {
-  text-align: center;
-  padding: 3px;
-  margin-top: -10;
-  background-color: grey;
+   overflow: hidden;
+  background-color: #000000;
+   display: block;
   color: white;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
   font-size: 15px;
-  display: flex;
+  justify-content: center;
 }
 .zoom {
   padding: 10px;
