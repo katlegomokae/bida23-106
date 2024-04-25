@@ -1,22 +1,13 @@
-const allStar = document.querySelectorAll('.rating .star')
-const ratingValue = document.querySelector('. rating input')
-allStar.forEach((item, idx)=> {
-  item.addEventListener('click' , function () {
-    let click = 0
-    ratingValue.value = idx + 1
-    console.log(ratingValue.value)
-    allStar.forEach(i=> {
-      i.classList.replace('bxs-star' , 'bx-star')
-       i.classList.remove('active')
-    })
-    for(let i=0; i<allStar.length; i++) {
-      if(i <= idx) {
-        allStar{i}.classList.replace('bx-star', 'bxs-star')
-        allStar{i}.classList.add('active')
-      } else {
-        allStar{i+1}.style.setProperty('--i', click )
-        click++
-      }
-    }
-  })
-})
+const btn = document.querySelector("button");
+			const post = document.querySelector(".post");
+			const widget = document.querySelector(".star-widget");
+			const editBtn= document.querySelector("edit");
+			  btn.onclick) = () =>{
+				  widget.style.display = "none";
+				  post.style.display = "block";
+				  editBtn.onclick) = () =>{
+				  widget.style.display = "block";
+				  post.style.display = "none";
+				 } 
+				  return false;
+				 } 
