@@ -115,6 +115,7 @@ img {
 footer {
   text-align: center;
   padding: 3px;
+  margin-top: -10;
   background-color: grey;
   color: white;
   font-size: 15px;
@@ -169,6 +170,8 @@ footer {
 }
 
 #slider figure img {
+             margin-left: 0px;
+             margin-right: 0px;
             width: 20%;
           float: left;
            height: 60%; 
