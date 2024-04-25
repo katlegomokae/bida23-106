@@ -115,7 +115,7 @@ img {
 footer {
   text-align: center;
   padding: 3px;
-  background-color: transparent;
+  background-color: grey;
   color: white;
   font-size: 15px;
   display: flex;
