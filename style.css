@@ -115,9 +115,11 @@ img {
 footer {
      color: white;
      font-size: 15px;
-     display: inline;
-     list-style-type: none;
    justify-content: space-between;
+}
+li {
+   display: inline;
+   list-style-type: none;
 }
 .zoom {
   padding: 10px;
