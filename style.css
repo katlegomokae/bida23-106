@@ -113,11 +113,11 @@ img {
   transform: scale(1.5); 
 }
 footer {
-     color: white;
-     font-size: 15px;
-   justify-content: space-between;
-   display: inline-block;
-   list-style-type: none;
+  text-align: center;
+  padding: 3px;
+  background-color: transparent;
+  color: white;
+  font-size: 15px;
 }
 .zoom {
   padding: 10px;
