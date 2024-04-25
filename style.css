@@ -116,9 +116,7 @@ footer {
      color: white;
      font-size: 15px;
    justify-content: space-between;
-}
-li {
-   display: inline;
+   display: inline-block;
    list-style-type: none;
 }
 .zoom {
