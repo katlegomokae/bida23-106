@@ -119,6 +119,7 @@ footer {
 .footer p {
   display: flex;
    flex-direction: row;
+  white-space: nowrap;
 }
 .zoom {
   padding: 10px;
