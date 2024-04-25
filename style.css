@@ -108,7 +108,7 @@ img {
 footer {
    overflow: hidden;
   background-color: #000000;
-   display: block;
+   display: inline;
   color: white;
   text-align: center;
   padding: 16px 18px;
