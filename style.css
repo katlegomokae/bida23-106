@@ -116,6 +116,7 @@ footer {
      color: white;
      font-size: 15px;
      display: flex;
+   justify-content: space-between;
 }
 .zoom {
   padding: 10px;
