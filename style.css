@@ -115,11 +115,7 @@ img {
 footer {
      color: white;
      font-size: 15px;
-}
-.footer p {
-  display: flex;
-   flex-direction: row;
-  white-space: nowrap;
+     display: flex;
 }
 .zoom {
   padding: 10px;
