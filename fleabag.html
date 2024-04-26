@@ -83,13 +83,27 @@ body {
   width: 100%;
   padding: 20px;
 }
+      .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.top-right {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
     </style>
   </head>
   <body>
+     <div class="container">
     <video controls autoplay id="myVideo">
   <source src="fleabag-trailer.mp4" type="video/mp4">
-</video>
-     <div class="topnav">
+    </video>
+       <div class="top-right">   
+         <div class="topnav">
       <p><a href="games&apps.html">Games&Apps</a></p>
       <p><a href="collection.html">Collection</a></p>
        <p><a href="feedback.html">Feedback</a></p>
@@ -97,6 +111,8 @@ body {
        <p><a href="movies.html">Movies</a></p>
       <p><a href="index.html">Home</a></p>
     </div> 
+       </div>
+     </div>
     <header>
      <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
     </header>
