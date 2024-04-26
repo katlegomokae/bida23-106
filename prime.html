@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Netflix Collection</title>
+   <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    p { 
+      color: white;
+       font-size: 15px;
+       font-weight: 300;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+     }
+    a { 
+   text-decoration: none;
+   color: white;
+   font-style: Arial, Helvetica, sans-serif;
+   font-size: 20px;
+  }
+     a:hover {
+                background-color: rgba(255,255,255,0);
+                color: white;
+       } 
+      .topnav {
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.topnav a:hover {
+  background-color: rgba(255,255,255,0);
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #000000;
+  color: grey;
+}
+  body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #000000;
+}
+.bg {
+  background-image: url("primevideo.jpeg");
+  height: 75%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+    
+    section {
+              white-space: nowrap; 
+              margin-right: 1em;
+              margin-left: 1em;
+          }
+ #zoom {
+  padding: 50px;
+  transition: transform .2s;
+  width: 270px;
+  height: 250px;
+  
+}
+
+#zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+</style>
+</head>
+  <body>
+      <div class="topnav">
+      <p><a href="games&apps.html">Games&Apps</a></p>
+      <p><a class="active" href="collection.html">Collection</a></p>
+       <p><a href="feedback.html">Feedback</a></p>
+       <p><a href="tvshows.html">TV Shows</a></p>
+       <p><a href="movies.html">Movies</a></p>
+      <p><a href="index.html">Home</a></p>
+    </div> 
+   <div class="bg"></div>    
+    <br>
+    <table>
+      <tr>
+        <section>
+        <td><a href="fleabag.html"><img id="zoom" src="fleabag.jp" alt="Fleabag" height="250px" width="198px"></td>
+        <td><a href="tsitp.html"><img id="zoom" src="tsitp.jpg" alt="The Summer I Turned Pretty" height="250px" width="200px"></td>
+        <td><a href="swarm.html"><img id="zoom"src="swarm.png" alt="Swarm" height="250px" width="198px"></td>
+        <td><a href="other-zo.html"><img id="zoom"src="other-zoey.jpg" alt="The Other Zoey" height="250px" width="198px"></td>
+        </section>
+      </tr>
+      <tr>
+        <section>
+         <td><p><a href="fleabag.html">Fleabag</p></td> 
+        <td><p><a href="tsitp.html">The Summer I Turned Pretty</p></td>
+        <td><p><a href="swarm.html">Swarm</p></td>
+        <td><p><a href="other-zo.html">The Other Zoey</p></td>
+        </section>
+      </tr>
+      </table>
+  </body>
+</html>
