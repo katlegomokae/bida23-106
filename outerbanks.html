@@ -2,21 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge" 
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Outer Banks</title>
+    <title>Virgin River</title>
+    
     <style>
-       body { 
-        background-color: #000000;
-      }
-      p { 
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-      }
-      .topnav {
-  overflow: visisble;
-  background-color: #000000;
+      body { background-color: black;}
+      
+            .topnav {
+          overflow: visisble;
+         background-color: #000000;
 }
 
 .topnav a {
@@ -48,6 +43,12 @@
     padding: 14px;
   }
        } 
+      p { 
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        padding-left: 15px;
+      }
         
         header {
                  position: absolute;
@@ -62,8 +63,7 @@
         }
       * {
   box-sizing: border-box;
-}
-
+}    
 body {
   margin: 0;
   font-family: Arial;
@@ -74,25 +74,18 @@ body {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
+  max-width: 100%; 
+  max-height: 75%;
+  padding-top: 40px; 
 }
 
-.content {
-  position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
-}
+  aside { float: left;
+         font-size:20px;
+        }
     </style>
   </head>
-  <body>
-    <video controls autoplay id="myVideo">
-  <source src="obxtrailer.mp4" type="video/mp4">
-</video>
-     <div class="topnav">
+  <body>  
+         <div class="topnav">
       <p><a href="games&apps.html">Games&Apps</a></p>
       <p><a href="collection.html">Collection</a></p>
        <p><a href="feedback.html">Feedback</a></p>
@@ -103,12 +96,14 @@ body {
     <header>
      <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
     </header>
-    <br>
-    <div class="content">
-      <h1>OUTER BANKS</h1>
-    <p>A teenager enlists his three best friends to hunt for a legendary treasure linked to his father's disappearance.</p>
-    <br>
-    <p>Cast:Chase Stokes, Madelyn Cline, Rudy Pankow, Madison Bailey, Drew Starkey ....</p>
-    </div> 
+    <div class="container">
+    <video controls autoplay id="myVideo">
+  <source src="obxtrailer.mp4" type="video/mp4">
+    </video>
+    </div>
+    <aside><p><h1>Virgin River</h1></p></aside>
+    <aside>p>A teenager enlists his three best friends to hunt for a legendary treasure linked to his father's disappearance.</p>
+</aside>
+<p>Cast:Chase Stokes, Madelyn Cline, Rudy Pankow, Madison Bailey, Drew Starkey ....</p>
   </body>
 </html>
