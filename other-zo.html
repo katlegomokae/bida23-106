@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The Other Zoey</title>
+    <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fleabag</title>
+    
     <style>
-       body { 
-         body { background-image: url('otz.jpg');}
-      }
-      p { 
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-      }
-      .topnav {
-  overflow: visisble;
-  background-color: #000000;
+      body { background-color: black;}
+      
+            .topnav {
+          overflow: visisble;
+         background-color: #000000;
 }
 
 .topnav a {
@@ -45,6 +43,12 @@
     padding: 14px;
   }
        } 
+      p { 
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        padding-right: 15px;
+      }
         
         header {
                  position: absolute;
@@ -59,7 +63,7 @@
         }
       * {
   box-sizing: border-box;
-}
+}    
 body {
   margin: 0;
   font-family: Arial;
@@ -70,28 +74,18 @@ body {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
+  max-width: 100%; 
+  max-height: 75%;
+  padding-top: 40px; 
 }
 
-.content {
-  position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
-}
+  aside { float: left;
+         font-size:20px;
+        }
     </style>
   </head>
-  <body>
-    <button style="font-size:25px; background-color:grey;">Play Trailer</button>
-    <video controls style="width:100%; 
-                               max-width: 400px;">
-      <controls autoplay id="myVideo">
-  <source src="toz.mp4" type="video/mp4">
-</video>
-     <div class="topnav">
+  <body>  
+         <div class="topnav">
       <p><a href="games&apps.html">Games&Apps</a></p>
       <p><a href="collection.html">Collection</a></p>
        <p><a href="feedback.html">Feedback</a></p>
@@ -102,12 +96,14 @@ body {
     <header>
      <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
     </header>
+    <div class="container">
+    <video controls autoplay id="myVideo">
+  <source src="toz.mp4" type="video/mp4">
+    </video>
+    </div>
+    <aside><p><h1>The Other Zoey</h1></p></aside>
+    <aside><p>Zoey is a brilliant college student who's determined to challenge the conventional ideas of love and dating. Her life soon gets turned upside down when an amnesiac mistakenly believes she's his girlfriend, who also happens to share the name Zoey.</p>
     <br>
-    <div class="content">
-      <h1>THE OTHER ZOEY</h1>
-    <p>Zoey is a brilliant college student who's determined to challenge the conventional ideas of love and dating. Her life soon gets turned upside down when an amnesiac mistakenly believes she's his girlfriend, who also happens to share the name Zoey.</p>
-    <br>
-    <p>Cast:Josephine Langord, Drew Starkey, Archie Renaux....</p>
-    </div> 
+    <aside><p>Cast:Josephine Langord, Drew Starkey, Archie Renaux....</p></aside>
   </body>
 </html>
