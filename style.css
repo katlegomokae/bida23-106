@@ -157,6 +157,7 @@ footer {
  
  #slider {
       overflow: hidden;
+      padding-top: 35px;
 }
 #slider figure {
   position: relative;
