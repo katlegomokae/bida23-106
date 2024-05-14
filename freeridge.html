@@ -1,22 +1,17 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
-     <meta charset="utf-8">
+    <meta charset="utf-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Freeridge</title>
+    <title>Free Ridge</title>
+    
     <style>
-       body { 
-        background-color: #000000; 
-      }
-      p { 
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-      }
-      .topnav {
-  overflow: visisble;
-  background-color: #000000;
+      body { background-color: black;}
+      
+            .topnav {
+          overflow: visisble;
+         background-color: #000000;
 }
 
 .topnav a {
@@ -48,6 +43,12 @@
     padding: 14px;
   }
        } 
+      p { 
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        padding-left: 15px;
+      }
         
         header {
                  position: absolute;
@@ -62,8 +63,7 @@
         }
       * {
   box-sizing: border-box;
-}
-
+}    
 body {
   margin: 0;
   font-family: Arial;
@@ -74,24 +74,18 @@ body {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
+  max-width: 100%; 
+  max-height: 75%;
+  padding-top: 40px; 
 }
 
-.content {
-  position: fixed;
-  bottom: 0;
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
-}
+  aside { float: left;
+         font-size:20px;
+        }
     </style>
   </head>
-  <body>
-    <video controls autoplay id="myVideo">
-  <source src="freeridgetr.mp4" type="video/mp4">
-</video>
-     <div class="topnav">
+  <body>  
+         <div class="topnav">
       <p><a href="games&apps.html">Games&Apps</a></p>
       <p><a href="collection.html">Collection</a></p>
        <p><a href="feedback.html">Feedback</a></p>
@@ -102,12 +96,14 @@ body {
     <header>
      <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
     </header>
+    <div class="container">
+    <video controls autoplay id="myVideo">
+  <source src="fleabag-trailer.mp4" type="video/mp4">
+    </video>
+    </div>
+<h1>FREERIDGE</h1>
+    <aside><p>Gloria, Ines, Demi, and Cameron unleash a curse bringing dark misfortune into their lives.</p></aside>
     <br>
-    <div class="content">
-      <h1>FREERIDGE</h1>
-    <p>Gloria, Ines, Demi, and Cameron unleash a curse bringing dark misfortune into their lives.</p>
-    <br>
-    <p>Cast:Tenzing Norgay Trainor, Bryanna Salaz,Ciara Riley Wilson, Keyla Monterroso Mejia....</p>
-    </div> 
+   <aside><p>Cast:Tenzing Norgay Trainor, Bryanna Salaz,Ciara Riley Wilson, Keyla Monterroso Mejia....</p></aside>
   </body>
 </html>
