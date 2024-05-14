@@ -57,6 +57,25 @@
           height: 2%;
           opacity: 0.8;
         }
+       div { 
+        white-space: nowrap; 
+        margin-right: 1em;
+        margin-left: 1em;
+          }
+       #zoom {
+  padding: 60px;
+  transition: transform .2s;
+  width: 270px;
+  height: 250px;
+  
+}
+
+#zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+      
        #slider {
       overflow: hidden;
       padding-top: 35px;
@@ -107,25 +126,7 @@
   100% {
     left: -400%
   }
-         div { 
-        white-space: nowrap; 
-        margin-right: 1em;
-        margin-left: 1em;
-          }
-      
-       #zoom {
-  padding: 60px;
-  transition: transform .2s;
-  width: 270px;
-  height: 250px;
-  
-}
-
-#zoom:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5); 
-}
+    
     </style>
   </head>
   <body>
