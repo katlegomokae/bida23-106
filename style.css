@@ -13,8 +13,8 @@ body {
     background-color: #000000;
     float: right;
   }
-     .topright fa-bell {
-                     float: right;
+     .topright fa-search {
+                     float: left;
                      font-size: 20px;
                       width: 30%;
                       padding-left: 10px;
