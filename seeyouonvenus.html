@@ -68,16 +68,17 @@ body {
   margin: 0;
   font-family: Arial;
   font-size: 17px;
+  height: 100%;
+  margin: 0;
+}
+.bg {
+  background-video: url("seeyouon-venus.mp4");
+  height: 60%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  max-width: 100%;
-  height: auto;
-  padding-top: 70px;
-}
  aside { float: left;
          font-size:20px;
         }
@@ -95,11 +96,9 @@ body {
     <header>
      <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
     </header>
-    <video controls autoplay id="myVideo">
-  <source src="seeyouon-venus.mp4" type="video/mp4">
-</video>
+    <div class="bg">
+    </div>
     <br>
-    <div class="content">
       <h1>SEE YOU ON VENUS</h1>
     <aside><p>Mia and Kyle, two misfit American teenagers, fall in love while travelling through Spain in search of Mia's birth mother.</p></aside>
     <br>
