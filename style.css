@@ -95,6 +95,7 @@ a {
           width: 7%;
           height: 2%;
           opacity: 0.8;
+         float: left;
         }
       
       div { 
