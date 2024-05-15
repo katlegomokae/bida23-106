@@ -85,9 +85,15 @@ a {
     border: 1px solid #ccc;  
   }
 }
-img { 
-          width: 60%;
-          height: 5%;
+ header {
+                 position: absolute;
+                 top: 8px;
+                 right: 16px;  
+              }
+
+    img { 
+          width: 7%;
+          height: 2%;
           opacity: 0.8;
         }
       
