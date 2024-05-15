@@ -96,6 +96,10 @@ img {
         margin-right: 1em;
         margin-left: 1em;
           }
+     .responsive {
+  width: 100%;
+  height: auto;
+}
 footer {
    overflow: hidden;
   background-color: #000000;
