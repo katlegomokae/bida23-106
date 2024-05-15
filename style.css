@@ -111,31 +111,25 @@ footer {
   font-size: 15px;
   justify-content: center;
 }
+      div { 
+        white-space: nowrap; 
+        margin-right: 1em;
+        margin-left: 1em;
+          }
+      
        #zoom {
-        padding: 50px;
+         padding: 60px;
         transition: transform .2s;
-         height: 250px;
-         width: 270px;
-           }
+        width: 285px;
+       height: 250px;
+}
 
 #zoom:hover {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.5); 
 }
-.zoom {
-  padding: 10px;
-  transition: transform .2s;
-  width: 10px;
-  height: 5px;
-  margin: 0 auto;
-}
-
-.zoom:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5); 
-}
+      
 
 .insta-icon {
             color: #FFFFFF;
