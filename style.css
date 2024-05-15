@@ -20,12 +20,7 @@ body {
                       padding-top: 50px;
                       padding-left: 25px;
                       margin-left: 10px; 
-                  }
- header { 
-  width: 25%;
-  height: auto;
-  opacity: 0.8;
-}
+     }
 a { 
    text-decoration: none;
    color: white;
@@ -62,27 +57,14 @@ a {
   color: grey;
 }
 
-.topnav input[type=text]  {
-  float: right;
-  padding: 6px;
-  margin-top: 8px;
-  margin-right: 16px;
-  border: none;
-  font-size: 17px;
-}
-
 @media screen and (max-width: 600px) {
-  .topnav a, .topnav input[type=text] {
+  .topnav a {
     float: none;
     display: block;
     text-align: left;
     width: 100%;
     margin: 0;
     padding: 14px;
-  }
-  
-  .topnav input[type=text] {
-    border: 1px solid #ccc;  
   }
 }
  header {
@@ -95,14 +77,12 @@ a {
           width: 7%;
           height: 2%;
           opacity: 0.8;
-         float: left;
         }
       
       div { 
         white-space: nowrap; 
         margin-right: 1em;
         margin-left: 1em;
-        background-color: #000000;
           }
      .responsive {
   width: 100%;
