@@ -1,66 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8"> 
-	<meta name="viewport" content="width=device-width,initial-scale=1.0"> 
-     <title>Feedback</title>	
-	  <style>
-		  body {
-			  background-color: black;
-		  }
-      header {
-                 position: absolute;
-                 top: 8px;
-                 right: 16px;  
-              }
-
-    img { 
-          width: 7%;
-          height: 1%;
-          opacity: 0.8;
-        }
-		  .topnav a {
-  float: right;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px 18px;
-  text-decoration: none;
-  font-size: 15px;
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+         <title>Feedback</title>
+         <style>
+            * {margin:0;
+            padding:0;
+        box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    --yellow: #FFBD13;
+    --blue: #4383FF;
+    --light: #f5f5f5;
+    --grey: #AAA;
+    --white: #FFF;
+    --shadow: 8px 8px 30px rgba(0,0,0,.05);
+}
+body {
+    background: var(--light);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.topnav a:hover {
-  background-color: rgba(255,255,255,0);
-  color: white;
-}
 
-.topnav a.active {
-  background-color: #000000;
-  color: grey;
-}
-      @media screen and (max-width: 600px) {
-  .topnav a {
-    float: none;
-    display: block;
-    text-align: left;
+
+
+
+.wrapper { 
+    background: var(--white);
+    padding: 2rem;
+    max-width: 576px;
     width: 100%;
-    margin: 0;
-    padding: 14px;
-  }  
-    </style>
-  </head>
-  <body>
-     <div class="topnav">
-      <p><a href="games&apps.html">Games&Apps</a></p>
-      <p><a href="collection.html">Collection</a></p>
-       <p><a href="feedback.html">Feedback</a></p>
-       <p><a class="active" href="tvshows.html">TV Shows</a></p>
-       <p><a href="movies.html">Movies</a></p>
-      <p><a href="index.html">Home</a></p>
-      </div>
-    <header>
-     <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
-    </header>
-		  </body>
-		  </html>
+    border-radius: .75rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+.wrapper h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: .5rem
+    font-size: 2rem;
+    color: var(--yellow);
+    margin-bottom: 2rem;
+}
+.rating .star {
+    cursor: pointer;
+}
+.rating .star.active {
+    opacity: 0;
+    animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+.rating .star:hover {
+    transform: scale(1.1);
+}
+textarea {
+    width: 100%;
+    background: var(--light);
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    resize: none;
+    margin-bottom: .5rem;
+}
+.btn-group {
+    display: flex;
+    grid-gap: .5rem;
+    align-items: center;
+}
+.btn-group .btn {
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: .875rem;
+    font-weight: 500;
+}
+.btn-group .btn.submit {
+background: var(--blue);
+color: var(--white);
+}
+.btn-group .btn.submit:hover {
+    background: var(--blue);
+}
+.btn-group .btn.cancel {
+    background: var(--white);
+    color: var(--blue);
+}
+.btn-group .btn.cancel:hover {
+    background: var(--light);
+}
+         </style>
+         </head>
+         <body>
+            <div class="wrapper">
+                <h3>Give Us Feedback</h3>
+            <form action="#">
+            <div class="rating">
+                <input type="number" name="rating" hidden>
+               <i class="bx bx-star star" style=""--i: 0;></i>    
+               <i class="bx bx-star star" style=""--i: 1;></i>          
+               <i class="bx bx-star star" style=""--i: 2;></i>          
+               <i class="bx bx-star star" style=""--i: 3;></i>          
+               <i class="bx bx-star star" style=""--i: 4;></i>                
+              </div>
+              <textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+              <div class="btn-group">
+                <button type="submit" class="btn submit">Submit</button>
+                <button class="btn cancel">Cancel</button>
+              </div>
+            </form>
+            </div>
+            <script>
+                const allStar = document.querySelectorAll('.rating .star')
+                const ratingValue = document.querySelector('.rating input')
+                allStar.forEach((item, idx)=> {
+                    item.addEventListener('click', function () {
+                        let click = 0
+                        ratingValue.value = idx + 1
+                        console.log(ratingValue.value)
 
+                        allStar.forEach(i=> {
+                            i.classList.replace('bxs-star, bx-star')
+                            i.classList.remove('active')
+                        })
+                        for(let i=0; i<allStar.length; i++) {
+                            if(i <= idx) {
+                                allStar[i].classList.replace('bx-star', 'bxs-star')
+                                allStar[i].classList.add('active')
+                            } else {
+                                allStar[i].style.setProperty('--i', click )
+                                click++
+                            }
+                        }       
+                    })
+                })
+            </script>
+         </body>
+</html>
