@@ -4,6 +4,7 @@
      <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       body {
         background-color: #000000;
@@ -134,7 +135,71 @@
   }
   100% {
     left: -400%
-  }    
+  }   
+  footer {
+  text-align: center;
+  color: grey;
+}
+      footer {
+        background-color: black;
+      }
+      .footercontainer{
+        width:100%;
+        padding: 70px 30px 20px;
+      }
+      .socialicons {
+        display: flex;
+        justify-content: center;
+      }
+      .socialicons a{
+        text-decoration: none;
+        padding: 10px;
+        background-color: #000000;
+        margin: 10px;
+        border-radius: 50%;
+      }
+      .socialicons a i{
+        font-size: 2em;
+        color: #000000;
+        opaacity: 0.9;
+      }
+      .socialicons a:hover {
+        background-color: #000000;
+        transition: 0.5s;
+      }
+      .socialicons a:hover i{
+        color: #ffffff;
+        transition: 0.5s;
+      }
+      .footerNav {
+        margin: 30px 0;
+      }
+    
+       .footerNav ul{
+        display: flex;
+        justify-content: center;
+      }
+      
+      .footerNav ul i a{
+       color: white;
+        margin: 20px;
+        text-decoration: none;
+        font-size: 1.3em;
+        opacity: 0.7;
+        transition: 0.5s;
+      }  
+       .footerNav ul i a:hover {
+         opacity: 1;
+       }
+      .footerBottom {
+        background-color: black;
+        padding: 20px;
+        text-align: center;
+      }
+        .footerBottom p{
+          color: #000000;
+        }
+        
     </style>
   </head>
   <body>
@@ -190,8 +255,27 @@
         </tr>
       </table>
     <footer>
-      <p>TM & <sup>©</sup> 2024 Warner Bros. Entertainment Inc.</p> 
+      <div class="footercontainer">
+        <div calss="socialicons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <div class="footerNav">
+          <ul>
+            <a href="aboutus.html">Company</a>
+             <a href="aboutus.html">Accesibility</a>
+             <a href="aboutus.html">Cookie Settings</a>
+             <a href="aboutus.html">Help</a>
+          </ul>
+      </div>
+      </div>
+       <div class="footerBottom">
+       <p>TM & <sup>©</sup> 2024 Warner Bros. Entertainment Inc.</p> 
       <p>All rights reserved.</p>
+        </div>
     </footer>
   </body>
 </html>
