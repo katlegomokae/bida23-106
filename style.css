@@ -17,43 +17,7 @@ a {
        a:hover {
                 background-color: rgba(255,255,255,0);
                 color: white;
-       }
-.topnav {
-  overflow: hidden;
-  background-color: #000000;
- justify-content: center;
-}
 
-.topnav a {
-  float: right;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px 18px;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.topnav a:hover {
-  background-color: rgba(255,255,255,0);
-  color: white;
-}
-
-.topnav a.active {
-  background-color: #000000;
-  color: grey;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-}
  header {
                  position: absolute;
                  top: 8px;
