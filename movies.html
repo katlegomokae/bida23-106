@@ -150,6 +150,7 @@
       .socialicons {
         display: flex;
         justify-content: center;
+        float: right;
       }
       .socialicons a{
         text-decoration: none;
@@ -178,6 +179,7 @@
        .footerNav ul{
         display: flex;
         justify-content: center;
+         list-style-type: none;
       }
       
       .footerNav ul i a{
@@ -198,7 +200,18 @@
       }
         .footerBottom p{
           color: #000000;
+          font-size: 15px;
         }
+      @media(max-width: 700px;){
+        .footerNav ul{
+          flex-direction: column;
+        }
+        .footerNav ul li{
+          width: 100%;
+          text-align: center;
+          margin: 10px;
+      }
+      }
         
     </style>
   </head>
@@ -256,7 +269,7 @@
       </table>
     <footer>
       <div class="footercontainer">
-        <div calss="socialicons">
+        <div class="socialicons">
           <a href="#"><i class="fa-brands fa-facebook"></i></a>
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
           <a href="#"><i class="fa-brands fa-youtube"></i></a>
@@ -273,8 +286,7 @@
       </div>
       </div>
        <div class="footerBottom">
-       <p>TM & <sup>©</sup> 2024 Warner Bros. Entertainment Inc.</p> 
-      <p>All rights reserved.</p>
+       <p>TM & <sup>©</sup> 2024 Warner Bros. Entertainment Inc.</p>  <p>All rights reserved.</p>
         </div>
     </footer>
   </body>
