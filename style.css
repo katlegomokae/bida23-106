@@ -76,7 +76,76 @@ a {
   width: 100%;
   height: auto;
 }
-.container {
+      div { 
+        white-space: nowrap; 
+        margin-right: 1em;
+        margin-left: 1em;
+          }
+      
+       #zoom {
+         padding: 60px;
+        transition: transform .2s;
+        width: 285px;
+       height: 250px;
+}
+
+#zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+    
+   #slider {
+      overflow: hidden;
+      padding-top: 35px;
+}
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: slider 20s infinite;
+}
+
+#slider figure img {
+             margin-left: 0px;
+             margin-right: 0px;
+            width: 20%;
+          float: left;
+           height: 60%; 
+        background-position: center;
+       background-repeat: no-repeat;
+      background-size: cover;
+           }
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%
+  }
+  .container {
   max-width:1170px;
   background-color: black;
   margin: auto;
@@ -156,72 +225,3 @@ ul {
   }
 }
 
-      div { 
-        white-space: nowrap; 
-        margin-right: 1em;
-        margin-left: 1em;
-          }
-      
-       #zoom {
-         padding: 60px;
-        transition: transform .2s;
-        width: 285px;
-       height: 250px;
-}
-
-#zoom:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5); 
-}
-    
-   #slider {
-      overflow: hidden;
-      padding-top: 35px;
-}
-#slider figure {
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  animation: slider 20s infinite;
-}
-
-#slider figure img {
-             margin-left: 0px;
-             margin-right: 0px;
-            width: 20%;
-          float: left;
-           height: 60%; 
-        background-position: center;
-       background-repeat: no-repeat;
-      background-size: cover;
-           }
-@keyframes slider {
-  0% {
-    left: 0;
-  }
-  20% {
-    left: 0;
-  }
-  25% {
-    left: -100%;
-  }
-  45% {
-    left: -100%;
-  }
-  50% {
-    left: -200%;
-  }
-  70% {
-    left: -200%
-  }
-  75% {
-    left: -300%;
-  }
-  95% {
-    left: -300%;
-  }
-  100% {
-    left: -400%
-  }
