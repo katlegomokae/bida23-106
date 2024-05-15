@@ -8,19 +8,6 @@ body {
   background-color: #000000;
   overflow-x: hidden;
      }
-  .topright {
-    overflow: hidden;
-    background-color: #000000;
-    float: right;
-  }
-     .topright fa-search {
-                     float: right;
-                     font-size: 20px;
-                      width: 40%;
-                      padding-top: 50px;
-                      padding-left: 25px;
-                      margin-left: 10px; 
-     }
 a { 
    text-decoration: none;
    color: white;
@@ -70,12 +57,12 @@ a {
  header {
                  position: absolute;
                  top: 8px;
-                 right: 16px;  
+                 left: 16px;  
               }
 
     img { 
-          width: 7%;
-          height: 2%;
+          width: 10px;
+          height: 5px;
           opacity: 0.8;
         }
       
