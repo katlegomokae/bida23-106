@@ -3,6 +3,7 @@
   <head>
      <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title> TV shows </title>
     <style>
       body { 
@@ -65,6 +66,21 @@
        .responsive {
   width: 100%;
   height: auto;
+}
+  form.search button {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  background: #000000;
+  color: white;
+  font-size: 20px;
+  border: 1px solid grey;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: grey;
 }
        div { 
         white-space: nowrap; 
@@ -159,7 +175,10 @@
         <img src="waves.jpg">
       </figure>
     </div>
-
+<form>
+  <form class="search" action="/action_page.php">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
     <table> 
   <tr>
       <p>Suspensful</p>
