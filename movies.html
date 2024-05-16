@@ -108,8 +108,6 @@ form.search button:hover {
        #slider {
       overflow: hidden;
       padding-top: 50px;
-      width: 100%;
-      height: auto;
 }
 #slider figure {
   position: relative;
@@ -157,9 +155,10 @@ form.search button:hover {
   100% {
     left: -400%
   }   
-  @media screen and (max-device-width: 400px;)
-      slider figure {
-            position: static;
+  @media screen and (min-device-width: 400px;)
+      slider {
+          width: 100%;
+          height: auto;
 }
       }
            
