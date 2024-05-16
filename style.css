@@ -110,7 +110,7 @@ form.search button:hover {
       width:100%;
 }
 #slider figure {
-  position: relative;
+  position: fixed;
   width: 500%;
   margin: 0;
   left: 0;
