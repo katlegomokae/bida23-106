@@ -7,7 +7,11 @@
     <title>Fleabag</title>
     
     <style>
-      body { background-color: black;}
+      body { background-color: black;
+             margin: 0;
+             font-family: Arial;
+             font-size: 17px;
+           }
       
             .topnav {
           overflow: visisble;
@@ -65,12 +69,24 @@
       * {
   box-sizing: border-box;
 }    
-body {
-  margin: 0;
-  font-family: Arial;
-  font-size: 17px;
+
+ form.search button {
+  position: absolute;
+  float: left;
+  display: block;
+  width: 20%;
+  padding: 10px;
+  background: #000000;
+  color: white;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 70px;
+  cursor: pointer;
 }
 
+form.search button:hover {
+  background: grey;
+}
 #myVideo {
   position: relative;
   right: 0;
