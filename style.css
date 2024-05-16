@@ -104,7 +104,8 @@ form.search button:hover {
   transform: scale(1.5); 
 }
       
-       #slider {
+     
+            #slider {
       overflow: hidden;
       padding-top: 35px;
 }
@@ -125,7 +126,7 @@ form.search button:hover {
         background-position: center;
        background-repeat: no-repeat;
       background-size: cover;
-           }
+}
 @keyframes slider {
   0% {
     left: 0;
