@@ -3,25 +3,19 @@
   <head>
      <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WarnerBros. | Collection</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title> TV shows </title>
     <style>
-      body { background: #000000;
-           }
-      p { font-size: 20px;
-         color: #ffffff;
+      body { 
+        background-color: #000000; 
+        overflow-x: hidden;
+      }
+      p { 
+        color: #ffffff;
         font-family: Arial, Helvetica, sans-serif;
-         text-align: center;
-        }
-        a { 
-   text-decoration: none;
-   color: white;
-   font-style: Arial, Helvetica, sans-serif;
-   font-size: 20px;
-  }
-       a:hover {
-                background-color: rgba(255,255,255,0);
-                color: white;
-       } 
+        font-size: 20px;
+        padding-left: 10px;
+      }
       .topnav {
   overflow: hidden;
   background-color: #000000;
@@ -39,68 +33,90 @@
 
 .topnav a:hover {
   background-color: rgba(255,255,255,0);
-  color: grey;
+  color: white;
 }
 
 .topnav a.active {
   background-color: #000000;
   color: grey;
 }
-        @media screen and (max-width: 600px) {
+      @media screen and (max-width: 600px) {
   .topnav a {
     float: none;
     display: block;
-    text-align: center;
+    text-align: left;
     width: 100%;
     margin: 0;
     padding: 14px;
   }
-             #zoom {
-  padding: 50px;
+       } 
+        
+        header {
+                 position: absolute;
+                 top: 8px;
+                 right: 16px;  
+              }
+
+    img { 
+          width: 7%;
+          height: 2%;
+          opacity: 0.8;
+      padding-top: 10px;
+        }
+       .responsive {
+  width: 100%;
+  height: auto;
+}
+  form.search button {
+  position: absolute;
+  float: left;
+  display: block;
+  width: 20%;
+  padding: 10px;
+  background: #000000;
+  color: white;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 70px;
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: grey;
+}
+       div { 
+        white-space: nowrap; 
+        margin-right: 1em;
+        margin-left: 1em;
+          }
+       #zoom {
+  padding: 60px;
   transition: transform .2s;
-  width: 260px;
-  height: 230px;
-  margin: 0 auto;
+  width: 270px;
+  height: 250px;
+  
 }
 
 #zoom:hover {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.5); 
-} 
-      div { 
-        white-space: nowrap; 
-        margin-right: 1em;
-        margin-left: 1em;
-      }
-    </style>
+}
+      </style>
   </head>
-  <body> 
+      <body>
       <div class="topnav">
       <p><a href="games&apps.html">Games&Apps</a></p>
-      <p><a class="active" href="collection.html">Collections</a></p>
+      <p><a href="collection.html">Collection</a></p>
        <p><a href="feedback.html">Feedback</a></p>
-       <p><a href="tvshows.html">TV Shows</a></p>
+       <p><a class="active" href="tvshows.html">TV Shows</a></p>
        <p><a href="movies.html">Movies</a></p>
       <p><a href="index.html">Home</a></p>
-    </div> 
-    <table>
-      <div>
-      <tr>
-        <td><a href="romancecoll.html"><img class="zoom" src="virgin-river.jpg" alt="Virgin River"></a></td> 
-         <td><a href="netflix.html"><img id="zoom" src="netflix.jpg" alt="Netflix"></a></td> 
-          <td><a href="prime.html"><img id="zoom" src="primevideo.jpeg" alt="Prime Video"></a></td>
-          <td><a href="binge.html"><img id="zoom" src="gg.jpg" alt="Gilmore Girls"></a></td>
-      </tr>
       </div>
-      <div>
-      <tr>
-          <td><p><a href="romancecoll.html">Romance</p></td>
-          <td><p><a href="netflix.html">Netflix</p></td>
-          <td><p><a href="prime.html">Prime Video</p></td>
-          <td><p><a href="binge.html">Binge TV</p></td>
-      </tr>
-      </div>
-    </table>
-  </body>
-</html>
+    <header>
+     <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
+    </header>
+     <form class="search" action="search.html" style="margin:20px;max-width:300px">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>  
+      </body>
