@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
     <style>
       body {
@@ -67,10 +65,61 @@
           opacity: 0.8;
           padding-top: 10px;
         }
-      .cover {
-        width: 100%;
-        height: auto;
-        padding-top: 30px;
+        #slider {
+      overflow: hidden;
+      padding-top: 50px;
+}
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: slider 20s infinite;
+}
+
+#slider figure img {
+             margin-left: 0px;
+             margin-right: 0px;
+            width: 20%;
+          float: left;
+           height: 60%; 
+        background-position: center;
+       background-repeat: no-repeat;
+      background-size: cover;
+           }
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%
+  }   
+  @media screen and (min-device-width: 400px;)
+      slider {
+          width: 100%;
+          height: auto;
+}
       }
        .responsive {
   width: 100%;
@@ -205,31 +254,14 @@ form.example button:hover {
   <form class="example" action="search.html" style="margin:auto;max-width:300px">
   <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
 </form>
-    <div class="cover">
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="pearl.jpg" alt="Pearl" class="d-block" style="width:100%">
-    </div>
-    <div class="carousel-item">
-      <img src="waves.jpg" alt="Waves" class="d-block" style="width:100%">
-    </div>
-    <div class="carousel-item">
-      <img src="girlstrip.jpg" alt="Girls Trip" class="d-block" style="width:100%">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
+   <div id="slider">
+      <figure>
+        <img src="pearl.jpg">
+        <img src="everything-everything.jpg">
+        <img src="girl-interrupted.webp">
+        <img src="girlstrip.jpg">
+        <img src="waves.jpg">
+      </figure>
     </div>
   <table>
     <tr>
