@@ -59,7 +59,8 @@
   width: 100%;
   height: auto;
 }
-  form.search button {
+   form.search button {
+  position: absolute;
   float: left;
   display: block;
   width: 20%;
@@ -67,14 +68,15 @@
   background: #000000;
   color: white;
   font-size: 20px;
-  border: 1px solid grey;
-  border-radius: 50px;
+  border: 1px solid black;
+  border-radius: 70px;
   cursor: pointer;
 }
 
 form.search button:hover {
   background: grey;
-}
+}}
+
        div { 
         white-space: nowrap; 
         margin-right: 1em;
