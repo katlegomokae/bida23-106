@@ -3,23 +3,20 @@
   <head>
      <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title> TV shows </title>
     <style>
-      body {
-        background-color: #000000;
+      body { 
+        background-color: #000000; 
         overflow-x: hidden;
       }
-            
-        p { 
-          color: #ffffff;
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 20px;
-          margin-top: 2em;
-          padding-left: 15px;
-        }
-       .topnav {
+      p { 
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        padding-left: 10px;
+      }
+      .topnav {
   overflow: hidden;
   background-color: #000000;
 }
@@ -36,24 +33,25 @@
 
 .topnav a:hover {
   background-color: rgba(255,255,255,0);
-  color: grey;
+  color: white;
 }
 
 .topnav a.active {
   background-color: #000000;
   color: grey;
 }
-      @media screen and (max-device-width: 300px) {
+      @media screen and (max-width: 600px) {
   .topnav a {
-    float: right;
+    float: none;
     display: block;
-    text-align: right;
+    text-align: left;
     width: 100%;
     margin: 0;
     padding: 14px;
   }
-      }
-      header {
+       } 
+        
+        header {
                  position: absolute;
                  top: 8px;
                  right: 16px;  
@@ -63,14 +61,13 @@
           width: 7%;
           height: 2%;
           opacity: 0.8;
-          padding-top: 10px;
+      padding-top: 10px;
         }
-    
        .responsive {
   width: 100%;
   height: auto;
-} 
- form.search button {
+}
+  form.search button {
   position: absolute;
   float: left;
   display: block;
@@ -87,17 +84,17 @@
 form.search button:hover {
   background: grey;
 }
-          div { 
+       div { 
         white-space: nowrap; 
         margin-right: 1em;
         margin-left: 1em;
           }
-      
        #zoom {
-         padding: 60px;
-        transition: transform .2s;
-        width: 150px;
-       height: 100px;
+  padding: 60px;
+  transition: transform .2s;
+  width: 270px;
+  height: 250px;
+  
 }
 
 #zoom:hover {
@@ -105,12 +102,8 @@ form.search button:hover {
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.5); 
 }
-
-  
-  left: 0;
-  animation: slider 20s infinite;
-}
- #slider {
+      
+       #slider {
       overflow: hidden;
       padding-top: 35px;
 }
@@ -160,123 +153,47 @@ form.search button:hover {
   100% {
     left: -400%
   }
-  
-  footer {
-  text-align: center;
-  color: grey;
-}
-      footer {
-        background-color: black;
-      }
-      .footercontainer{
-        width:100%;
-        padding: 70px 30px 20px;
-      }
-      .socialicons {
-        display: flex;
-        justify-content: center;
-      }
-      .socialicons a{
-        text-decoration: none;
-        padding: 10px;
-        background-color: #ffffff;
-        margin: 10px;
-        border-radius: 50%;
-      }
-      .socialicons a i{
-        font-size: 2em;
-        color: #000000;
-        opaacity: 0.9;
-      }
-      .socialicons a:hover {
-        background-color: #111;
-        transition: 0.5s;
-      }
-      .socialicons a:hover i{
-        color: #ffffff;
-        transition: 0.5s;
-      }
-      .footerNav {
-        margin: 30px 0;
-      }
-    
-       .footerNav ul{
-        display: flex;
-        justify-content: center;
-         list-style-type: none;
-      }
-      
-      .footerNav ul i a{
-       color: white;
-        margin: 20px;
-        text-decoration: none;
-        font-size: 1.3em;
-        opacity: 0.7;
-        transition: 0.5s;
-      }  
-       .footerNav ul i a:hover {
-         opacity: 1;
-       }
-      .footerBottom {
-        background-color: black;
-        padding: 20px;
-        text-align: center;
-      }
-        .footerBottom p{
-          color: #000000;
-          font-size: 15px;
-        }
-      @media(max-width: 700px;){
-        .footerNav ul{
-          flex-direction: column;
-        }
-        .footerNav ul li{
-          width: 100%;
-          text-align: center;
-          margin: 10px;
-      }
-      }
-        
     </style>
   </head>
   <body>
-   <div class="topnav">
+      <div class="topnav">
       <p><a href="games&apps.html">Games&Apps</a></p>
-      <p><a href="collection.html">Collections</a></p>
+      <p><a href="collection.html">Collection</a></p>
        <p><a href="feedback.html">Feedback</a></p>
-       <p><a href="tvshows.html">TV Shows</a></p>
-       <p><a class="active" href="movies.html">Movies</a></p>
+       <p><a class="active" href="tvshows.html">TV Shows</a></p>
+       <p><a href="movies.html">Movies</a></p>
       <p><a href="index.html">Home</a></p>
-    </div> 
+      </div>
     <header>
      <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
     </header>
-   <form class="search" action="search.html" style="margin:20px;max-width:300px">
+     <form class="search" action="search.html" style="margin:20px;max-width:300px">
   <button type="submit"><i class="fa fa-search"></i></button>
-   <div id="slider">
+</form>
+    <div id="slider">
       <figure>
         <img src="pearl.jpg">
-        <img src="everything-everything.jpg">
+        <img src="Ginny&Georgia.jpg">
         <img src="girl-interrupted.webp">
         <img src="girlstrip.jpg">
         <img src="waves.jpg">
       </figure>
     </div>
-  <table>
-    <tr>
-      <br>
-      <p>Romance</p>
+    <table> 
+  <tr>
+     <p>Romance</p>
       <div>
       <td><a href="seeyouonvenus.html"><img id="zoom" src="See You On Venus.jpeg" class="responsive" alt="See You On Venus"  style="width:250px;height:200px;"></a></td>
       <td><a href="other-zo.html"><img id="zoom" src="other-zoey.jpg"  class="responsive" alt="The Other Zoey"    style="width:250px;height:200px;"></a></td>
       <td><a href="perfectfind.html"><img id="zoom" src="theperfectfind.jpeg" class="responsive" alt="The Perfect Find"  style="width:250px;height:200px;"></a></td>
-          <td><a href="lovegelato.html"><img id="zoom" src="love&gelato.jpeg" class="responsive" alt="love&gelato"   style="width:250px;height:200px;"></a></td>
+      <td><a href="lovegelato.html"><img id="zoom" src="love&gelato.jpeg" class="responsive" alt="love&gelato"   style="width:250px;height:200px;"></a></td>
       </div>
-    </tr>
-  </table>
+    </tr> 
+    </table>
+
     <table>
       <tr>
-        <p>Comedy</p>
+       <p>Comedy</p>
         <div>
           <td><a href="bridesmaids.html"><img id="zoom" src="bridesmaids.jpg" class="responsive" alt="Bridesmaids"   style="width:250px;height:200px;"></a></td>
           <td><a href="dorevenge.html"><img id="zoom" src="dorevenge.jpg" class="responsive" alt="Do Revenge"    style="width:250px;height:200px;"></a></td>
@@ -285,38 +202,17 @@ form.search button:hover {
         </div>
       </tr>
     </table>
-      <table>
-        <tr>
-          <p>Indie Movies</p>
+
+    <table>
+      <tr>
+      <p>Indie Movies</p>
           <div>
             <td><a href="floproject.html"><img id="zoom" src="the-florida-project.jpg"  class="responsive" alt="The Florida Project" style="width:250px;height:200px;"></a></td>
             <td><a href="ladybird.html"><img id="zoom" src="ladybird.jpg" class="responsive" alt="Ladybird" style="width:250px;height:200px;"></a></td>
             <td><a href="cmbyn.html"><img id="zoom" src="cmbyn.jpeg" class="responsive" alt="Call Me By Your Name"  style="width:250px;height:200px;"></a></td>
             <td><a href="beautifulboy.html"><img id="zoom" src="beautiful-boy.jpeg" class="responsive" alt="Beautiful Boy"  style="width:250px;height:200px;"></a></td>
           </div>
-        </tr>
-      </table>
-    <footer>
-      <div class="footercontainer">
-        <div class="socialicons">
-          <a href="https://www.facebook.com/warnerbrosent/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-          <a href="insta-icon" href="https://www.facebook.com/warnerbrosent/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.youtube.com/user/WarnerBrosPictures" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-          <a href="https://twitter.com/Warnerbros/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/company/warner-bros--entertainment/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-        </div>
-        <div class="footerNav">
-          <ul>
-            <li><a href="aboutus.html">Company</a></li>
-             <li><a href="aboutus.html">Accesibility</a></li>
-             <li><a href="aboutus.html">Cookie Settings</a></li>
-             <li><a href="aboutus.html">Help</a></li>
-          </ul>
-      </div>
-      </div>
-       <div class="footerBottom">
-       <p>TM & <sup>©</sup> 2024 Warner Bros. Entertainment Inc.</p>  <p>All rights reserved.</p>
-        </div>
-    </footer>
+      </tr>
+    </table>
   </body>
 </html>
