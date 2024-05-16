@@ -55,7 +55,7 @@
     margin: 0;
     padding: 14px;
   }
-             .zoom {
+             #zoom {
   padding: 50px;
   transition: transform .2s;
   width: 260px;
@@ -63,7 +63,7 @@
   margin: 0 auto;
 }
 
-.zoom:hover {
+#zoom:hover {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.5); 
@@ -78,29 +78,29 @@
   <body> 
       <div class="topnav">
       <p><a href="games&apps.html">Games&Apps</a></p>
-      <p><a class="active" href="collection.html">Collection</a></p>
+      <p><a class="active" href="collection.html">Collections</a></p>
        <p><a href="feedback.html">Feedback</a></p>
        <p><a href="tvshows.html">TV Shows</a></p>
        <p><a href="movies.html">Movies</a></p>
       <p><a href="index.html">Home</a></p>
     </div> 
     <table>
+      <div>
       <tr>
-        <div>
         <td><a href="romancecoll.html"><img class="zoom" src="virgin-river.jpg" alt="Virgin River"></a></td> 
-         <td><a href="netflix.html"><img class="zoom" src="netflix.jpg" alt="Netflix"></a></td> 
-          <td><a href="prime.html"><img class="zoom" src="primevideo.jpeg" alt="Prime Video"></a></td>
-          <td><a href="binge.html"><img class="zoom" src="gg.jpg" alt="Gilmore Girls"></a></td>
-        </div>
+         <td><a href="netflix.html"><img id="zoom" src="netflix.jpg" alt="Netflix"></a></td> 
+          <td><a href="prime.html"><img id="zoom" src="primevideo.jpeg" alt="Prime Video"></a></td>
+          <td><a href="binge.html"><img id="zoom" src="gg.jpg" alt="Gilmore Girls"></a></td>
       </tr>
+      </div>
+      <div>
       <tr>
-        <div>
           <td><p><a href="romancecoll.html">Romance</p></td>
           <td><p><a href="netflix.html">Netflix</p></td>
           <td><p><a href="prime.html">Prime Video</p></td>
           <td><p><a href="binge.html">Binge TV</p></td>
-        </div>
       </tr>
+      </div>
     </table>
   </body>
 </html>
