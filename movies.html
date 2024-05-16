@@ -41,7 +41,7 @@
   background-color: #000000;
   color: grey;
 }
-      @media screen and (max-width: 600px) {
+      @media screen and (max-device-width: 400px) {
   .topnav a {
     float: right;
     display: block;
@@ -158,6 +158,12 @@ form.search button:hover {
   100% {
     left: -400%
   }   
+
+  @media screen and {max-device-width:600px;) {
+                     slider {
+                       object-fit: contain;
+                     }
+                    }
   footer {
   text-align: center;
   color: grey;
