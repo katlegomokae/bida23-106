@@ -107,6 +107,7 @@ form.search button:hover {
        #slider {
       overflow: hidden;
       padding-top: 35px;
+      width:100%;
 }
 #slider figure {
   position: relative;
