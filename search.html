@@ -81,12 +81,68 @@ form.search::after {
   clear: both;
   display: table;
 }
+      div { 
+        white-space: nowrap; 
+        margin-right: 1em;
+        margin-left: 1em;
+          }
+       #zoom {
+  padding: 60px;
+  transition: transform .2s;
+  width: 270px;
+  height: 250px;
+  
+}
+
+#zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
       </style>
   </head>
   <body>
+    <div class="topnav">
+      <p><a href="games&apps.html">Games&Apps</a></p>
+      <p><a href="collection.html">Collection</a></p>
+       <p><a href="feedback.html">Feedback</a></p>
+       <p><a class="active" href="tvshows.html">TV Shows</a></p>
+       <p><a href="movies.html">Movies</a></p>
+      <p><a href="index.html">Home</a></p>
+      </div>
       <form class="example" action="movies.html">
   <input type="text" placeholder="Search For Movies and TV Shows...." name="search">
 </form>
+     <table> 
+  <tr>
+      <div>
+      <td><a href="thesociety.html"><img id="zoom" src="the-society.jpg"   class="responsive" style="width:250px;height:200px;"></a></td>
+      <td><a href="freeridge.html"><img id="zoom" src="freeridge.jpg"  class="responsive"  style="width:250px;height:200px;"></a></td>
+      <td><a href="swarm.html"><img id="zoom" src="swarm.png"  class="responsive"  style="width:250px;height:200px;"></a></td>
+      <td><a href="outerbanks.html"><img id="zoom" src="outer-banks.jpeg"  class="responsive"   style="width:250px;height:200px;"></a></td>
+        </div>
+    </tr> 
+    </table>
+     <table>
+      <tr>
+        <div>
+          <td><a href="fleabag.html"><img id="zoom" src="fleabag.jpg" class="responsive" style="width:250px;height:200px;" ></a></td>
+          <td><a href="tsitp.html"><img id="zoom" src="tsitp.jpg"  class="responsive"  style="width:250px;height:200px;"></a></td>
+          <td><a href="fromscratch.html"><img id="zoom" src="from-scratch.jpg"  class="responsive"  style="width:250px;height:200px;"></a></td>
+           <td><a href="virginriver.html"><img id="zoom" src="virgin-river.jpg"   class="responsive" style="width:250px;height:200px;"></a></td>
+        </div> 
+      </tr>
+    </table>
+<table>
+      <tr>
+        <div>
+          <td><a href="baby.html"><img id="zoom" src="baby.jpg"  class="responsive"  style="width:250px;height:200px;""></a></td>
+          <td><a href="tsitp.html"><img id="zoom" src="tsitp.jpg"  class="responsive"  style="width:250px;height:200px;"></a></td>
+          <td><a href="heartbreakhigh.html"><img id="zoom" src="Heartbreak-high.jpg"  class="responsive" style="width:250px;height:200px;"></a></td>
+           <td><a href="ginnyandgeorgia.html"><img id="zoom" src="Ginny&Georgia.jpg"  class="responsive" style="width:250px;height:200px;"></a></td>
+        </div>
+      </tr>
+    </table>
   </body>
 </html>
       
