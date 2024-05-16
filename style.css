@@ -114,6 +114,7 @@ form.search button:hover {
   width: 500%;
   margin: 0;
   left: 0;
+  right:0
   animation: slider 20s infinite;
 }
 
