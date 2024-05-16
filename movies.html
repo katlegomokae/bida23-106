@@ -153,6 +153,77 @@ form.search button:hover {
   100% {
     left: -400%
   }
+  footer{
+          background-color: #111
+        }
+        .footerContainer {
+            width: 100%; 
+            padding: 70px 10px 20px;
+        }
+        .socialIcons{
+            display:flex;
+            justify-content: center;
+        }
+        .socialIcons a{
+            text-decoration: none;
+            padding: 10px;
+            background-color:aliceblue;
+            margin: 10px;
+            border-radius: 50%;
+        }
+         socialIcons a i(
+            font-size: 7em;
+            color: black;
+            opacity: 0.9
+         )
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5
+}
+.footerNav{
+    margin:30px opx;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+      .footerNav ul li a{
+        color: white;
+        margin: 20px;
+        text-decoration: none;
+        font-size: 1.3em;
+        opacity: 0.7;
+        transition: 0.5s
+      }
+      .footerNav ul li a:hover{
+        opacity:1;
+      }
+      .footerBottom{
+        background-color: #000
+        padding: 20px;
+        text-align: center;
+      }
+      .footerBottom p{
+        color:white;
+      }
+      .designer{
+        opacity: 0.7;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 400px;
+        margin: 0px 5px;
+      }
+      @media screen and (max-width: 700px;)  {
+.footerNav ul(
+    flex-direction: column;
+)
+.footerNav ul li(
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+)
+    }
     </style>
   </head>
   <body>
@@ -214,5 +285,32 @@ form.search button:hover {
           </div>
       </tr>
     </table>
+    <footer>
+      div class="footerContainer">
+             <div class="socialIcons">
+               <a href="#"><i class="fa-brands fa-facebook"></i></a>
+               <a href="#"><i class="fa-brands fa-instagram"></i></a>
+               <a href="#"><i class="fa-brands fa-twitter"></i></a>
+               <a href="#"><i class="fa-brands fa-youtube"></i></a>
+               <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+             </div>
+             <div class="footerNav">
+                <ul>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Cookie Preferences</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+             </div>
+             
+            </div>
+            <div class="footerBottom">
+                <p>TM & © 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span> All rights reserved.
+             </div>
+        </footer>
+    </body>
+    </html>
+    </footer>
   </body>
 </html>
