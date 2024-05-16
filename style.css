@@ -1,27 +1,16 @@
-* {
-  background-color: #000000;
-}
-body { 
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  color: #ffffff;
-  background-color: #000000;
-  overflow-x: hidden;
-     }
-a { 
-   text-decoration: none;
-   color: white;
-   font-style: Arial, Helvetica, sans-serif;
-   font-size: 20px;
-  }
-       a:hover {
-                background-color: rgba(255,255,255,0);
-                color: white;
-                }
-.topnav {
+ body { 
+        background-color: #000000; 
+        overflow-x: hidden;
+      }
+      p { 
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        padding-left: 10px;
+      }
+      .topnav {
   overflow: hidden;
   background-color: #000000;
- justify-content: center;
 }
 
 .topnav a {
@@ -43,8 +32,7 @@ a {
   background-color: #000000;
   color: grey;
 }
-
-@media screen and (max-width: 600px) {
+      @media screen and (max-width: 600px) {
   .topnav a {
     float: none;
     display: block;
@@ -53,9 +41,9 @@ a {
     margin: 0;
     padding: 14px;
   }
-}
-
- header {
+       } 
+        
+        header {
                  position: absolute;
                  top: 8px;
                  right: 16px;  
@@ -65,28 +53,39 @@ a {
           width: 7%;
           height: 2%;
           opacity: 0.8;
+      padding-top: 10px;
         }
-      
-      div { 
-        white-space: nowrap; 
-        margin-right: 1em;
-        margin-left: 1em;
-          }
-     .responsive {
+       .responsive {
   width: 100%;
   height: auto;
 }
-      div { 
+  form.search button {
+  float: left;
+  display: block;
+  width: 20%;
+  padding: 10px;
+  background: #000000;
+  color: white;
+  font-size: 20px;
+  border: 1px solid grey;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: grey;
+}
+       div { 
         white-space: nowrap; 
         margin-right: 1em;
         margin-left: 1em;
           }
-      
        #zoom {
-         padding: 60px;
-        transition: transform .2s;
-        width: 285px;
-       height: 250px;
+  padding: 60px;
+  transition: transform .2s;
+  width: 270px;
+  height: 250px;
+  
 }
 
 #zoom:hover {
@@ -94,8 +93,8 @@ a {
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.5); 
 }
-    
-   #slider {
+      
+       #slider {
       overflow: hidden;
       padding-top: 35px;
 }
@@ -145,83 +144,4 @@ a {
   100% {
     left: -400%
   }
-  .container {
-  max-width:1170px;
-  background-color: black;
-  margin: auto;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-ul { 
-  list-style:none;
-   }
-  .footer {
-  background-color: #000000;
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-  padding: 70px 0;
-}
-
-.footer-col {
-  width: 25%;
-  padding: 0 15px;
-}
-.footer-col h4 {
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  text-transform: capitalize;
-  margin-bottom: 25px;
-  font-weight: 500;
-  position: relative;
-}
-.footer-col ul li:not(:last-child){
-  margin-bottom: 10px;
-}
-.footer-col ul li a{
-  font-size:20px;
-  text-transform: capitalize;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 300;
-  display: block;
-  transition: all 0.3s ease;
-}
-.footer-col ul li a:hover{
-  color: #ffffff;
-  padding-left:8px;
-}
-.footer-col social-links a{
-  display:inline-block;
-  height:40px;
-  width:40px;
-  background-color: rgba(255,255,255,0.2);
-  margin: 0 10px 10px 0;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%
-  color: #ffffff;
-  transition: all 0.5s ease;
-}
-.footer-col social-links a:hover {
-  color: #24262b;
-  background-color: #ffffff;
-}
-/*responsive*/
-@media(max-width: 76px){
-  .footer-col {
-    width: 50%;
-    margin-bottom: 30px;
-  }
-}
-@media(max-width: 574px){
-  .footer-col {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-}
-
+    
