@@ -1,332 +1,355 @@
+<!-- Index.html -->
 <!DOCTYPE html> 
-<html lang="en">
+<html lang="en"> 
+
 <head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
-    <style>
-      
+	<meta charset="UTF-8"> 
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0"> 
+	<!-- Linking css file -->
+	<style>
+        /* Style.css */
 body { 
-    font-family: Arial, sans-serif; 
-    margin: 0; 
-    padding: 20px; 
-    background-color: #000000; 
+	font-family: Arial, sans-serif; 
+	margin: 0; 
+	padding: 20px; 
+	background-color: #197819; 
 } 
+
+/* Form container */
 .container { 
-    max-width: 600px; 
-    margin: 0 auto; 
-    padding: 20px; 
-    background-color: #fff; 
-    border-radius: 10px; 
-    box-shadow: 0 0 10px
-        rgba(0, 0, 0, 0.1); 
+	max-width: 600px; 
+	margin: 0 auto; 
+	padding: 20px; 
+	background-color: #fff; 
+	border-radius: 10px; 
+	box-shadow: 0 0 10px
+		rgba(0, 0, 0, 0.1); 
 } 
-  
+
 h1 { 
-    text-align: center; 
+	text-align: center; 
 } 
-  
+
 label { 
-    margin-top: 1rem; 
+	margin-top: 1rem; 
 } 
-  
+
 input { 
-    padding: 10px; 
-    box-sizing: border-box; 
-    margin: 1.2rem 0; 
+	padding: 10px; 
+	box-sizing: border-box; 
+	margin: 1.2rem 0; 
 } 
-  
+
+/* Styling specific input types */
 input[type="text"], 
 input[type="number"] { 
-    width: 100%; 
+	width: 100%; 
 } 
-  
-input[type="textarea"] { 
-    width: 100%; 
-    height: 10rem; 
-    border: 1px solid black;
-    border-radius: 20px;
-} 
-  
-button { 
-    width: 100%; 
-    padding: 10px; 
-    background-color: black; 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-} 
-  
-button:hover { 
-    background-color: grey; 
-} 
-  
-.error { 
-    border: 3px solid red; 
-} 
-  
-.errorText { 
-    padding: 1rem; 
-    border: 2px solid red; 
-    box-shadow: rgba(149, 157, 165, 0.2) 
-        0px 4px 12px; 
-    font-size: 1.2rem; 
-    font-family: "Lucida Sans", 
-        "Lucida Sans Regular", 
-        sans-serif; 
-} 
-  
-.successText { 
-    padding: 1rem; 
-    border: 4px solid black; 
-    box-shadow: rgba(149, 157, 165, 0.2) 
-        0px 4px 12px; 
-    font-size: 1.2rem; 
-    font-family: "Lucida Sans", 
-        "Lucida Sans Regular", 
-        sans-serif; 
-} 
-    </style>
-    <title>Feedback Form</title> 
-</head> 
-  
-<body> 
-  
-    <div class="container"> 
-        <h1>Feedback Form</h1> 
-        <h4 id="errorText"></h4> 
-        <form id="surveyForm"> 
-  
-            <label for="name">Name:</label>
-          <br> 
-            <input type="text"id="name" name="name"required>
-          <br> 
-  
-            <label for="age">Age: </label>
-          <br> 
-            <input type="number" id="age"name="age" required>
-          <br> 
-  
-            <label> 
-              Gender
-            </label><br> 
-            <input type="radio" 
-                   id="indoor" 
-                   name="type" 
-                   value="Gender" 
-                   required> 
-              
-            <label for="male"> 
-               Male
-            </label><br> 
-            <input type="radio" id="male"  name="type" value="Male" required> 
-              
-           <label for="female">Female</label><br> 
-            <input type="radio"id="female" name="type"value="Female" required> 
-  
-            <label for="Other"> 
-               Other
-            </label><br> 
-            <input type="radio"id="other" name="type"value="other" required> 
 
-            <label for="prefer not to say"> 
-                Prefer not to say 
-            </label><br> 
-            <input type="radio" 
-                   id="prefer not to say" 
-                   name="prefer not to say" 
-                   required>
-                   <br>
-  
-            <label for="feedback"> 
-                Your Thoughts:  
-            </label><br> 
-            <input type="textarea" 
-                   id="feedback" 
-                   name="feedback"><br> 
-  
-  
-  
-  
-  
-  
-  
-            <button type="submit"> 
-                Submit 
-            </button> 
-        </form> 
-    </div> 
-  
-    <script>
-       // Script.js 
-// Adding event listener to the form element 
-document 
-    .getElementById("surveyForm") 
-    .addEventListener( 
-        "submit", 
-        function (event) { 
-            // PreventDefault() is used to avoid 
-            // Refreshing of browser while submit 
-            event.preventDefault(); 
-  
-            let nameField = 
-                document.getElementById( 
-                    "name"
-                ); 
-            let ageField = 
-                document.getElementById( 
-                    "age"
-                ); 
-            let errorText = 
-                document.getElementById( 
-                    "errorText"
-                ); 
-  
-            let name = nameField.value; 
-            let age = ageField.value; 
-  
-            // Creating a regular expression for  
-            // Name field 
-            let Regex = /^[A-Za-z ]+$/; 
-  
-            // If name does not matches the  
-            // Regular expression 
-            if (!name.match(Regex)) { 
-                nameField.classList.add( 
-                    "error"
-                ); 
-                errorText.innerHTML = 
-                    `Name field should only contain  
-                     English alphabets and spaces`; 
-                errorText.classList.add( 
-                    "errorText"
-                ); 
-                return; 
-            } 
-  
-            // Check whether age is between 1 and 150 
-            else if ( 
-                isNaN(age) || 
-                age < 1 || 
-                age > 150 
-            ) { 
-                ageField.classList.add( 
-                    "error"
-                ); 
-                errorText.innerHTML = 
-                    `Age should only contain valid 
-                     values ( 1 - 150 )`; 
-                errorText.classList.add( 
-                    "errorText"
-                ); 
-                return; 
-            } 
-  
-            // Removing red border in name field 
-            if ( 
-                nameField.classList.contains( 
-                    "error"
-                ) 
-            ) 
-                nameField.classList.remove( 
-                    "error"
-                ); 
-  
-            // Removing red border in age field 
-            if ( 
-                ageField.classList.contains( 
-                    "error"
-                ) 
-            ) 
-                ageField.classList.remove( 
-                    "error"
-                ); 
-  
-            // Adding success message and styles 
-            errorText.innerHTML = 
-                "Submitted Successfully"; 
-            errorText.classList.add( 
-                "successText"
-            ); 
-  
-            const formData = 
-                new FormData( 
-                    event.target 
-                ); 
-            const formValues = {}; 
-  
-            // Storing each values in the object 
-            formData.forEach( 
-                (value, key) => { 
-                    formValues[key] = 
-                        value; 
-                } 
-            ); 
-  
-            // Calling convert function 
-            const csvContent = 
-                convertToCSV( 
-                    formValues 
-                ); 
-            const blob = new Blob( 
-                [csvContent], 
-                { type: "text/csv" } 
-            ); 
-  
-            // Creating a link for downloading 
-            // Excel sheet 
-            const link = 
-                document.createElement( 
-                    "a"
-                ); 
-            link.href = 
-                window.URL.createObjectURL( 
-                    blob 
-                ); 
-            link.download = 
-                "survey_data.csv"; 
-            link.click(); 
-  
-            // Reseting the form after certain 
-            // Timeout 2000ms => 2s 
-            setTimeout( 
-                document 
-                    .getElementById( 
-                        "surveyForm"
-                    ) 
-                    .reset(), 
-                2000 
-            ); 
-        } 
-    ); 
-  
-// Function to convert object to csv 
-function convertToCSV(objArr) { 
-    const array = 
-        typeof objArr !== "object"
-            ? JSON.parse(objArr) 
-            : objArr; 
-    let result = ""; 
-  
-    // Add commas to make it as csv 
-    const header = 
-        Object.keys(array).join(",") + 
-        "\n"; 
-    result += header; 
-  
-    for (const item in array) { 
-        if ( 
-            array.hasOwnProperty(item) 
-        ) { 
-            result += array[item] + ","; 
-        } 
-    } 
-    result = result.slice(0, -1); 
-    result += "\n"; 
-  
-    return result; 
+input[type="textarea"] { 
+	width: 100%; 
+	height: 10rem; 
 } 
-    </script> 
+
+button { 
+	width: 100%; 
+	padding: 10px; 
+	background-color: #4caf50; 
+	color: white; 
+	border: none; 
+	border-radius: 5px; 
+	cursor: pointer; 
+} 
+
+button:hover { 
+	background-color: #45a049; 
+} 
+
+.error { 
+	border: 3px solid red; 
+} 
+
+.errorText { 
+	padding: 1rem; 
+	border: 2px solid red; 
+	box-shadow: rgba(149, 157, 165, 0.2) 
+		0px 4px 12px; 
+	font-size: 1.2rem; 
+	font-family: "Lucida Sans", 
+		"Lucida Sans Regular", 
+		sans-serif; 
+} 
+
+.successText { 
+	padding: 1rem; 
+	border: 4px solid black;  
+	box-shadow: rgba(149, 157, 165, 0.2) 
+		0px 4px 12px; 
+	font-size: 1.2rem; 
+	font-family: "Lucida Sans", 
+		"Lucida Sans Regular", 
+		sans-serif; 
+} 
+
+    </style> 
+	<title>Survey Form</title> 
+</head> 
+
+<body> 
+
+	
+	<div class="container"> 
+		<h1>Feedback <Form></Form></h1> 
+
+		
+		<h4 id="errorText"></h4> 
+		
+	
+		<form id="surveyForm"> 
+
+			<label for="name"> 
+				Name: 
+			</label><br> 
+			<input type="text"
+				id="name"
+				name="name"
+				required><br> 
+
+			<label for="age"> 
+				Age: 
+			</label><br> 
+			<input type="number"
+				id="age"
+				name="age"
+				required><br> 
+
+			<label> 
+				Gender
+			</label><br> 
+			<input type="radio"
+				id="Gender"
+				name="Gender"
+				value="Indoor"
+				required> 
+			
+			<label for="male"> 
+				Male
+			</label><br> 
+			<input type="radio"
+				id="male"
+				name="male"
+				value="Outdoor"
+				required> 
+			
+		<label for="female"> 
+			Female
+			</label><br> 
+			<input type="radio"
+				id="female"
+				name="female"
+				value="Both"
+				required> 
+
+			<label for="prefer not to say"> 
+				Prefer not to say
+			</label><br> 
+
+			<label for="favorite movie"> 
+				Favorite movie 
+			</label><br> 
+			<input type="text"
+				id="favorite movie"
+				name="favorite-sport"
+				required><br> 
+
+			<label for="challenge"> 
+				What challenges did you face?
+			</label><br> 
+			<input type="text"
+				id="challenge"
+				name="challenge"
+				required><br>
+
+
+			<label for="feedback"> 
+			Your Opinion
+			</label><br> 
+			<input type="textarea"
+				id="feedback"
+				name="feedback"><br> 
+
+
+
+			<button type="submit"> 
+				Submit 
+			</button> 
+		</form> 
+	</div> 
+
+	<script > 
+    
+document 
+	.getElementById("surveyForm") 
+	.addEventListener( 
+		"submit", 
+		function (event) { 
+			event.preventDefault(); 
+
+			let nameField = 
+				document.getElementById( 
+					"name"
+				); 
+			let ageField = 
+				document.getElementById( 
+					"age"
+				); 
+			let errorText = 
+				document.getElementById( 
+					"errorText"
+				); 
+
+			let name = nameField.value; 
+			let age = ageField.value; 
+
+			
+			let Regex = /^[A-Za-z ]+$/; 
+
+			 
+			if (!name.match(Regex)) { 
+				nameField.classList.add( 
+					"error"
+				); 
+				errorText.innerHTML = 
+					`Name field should only contain 
+					English alphabets and spaces`; 
+				errorText.classList.add( 
+					"errorText"
+				); 
+				return; 
+			} 
+
+			
+			else if ( 
+				isNaN(age) || 
+				age < 1 || 
+				age > 150 
+			) { 
+				ageField.classList.add( 
+					"error"
+				); 
+				errorText.innerHTML = 
+					`Age should only contain valid 
+					values ( 1 - 150 )`; 
+				errorText.classList.add( 
+					"errorText"
+				); 
+				return; 
+			} 
+
+			if ( 
+				nameField.classList.contains( 
+					"error"
+				) 
+			) 
+				nameField.classList.remove( 
+					"error"
+				); 
+
+			if ( 
+				ageField.classList.contains( 
+					"error"
+				) 
+			) 
+				ageField.classList.remove( 
+					"error"
+				); 
+
+			
+			errorText.innerHTML = 
+				"Submitted Successfully"; 
+			errorText.classList.add( 
+				"successText"
+			); 
+
+			const formData = 
+				new FormData( 
+					event.target 
+				); 
+			const formValues = {}; 
+
+			
+			formData.forEach( 
+				(value, key) => { 
+					formValues[key] = 
+						value; 
+				} 
+			); 
+
+			
+			const csvContent = 
+				convertToCSV( 
+					formValues 
+				); 
+			const blob = new Blob( 
+				[csvContent], 
+				{ type: "text/csv" } 
+			); 
+
+		
+			const link = 
+				document.createElement( 
+					"a"
+				); 
+			link.href = 
+				window.URL.createObjectURL( 
+					blob 
+				); 
+			link.download = 
+				"survey_data.csv"; 
+			link.click(); 
+
+			
+			setTimeout( 
+				document 
+					.getElementById( 
+						"surveyForm"
+					) 
+					.reset(), 
+				2000 
+			); 
+		} 
+	); 
+
+
+function convertToCSV(objArr) { 
+	const array = 
+		typeof objArr !== "object"
+			? JSON.parse(objArr) 
+			: objArr; 
+	let result = ""; 
+
+
+	const header = 
+		Object.keys(array).join(",") + 
+		"\n"; 
+	result += header; 
+
+	for (const item in array) { 
+		if ( 
+			array.hasOwnProperty(item) 
+		) { 
+			result += array[item] + ","; 
+		} 
+	} 
+	result = result.slice(0, -1); 
+	result += "\n"; 
+
+	return result; 
+}
+
+</script> 
 </body> 
-  
+
 </html>
