@@ -1,24 +1,16 @@
-<!-- Index.html  -->
 <!DOCTYPE html> 
-<html lang="en"> 
-  
+<html lang="en">
 <head> 
     <meta charset="UTF-8"> 
-    <meta name="viewport" 
-          content="width=device-width, 
-                   initial-scale=1.0"> 
-    <!-- Linking css file  -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
     <style>
-        
-/* Style.css  */
+      
 body { 
     font-family: Arial, sans-serif; 
     margin: 0; 
     padding: 20px; 
-    background-color: #197819; 
+    background-color: #000000; 
 } 
-  
-/* Form container  */
 .container { 
     max-width: 600px; 
     margin: 0 auto; 
@@ -43,7 +35,6 @@ input {
     margin: 1.2rem 0; 
 } 
   
-/* Styling specific input types  */
 input[type="text"], 
 input[type="number"] { 
     width: 100%; 
@@ -52,12 +43,14 @@ input[type="number"] {
 input[type="textarea"] { 
     width: 100%; 
     height: 10rem; 
+    border: 1px solid black;
+    border-radius: 20px;
 } 
   
 button { 
     width: 100%; 
     padding: 10px; 
-    background-color: #4caf50; 
+    background-color: black; 
     color: white; 
     border: none; 
     border-radius: 5px; 
@@ -65,7 +58,7 @@ button {
 } 
   
 button:hover { 
-    background-color: #45a049; 
+    background-color: grey; 
 } 
   
 .error { 
@@ -85,7 +78,7 @@ button:hover {
   
 .successText { 
     padding: 1rem; 
-    border: 4px solid green; 
+    border: 4px solid black; 
     box-shadow: rgba(149, 157, 165, 0.2) 
         0px 4px 12px; 
     font-size: 1.2rem; 
@@ -99,94 +92,62 @@ button:hover {
   
 <body> 
   
-    <!-- Creating the form container  -->
     <div class="container"> 
-        <h1>Survey Form</h1> 
-  
-        <!-- Contains error -->
+        <h1>Feedback Form</h1> 
         <h4 id="errorText"></h4> 
-          
-        <!-- Form element  -->
         <form id="surveyForm"> 
   
-            <label for="name"> 
-                Name: 
-            </label><br> 
-            <input type="text" 
-                   id="name" 
-                   name="name" 
-                   required><br> 
+            <label for="name">Name:</label>
+          <br> 
+            <input type="text"id="name" name="name"required>
+          <br> 
   
-            <label for="age"> 
-                Age: 
-            </label><br> 
-            <input type="number" 
-                   id="age" 
-                   name="age" 
-                   required><br> 
+            <label for="age">Age: </label>
+          <br> 
+            <input type="number" id="age"name="age" required>
+          <br> 
   
             <label> 
-                Favorite type of Sport 
+              Gender
             </label><br> 
             <input type="radio" 
                    id="indoor" 
                    name="type" 
-                   value="Indoor" 
+                   value="Gender" 
                    required> 
               
-            <label for="indoor"> 
-                Indoor 
+            <label for="male"> 
+               Male
             </label><br> 
-            <input type="radio" 
-                   id="outdoor" 
-                   name="type" 
-                   value="Outdoor" 
-                   required> 
+            <input type="radio" id="male"  name="type" value="Male" required> 
               
-           <label for="outdoor"> 
-            Outdoor 
+           <label for="female">Female</label><br> 
+            <input type="radio"id="female" name="type"value="Female" required> 
+  
+            <label for="Other"> 
+               Other
+            </label><br> 
+            <input type="radio"id="other" name="type"value="other" required> 
+
+            <label for="prefer not to say"> 
+                Prefer not to say 
             </label><br> 
             <input type="radio" 
-                   id="both" 
-                   name="type" 
-                   value="Both" 
-                   required> 
-  
-            <label for="both"> 
-                Both 
-            </label><br> 
-  
-            <label for="favourite-sport"> 
-                Favorite Sport to Watch: 
-            </label><br> 
-            <input type="text" 
-                   id="favorite-sport" 
-                   name="favorite-sport" 
-                   required><br> 
-  
-            <label for="favorite--sport"> 
-                Favorite Sport to Play: 
-            </label><br> 
-            <input type="text" 
-                   id="favorite--sport" 
-                   name="favorite--sport" 
-                   required><br> 
-  
-            <label for="favorite-sport-person"> 
-                Favorite Sports-person: 
-            </label><br> 
-            <input type="text" 
-                   id="favorite-sport-person" 
-                   name="favorite-sport-person" 
-                   required><br> 
-  
+                   id="prefer not to say" 
+                   name="prefer not to say" 
+                   required>
+                   <br>
   
             <label for="feedback"> 
-                Your Thoughts on Sports (optional):  
+                Your Thoughts:  
             </label><br> 
             <input type="textarea" 
                    id="feedback" 
                    name="feedback"><br> 
+  
+  
+  
+  
   
   
   
