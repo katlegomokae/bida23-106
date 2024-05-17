@@ -39,7 +39,30 @@ p a:hover {
 form.search button:hover {
   background: grey;
 }
+.topnav {
+  overflow: hidden;
+  background-color: #000000;
+}
 
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: transparent;
+  color: grey;
+}
+
+.topnav a.active {
+  background-color: grey;
+  color: white;
+}
+</style>
        div { 
         white-space: nowrap; 
         margin-right: 1em;
