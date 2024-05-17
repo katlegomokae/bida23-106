@@ -152,60 +152,36 @@ form.search button:hover {
     left: -400%
   }
     
-            .footer {
-    padding: 40px 0;
-    background-color: black;
+
+   footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
 }
 
-.social-items {
-    color: #fff;
-    text-align: center;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.social-items a {
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    margin: 1rem;
-    opacity: 0.8;
-    line-height: 38px;
-    font-size: 1.4rem;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    border: 1.4px solid #ccc;
-}
-.social-items a:hover {
-    opacity: 1;
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.list {
-    padding: 0;
-    margin-top: 0;
-    font-size: 18px;
-    line-height: 1.6;
-    list-style: none;
-    margin-bottom: 0;
-    text-align: center;
+.social-icons li {
+  display: inline-block;
+  margin: 0 10px;
 }
 
-.list a {
-    opacity: 0.8;
-    color: #fff;
-    text-decoration: none;
-}
-.list li {
-    padding: 0 15px;
-    display: inline-block;
+.social-icons a {
+  text-decoration: none;
 }
 
-.list a:hover {
-    opacity: 1;
+img {
+  vertical-align: middle;
 }
 
-.copyright {
-    font-size: 14px;
-    margin-top: 15px;
-    text-align: center;
-    color: rgb(181, 175, 175);
-}
+
