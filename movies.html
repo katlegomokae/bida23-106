@@ -16,30 +16,30 @@
         font-size: 20px;
         padding-left: 10px;
       }
-      .topnav {
+ .topnav {
   overflow: hidden;
   background-color: #000000;
 }
 
 .topnav a {
-  float: right;
-  display: block;
-  color: white;
+  float: left;
+  color: #f2f2f2;
   text-align: center;
-  padding: 16px 18px;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .topnav a:hover {
-  background-color: rgba(255,255,255,0);
-  color: white;
+  background-color: transparent;
+  color: grey;
 }
 
 .topnav a.active {
-  background-color: #000000;
-  color: grey;
+  background-color: grey;
+  color: white;
 }
+
       @media screen and (max-width: 600px) {
   .topnav a {
     float: none;
@@ -51,18 +51,7 @@
   }
        } 
         
-        header {
-                 position: absolute;
-                 top: 8px;
-                 right: 16px;  
-              }
-
-    img { 
-          width: 7%;
-          height: 2%;
-          opacity: 0.8;
-      padding-top: 10px;
-        }
+      
        .responsive {
   width: 100%;
   height: auto;
@@ -227,17 +216,15 @@ form.search button:hover {
     </style>
   </head>
   <body>
-      <div class="topnav">
-      <p><a href="games&apps.html">Games&Apps</a></p>
-      <p><a href="collection.html">Collection</a></p>
-       <p><a href="feedback.html">Feedback</a></p>
-       <p><a class="active" href="tvshows.html">TV Shows</a></p>
-       <p><a href="movies.html">Movies</a></p>
-      <p><a href="index.html">Home</a></p>
-      </div>
-    <header>
-     <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
-    </header>
+  <div class="topnav">
+  <a class="navbar-brand" href="Warner-Bros-Logo.png"><img src="Warner-Bros-Logo.png" style="width: 50px; height: 25px; padding-right: 100px;"></a>
+  <a class="active" href="index.html">Home</a>
+  <a href="movies.html">Movies</a>
+  <a href="tvshows.html">TV shows</a>
+    <a href="feedback.html"> Feedback</a>
+      <a href="collection.html">Collections</a>
+  <a href="games.html">Games&Apps</a>
+</div>
      <form class="search" action="search.html" style="margin:20px;max-width:300px">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
