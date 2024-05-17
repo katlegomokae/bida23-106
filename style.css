@@ -28,7 +28,7 @@ p a:hover {
   display: block;
   width: 20%;
   padding: 10px;
-  background: #000000;
+  background: transparent;
   color: white;
   font-size: 20px;
   border: 1px solid black;
