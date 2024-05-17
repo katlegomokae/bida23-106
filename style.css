@@ -39,6 +39,13 @@ p a:hover {
 form.search button:hover {
   background: grey;
 }
+@media and screen (max-width: 600px;) {
+    form.search button {
+                  float: left;
+                  padding-left: 10px;
+                  
+    }
+}
 .topnav {
   overflow: hidden;
   background-color: #000000;
