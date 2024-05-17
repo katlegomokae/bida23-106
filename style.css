@@ -41,9 +41,9 @@ form.search button:hover {
 }
 @media and screen (max-width: 600px;) {
     form.search button {
-                  float: left;
-                  padding-left: 10px;
-                  
+                  float: right;
+                  padding-left: 10px;   
+                  margin: 0;
     }
 }
 .topnav {
