@@ -5,23 +5,20 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>See You On Venus</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-       body { 
-        background-color: #000000; 
-      }
-      p { 
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-      }
-      p h1{
-        color:#ffffff;
-        font-size: 30px;
-        font-weight: 500;
-      }
-      .topnav {
-  overflow: visisble;
-  background-color: #000000;
+      body { background-color: black;
+             margin: 0;
+             font-family: Arial;
+             font-size: 17px;
+             overflow-x: hidden;
+           }
+      
+            .topnav {
+          overflow: visible;
+         background-color: #000000;
 }
 
 .topnav a {
@@ -43,9 +40,9 @@
   background-color: #000000;
   color: grey;
 }
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 300px) {
   .topnav a {
-    float: none;
+    float: right;
     display: block;
     text-align: left;
     width: 100%;
@@ -53,6 +50,13 @@
     padding: 14px;
   }
        } 
+      p { 
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
         
         header {
                  position: absolute;
@@ -65,49 +69,24 @@
           height: 2%;
           opacity: 0.8;
         }
-body {
-  margin: 0;
-  font-family: Arial;
-  font-size: 17px;
-  height: 100%;
-  margin: 0;
-  overflow-x: hidden;
+      * {
+  box-sizing: border-box;
+}    
+     
+#myVideo {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  width: 100%; 
+  height: 75%;
+  padding-top: 40px; 
 }
-      .bg {
-  background-image: url("press-release.jpg");
-  height: 60%; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-       .responsive {
-  width: 100%;
-  height: auto;
-}
-       div { 
-        white-space: nowrap; 
-        margin-right: 1em;
-        margin-left: 1em;
-          }
-      #zoom {
-         padding: 60px;
-        transition: transform .2s;
-        width: 150px;
-       height: 100px;
-}
-
-#zoom:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5); 
-}
-      
     </style>
   </head>
-  <body>
-     <div class="topnav">
-      <p><a href="games&apps.html">Games&Apps</a></p>
-      <p><a href="collection.html">Collection</a></p>
+  <body>  
+         <div class="topnav">
+      <p><a href="games.html">Games&Apps</a></p>
+      <p><a href="collection.html">Collections</a></p>
        <p><a href="feedback.html">Feedback</a></p>
        <p><a class="active" href="tvshows.html">TV Shows</a></p>
        <p><a href="movies.html">Movies</a></p>
@@ -116,18 +95,12 @@ body {
     <header>
      <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
     </header>
-    <div class="bg">
-    </div>
-    <p><h1>You May Also Like These</h1></h1></p>
-    <table>
-      <div>
-      <tr>
-        <td><img id="zoom" src="from-scratch.jpg" alt="from scratch"  class="responsive" style="width:250px;height:200px;"></td>
-        <td><img src="waves.jpg" id="zoom" alt="waves" class="responsive" style="width:250px;height:200px;"></td>
-        <td><img src="love&gelato.jpeg" id="zoom" alt="love and gelato"  class="responsive" style="width:250px;height:200px;"></td>
-        <td><img src="other-zoey.jpg" id="zoom" alt="the other zoey"  class="responsive" style="width:250px;height:200px;"></td>
-      </tr>
-      </div>
-    </table>
-  </body>
-</html>
+    <video controls autoplay id="myVideo">
+  <source  src="seeyouon-venus.mp4" type="video/mp4">
+    </video>
+    <br>
+    <p>Mia and Kyle, two misfit American teenagers, fall in love while travelling through Spain in search of Mia's birth mother.</p>
+      <br>
+    <p>Cast:Alex Aiono, Virginia Gardener, Rob Estes....</p>
+</body>
+</html> 
