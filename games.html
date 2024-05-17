@@ -14,7 +14,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+        
+.bg {
+  background-image: url("as.png");
+  height: 75%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+}
 
 #navlist {
     background-color: #000;
@@ -71,6 +79,11 @@
     background: transparent;
     color:grey
 }
+         header {
+                 position: absolute;
+                 top: 8px;
+                 right: 16px;  
+              }
 img { 
           width: 7%;
           height: 2%;
@@ -100,59 +113,6 @@ img {
   transform: scale(1.5); 
 }
       
-       #slider {
-      overflow: hidden;
-      padding-top: 35px;
-}
-#slider figure {
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  animation: slider 20s infinite;
-}
-
-#slider figure img {
-             margin-left: 0px;
-             margin-right: 0px;
-            width: 20%;
-          float: left;
-           height: 60%; 
-        background-position: center;
-       background-repeat: no-repeat;
-      background-size: cover;
-           }
-@keyframes slider {
-  0% {
-    left: 0;
-  }
-  20% {
-    left: 0;
-  }
-  25% {
-    left: -100%;
-  }
-  45% {
-    left: -100%;
-  }
-  50% {
-    left: -200%;
-  }
-  70% {
-    left: -200%
-  }
-  75% {
-    left: -300%;
-  }
-  95% {
-    left: -300%;
-  }
-  100% {
-    left: -400%
-  }
-    </style>
-</head>
-
 <body>
     <div id="navlist">
         <a href="index.html">Home</a>
@@ -170,15 +130,10 @@ img {
             </form>
         </div>
     </div>
-     <div id="slider">
-      <figure>
-        <img src="heads.jpeg" style="width:200px; height:150px;">
-        <img src="psych.jpeg" style="width:200px; height:150px;">
-        <img src="cartnet.jpeg" style="width:200px; height:150px;">
-        <img src="clank.jpeg" style="width:200px; height:150px;">
-        <img src="as.png" style="width:200px; height:150px;">
-      </figure>
-    </div>
+         <header>
+     <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
+    </header>
+        <div class="bg"></div>    
 </body>
 
 </html>
