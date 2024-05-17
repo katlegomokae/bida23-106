@@ -1,13 +1,20 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Free Ridge</title>
-    
+    <title>Freeridge</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-      body { background-color: black;}
+      body { background-color: black;
+             margin: 0;
+             font-family: Arial;
+             font-size: 17px;
+            overflow-x: hidden;
+           }
       
             .topnav {
           overflow: visisble;
@@ -33,9 +40,9 @@
   background-color: #000000;
   color: grey;
 }
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 300px) {
   .topnav a {
-    float: none;
+    float: right;
     display: block;
     text-align: left;
     width: 100%;
@@ -47,6 +54,7 @@
         color: #ffffff;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
+        padding-right: 15px;
         padding-left: 15px;
       }
         
@@ -64,24 +72,16 @@
       * {
   box-sizing: border-box;
 }    
-body {
-  margin: 0;
-  font-family: Arial;
-  font-size: 17px;
-}
-
+      #dropdown {
+        color: 
 #myVideo {
-  position: fixed;
+  position: relative;
   right: 0;
   bottom: 0;
-  max-width: 100%; 
-  max-height: 75%;
+  width: 100%; 
+  height: 75%;
   padding-top: 40px; 
 }
-
-  aside { float: left;
-         font-size:20px;
-        }
     </style>
   </head>
   <body>  
@@ -96,14 +96,12 @@ body {
     <header>
      <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
     </header>
-    <div class="container">
     <video controls autoplay id="myVideo">
-  <source src="freeridgetr.mp4" type="video/mp4">
+  <source  src="freeridgetr.mp4" type="video/mp4">
     </video>
-    </div>
-<h1>FREERIDGE</h1>
-    <aside><p>Gloria, Ines, Demi, and Cameron unleash a curse bringing dark misfortune into their lives.</p></aside>
     <br>
-   <aside><p>Cast:Tenzing Norgay Trainor, Bryanna Salaz,Ciara Riley Wilson, Keyla Monterroso Mejia....</p></aside>
-  </body>
-</html>
+   <p>Gloria, Ines, Demi, and Cameron unleash a curse bringing dark misfortune into their lives.</p>
+    <br>
+   <p>Cast:Tenzing Norgay Trainor, Bryanna Salaz,Ciara Riley Wilson, Keyla Monterroso Mejia....</p>  
+ </body>
+</html> 
