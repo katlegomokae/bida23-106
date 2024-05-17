@@ -5,12 +5,19 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Swarm</title>
-    
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-      body { background-color: black;}
+      body { background-color: black;
+             margin: 0;
+             font-family: Arial;
+             font-size: 17px;
+             overflow-x: hidden;
+           }
       
             .topnav {
-          overflow: visisble;
+          overflow: visible;
          background-color: #000000;
 }
 
@@ -33,9 +40,9 @@
   background-color: #000000;
   color: grey;
 }
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 300px) {
   .topnav a {
-    float: none;
+    float: right;
     display: block;
     text-align: left;
     width: 100%;
@@ -47,6 +54,8 @@
         color: #ffffff;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
+        padding-right: 15px;
+        padding-left: 15px;
       }
         
         header {
@@ -63,24 +72,16 @@
       * {
   box-sizing: border-box;
 }    
-body {
-  margin: 0;
-  font-family: Arial;
-  font-size: 17px;
-}
-
+      #dropdown {
+        color: 
 #myVideo {
-  position: fixed;
+  position: relative;
   right: 0;
   bottom: 0;
-  max-width: 100%; 
-  max-height: 75%;
+  width: 100%; 
+  height: 75%;
   padding-top: 40px; 
 }
-
-  aside { float: left;
-         font-size:20px;
-        }
     </style>
   </head>
   <body>  
@@ -95,14 +96,12 @@ body {
     <header>
      <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
     </header>
-    <div class="container">
     <video controls autoplay id="myVideo">
-  <source src="swarmtr.mp4" type="video/mp4">
+  <source  src="swarmtr.mp4" type="video/mp4">
     </video>
-    </div>
-    <aside><p><h1>FLEABAG</h1></p></aside>
-    <aside><p>An obsessed, Houston-based fan goes to increasingly violent lengths for her favourite R&B singer.</p></aside>
     <br>
-    <aside><p>Cast:Dominique Fishback, Billie Eilish, Chloe Bailey....</p></aside>
-  </body>
-</html>
+   <p>An obsessed, Houston-based fan goes to increasingly violent lengths for her favorite R&B singer.</p>
+    <br>
+    <p>Cast:Dominique Fishback, Billie Eilish, Chloe Bailey....</p>
+ </body>
+</html> 
