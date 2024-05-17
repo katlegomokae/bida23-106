@@ -65,6 +65,35 @@
               margin-right: 1em;
               margin-left: 1em;
           }
+     header {
+                 position: absolute;
+                 top: 8px;
+                 right: 16px;  
+              }
+
+    img { 
+          width: 7%;
+          height: 2%;
+          opacity: 0.8;
+      padding-top: 10px;
+        }
+    form.search button {
+  position: absolute;
+  float: left;
+  display: block;
+  width: 20%;
+  padding: 10px;
+  background: #000000;
+  color: white;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 70px;
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: grey;
+}
  #zoom {
   padding: 50px;
   transition: transform .2s;
@@ -89,6 +118,12 @@
        <p><a href="movies.html">Movies</a></p>
       <p><a href="index.html">Home</a></p>
     </div> 
+    <header>
+     <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
+    </header>
+     <form class="search" action="search.html" style="margin:20px;max-width:300px">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
    <div class="bg"></div>    
     <br>
     <table>
