@@ -23,6 +23,7 @@ body { font-family: Arial, Helvetica, sans-serif;
 .des{
     padding: 15px;
     text-align: center;
+    font-weight: 500;
 }
 .responsive{
     padding: 0 6px;
@@ -43,20 +44,11 @@ body { font-family: Arial, Helvetica, sans-serif;
         
     }
 }
-#zoom {
-  padding: 60px;
-  transition: transform .2s;
-  width: 270px;
-  height: 250px;
-  
+h1{
+    padding-left: 10px;
+    padding-top: 10px;
+    font-weight: 60px;
 }
-
-#zoom:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5); 
-}
- 
 nav {
     padding: 0;
     margin: 0;
@@ -78,6 +70,7 @@ label.logo{
 nav ul {
     float: right;
     margin-right: 20px;
+    text-decoration: none;
 
 }
 nav ul li{
@@ -92,7 +85,7 @@ nav ul li a{
     text-transform: uppercase;
 }
 a.active,a:hover{
-    background: #333;
+    background: grey;
     transition: .5s;
 }
 .checkbtn{
@@ -142,7 +135,7 @@ nav ul li a{
     }
     a:hover,a.active{
         background: none;
-        color:#0082e6;
+        color:grey;
     }
     #check:checked ~ ul{
         left: 0;
@@ -157,78 +150,71 @@ nav ul li a{
             <label for="check" class="checkbtn">
                 <i class="fas fa-bars"></i>
             </label>
-            <label class="logo"><img src="Warner-Bros-Logo.png" width="50px"height="50px"></label>
+            <label class="logo"><img src="Warner-Bros-Logo.png" width="80px"height="50px"></label>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html">Movies</a></li>
-                <li><a href="index.html">Tv shows</a></li>
+                <li><a class="active" href="index.html">Tv shows</a></li>
                 <li><a href="index.html">Collection</a></li>
                 <li><a href="index.html">Feedback</a></li>
                 <li><a href="index.html">Games and Apps</a></li>
             </ul>
         </nav>
         <div id="slider">
-            <figure>
-              <img src="pearl.jpg">
-              <img src="Ginny&Georgia.jpg">
-              <img src="girl-interrupted.webp">
-              <img src="girlstrip.jpg">
-              <img src="waves.jpg">
-            </figure>
-          </div>
+           
         <h1>Suspensful</h1>
         <div class="responsive"> 
             <div class="gallery">
-                <a href="thesociety.html" target="_blank"><img id="zoom" src="the-society.jpg" width="300" height="200"></a>
+                <a href="thesociety.html" target="_blank"><img  src="the-society.jpg" width="300" height="200"></a>
                 <div class="des">The Society</div>
             </div>
         </div>
 
         <div class="responsive"> 
             <div class="gallery">
-                <a href="freeridge.html" target="_blank"><img id="zoom" src="freeridge.jpg"  width="300" height="200"></a>
+                <a href="freeridge.html" target="_blank"><img  src="freeridge.jpg"  width="300" height="200"></a>
                 <div class="des">Freeridge</div>
             </div>
         </div>
 
         <div class="responsive"> 
             <div class="gallery">
-                <a href="swarm.html" target="_blank"><img id="zoom" src="swarm.png"  width="300" height="200"></a>
+                <a href="swarm.html" target="_blank"><img  src="swarm.png"  width="300" height="200"></a>
                 <div class="des">Swarm</div>
             </div>
         </div>
 
         <div class="responsive"> 
             <div class="gallery">
-                <a href="outerbanks.html" target="_blank"><img id="zoom" src="outer-banks.jpeg"  width="300" height="200"></a>
+                <a href="outerbanks.html" target="_blank"><img src="outer-banks.jpeg"  width="300" height="200"></a>
                 <div class="des">OBX</div>
             </div>
         </div>
         <h1>Romance</h1>
         <div class="responsive"> 
             <div class="gallery">
-                <a href="fleabag.html" target="_blank"><img id="zoom" src="fleabag.jpg" width="300" height="200"></a>
+                <a href="fleabag.html" target="_blank"><img src="fleabag.jpg" width="300" height="200"></a>
                 <div class="des">Fleabag</div>
             </div>
         </div>
 
         <div class="responsive"> 
             <div class="gallery">
-                <a href="tsitp.html" target="_blank"><img id="zoom" src="tsitp.jpg"  width="300" height="200"></a>
-                <div class="des">The Summer I Turned Pretty</div>
+                <a href="tsitp.html" target="_blank"><img src="tsitp.jpg"  width="300" height="200"></a>
+                <div class="des">TSITP</div>
             </div>
         </div>
 
         <div class="responsive"> 
             <div class="gallery">
-                <a href="fromscratch.html" target="_blank"><img id="zoom" src="cmbyn.jpeg"  width="300" height="200"></a>
+                <a href="fromscratch.html" target="_blank"><img src="cmbyn.jpeg"  width="300" height="200"></a>
                 <div class="des">From Scratch</div>
             </div>
         </div>
 
         <div class="responsive"> 
             <div class="gallery">
-                <a href="virginriver.html" target="_blank"><img id="zoom" src="virgin-river.jpg"  width="300" height="200"></a>
+                <a href="virginriver.html" target="_blank"><img  src="virgin-river.jpg"  width="300" height="200"></a>
                 <div class="des">Pearl</div>
             </div>
         </div>
