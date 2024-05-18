@@ -3,71 +3,150 @@
   <head>
      <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title> Search </title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ <title> TV shows </title>
     <style>
-      body { 
-        background-color: #000000; 
-        overflow-x: hidden;
-      }
-      p { 
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        padding-left: 10px;
-      }
-      .topnav {
-  overflow: hidden;
-  background-color: #000000;
+*{
+    box-sizing: border-box;
+    
 }
-
-.topnav a {
-  float: right;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px 20px;
-  text-decoration: none;
-  font-size: 15px;
+body { font-family: Arial, Helvetica, sans-serif;
+      background-color: black;
 }
-
-.topnav a:hover {
-  background-color: rgba(255,255,255,0);
-  color: grey;
+.gallery{
+    border: 1px solid #000;
 }
-
-.topnav a.active {
-  background-color: #000000;
-  color: grey;
-}
-      @media screen and (max-width: 400px) {
-  .topnav a {
-    float: right;
-    display: block;
-    text-align: left;
+.gallery img {
     width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-       } 
-        
-        header {
-                 position: absolute;
-                 top: 8px;
-                 right: 16px;  
-              }
-
-    img { 
-          width: 7%;
-          height: 2%;
-          opacity: 0.8;
-      padding-top: 10px;
-        }
-       .responsive {
-  width: 100%;
-  height: auto;
+    height: auto;
 }
-      form.search input[type=text] {
+.des{
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+}
+.responsive{
+    padding: 0 6px;
+    float: left;
+    width: 25%;
+}
+@media only screen and (max-width: 700px){
+    .responsive{
+        width: 50%;
+        margin: 6px 0;
+
+    }
+}
+@media only screen and (max-width: 500px){
+    .responsive{
+        width: 100%;
+      
+        
+    }
+}
+h1{
+    padding-top: 10px;
+    font-weight: 60px;
+    color:white;
+}
+nav {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    background-color: #000;
+    height: 80px;
+    width: 100%;
+
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+    text-decoration: none;
+
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+   text-decoration: none;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    border-radius: 3px;
+    text-transform: uppercase;
+   text-decoration: none;
+}
+a.active,a:hover{
+    background: grey;
+    transition: .5s;
+   text-decoration: none;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media screen and (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+
+    }
+}
+nav ul li a{
+    font-size: 16px;
+}
+@media screen and (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+    }
+    nav ul li a{
+        font-size:20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color:grey;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+       form.search input[type=text] {
   padding: 35px;
   font-size: 17px;
   border: 1px solid grey;
@@ -80,72 +159,135 @@ form.search::after {
   clear: both;
   display: table;
 }
-      div { 
-        white-space: nowrap; 
-        margin-right: 1em;
-        margin-left: 1em;
-        padding-top: 20px;
-          }
-       #zoom {
-  padding: 60px;
-  transition: transform .2s;
-  width: 270px;
-  height: 250px;
-  
-}
 
-#zoom:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5); 
+       .footerNav{
+    margin: 30px 0;
+  }
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
 }
-      </style>
-  </head>
-  <body>
-    <div class="topnav">
-      <p><a href="games&apps.html">Games&Apps</a></p>
-      <p><a href="collection.html">Collection</a></p>
-       <p><a href="feedback.html">Feedback</a></p>
-       <p><a class="active" href="tvshows.html">TV Shows</a></p>
-       <p><a href="movies.html">Movies</a></p>
-      <p><a href="index.html">Home</a></p>
-      </div>
-     <header>
-     <a href="index.html"><img src="Warner-Bros-Logo.png"></a>  
-    </header>
-      <form class="search" action="movies.html">
+.footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity:1;
+}
+.footerBottom{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color:white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+ @media screen and (max-width:700px){
+    .footerNav{
+      flex-direction: column;  
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align:center;
+        margin: 10px;
+    }
+ }
+
+    </style>
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="check" >
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"><img src="Warner-Bros-Logo.png" width="80px"height="50px"></label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a class="active" href="tvshows.html">Tv shows</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="games.html">Games and Apps</a></li>
+            </ul>
+        </nav>
+
+<form class="search" action="movies.html">
   <input type="text" placeholder="Search For Movies and TV Shows...." name="search">
 </form>
-     <table> 
-  <tr>
-      <div>
-      <td><a href="thesociety.html"><img id="zoom" src="the-society.jpg"   class="responsive" style="width:250px;height:200px;"></a></td>
-      <td><a href="freeridge.html"><img id="zoom" src="freeridge.jpg"  class="responsive"  style="width:250px;height:200px;"></a></td>
-      <td><a href="swarm.html"><img id="zoom" src="swarm.png"  class="responsive"  style="width:250px;height:200px;"></a></td>
-      <td><a href="outerbanks.html"><img id="zoom" src="outer-banks.jpeg"  class="responsive"   style="width:250px;height:200px;"></a></td>
+
+        <h1>Suspensful</h1>
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="deadtome.html" target="_blank"><img  src="dead to me.jpg" alt="Dead to me" width="300" height="150"></a>
+                <div class="des">Dead To Me</div>
+            </div>
         </div>
-    </tr> 
-    </table>
-     <table>
-      <tr>
-        <div>
-          <td><a href="fleabag.html"><img id="zoom" src="fleabag.jpg" class="responsive" style="width:250px;height:200px;" ></a></td>
-          <td><a href="tsitp.html"><img id="zoom" src="tsitp.jpg"  class="responsive"  style="width:250px;height:200px;"></a></td>
-          <td><a href="fromscratch.html"><img id="zoom" src="from-scratch.jpg"  class="responsive"  style="width:250px;height:200px;"></a></td>
-           <td><a href="virginriver.html"><img id="zoom" src="virgin-river.jpg"   class="responsive" style="width:250px;height:200px;"></a></td>
-        </div> 
-      </tr>
-    </table>
-<table>
-      <tr>
-        <div>
-          <td><a href="baby.html"><img id="zoom" src="baby.jpg"  class="responsive"  style="width:250px;height:200px;""></a></td>
-          <td><a href="tsitp.html"><img id="zoom" src="tsitp.jpg"  class="responsive"  style="width:250px;height:200px;"></a></td>
-          <td><a href="heartbreakhigh.html"><img id="zoom" src="Heartbreak-high.jpg"  class="responsive" style="width:250px;height:200px;"></a></td>
-           <td><a href="ginnyandgeorgia.html"><img id="zoom" src="Ginny&Georgia.jpg"  class="responsive" style="width:250px;height:200px;"></a></td>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="freeridge.html" target="_blank"><img  src="freeridge.jpg" alt="freeridge" width="300" height="200"></a>
+                <div class="des">Freeridge</div>
+            </div>
         </div>
-      </tr>
-    </table>
-  </body>
-</html>
-      
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="swarm.html" target="_blank"><img  src="YOU.jpg"  alt="you"width="300" height="200"></a>
+                <div class="des">YOU</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="watcher.html" target="_blank"><img src="the watcher.jpg" alt="the watcher" width="300" height="200"></a>
+                <div class="des">The Watcher</div>
+            </div>
+        </div>
+          <h1>Romance</h1>
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="oneday.html" target="_blank"><img src="One-Day.jpg" alt="fleabag" width="300" height="200"></a>
+                <div class="des">One Day</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="tsitp.html" target="_blank"><img src="tsitp.jpg" alt="The Summer I turned pretty" width="300" height="200"></a>
+                <div class="des">TSITP</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="cmbyn.html" target="_blank"><img src="cmbyn.jpeg" alt="call me by your name" width="300" height="200"></a>
+                <div class="des">CMBYN</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="virginriver.html" target="_blank"><img  src="virgin-river.jpg" alt="virgin river" width="300" height="200"></a>
+                <div class="des">Virgin River</div>
+            </div>
+        </div>
+          <footer>
+            <div class="footerBottom">
+            <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
+        </div>
+        </footer>
+    </body>
+    </html>
