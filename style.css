@@ -38,7 +38,6 @@ body { font-family: Arial, Helvetica, sans-serif;
     }
 }
 h1{
-    padding-left: 10px;
     padding-top: 10px;
     font-weight: 60px;
     color:white;
@@ -138,23 +137,7 @@ nav ul li a{
         left: 0;
     }
 }
- form.search button {
-  display: block;
-  width: 20%;
-  padding: 10px;
-  background: #000000;
-  color: white;
-  font-size: 20px;
-  border: 1px solid black;
-  border-radius: 70px;
-  cursor: pointer;
-}
-
-form.search button:hover {
-  background: grey;
-}
-
-    .footerNav{
+       .footerNav{
     margin: 30px 0;
   }
 .footerNav ul{
