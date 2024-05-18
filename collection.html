@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
     <style>
       
     *{
@@ -113,7 +117,66 @@ nav ul li a{
         left: 0;
     }
 }
+     form.search button {
+  display: block;
+  width: 20%;
+  padding: 10px;
+  background: #000000;
+  color: white;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 70px;
+  cursor: pointer;
+}
 
+form.search button:hover {
+  background: grey;
+}
+
+       .footerNav{
+    margin: 30px 0;
+  }
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity:1;
+}
+.footerBottom{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color:white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+ @media screen and (max-width:700px){
+    .footerNav{
+      flex-direction: column;  
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align:center;
+        margin: 10px;
+    }
+ }
     </style>
     </head>
     <body>
@@ -132,5 +195,21 @@ nav ul li a{
                 <li><a href="games.html">Games and Apps</a></li>
             </ul>
         </nav>
-    
+      <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">More 
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="netflix.html">Netfflix</a></li>
+      <li><a href="prime.html">Prime Video</a></li>
+      <li><a href="romancecoll.html">Romance</a></li>
+    </ul>
+  </div>
+</div>
+        <footer>
+            <div class="footerBottom">
+            <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
+        </div>
+        </footer>
+    </body>
+</html>
     
