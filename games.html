@@ -149,7 +149,80 @@ nav ul li a{
         left: 0;
     }
 }
+ footer {
+    padding:0;
+    margin: 0;
+    background-color: black;
+  }
+  .footerContainer{
+    width: 100%
+  }
 
+
+  .socialIcons{
+    display:flex;
+    justify-content:center;
+  }
+  .socialIcons a{
+    text-decoration: none;
+    padding:10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%
+  }
+  .socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9; 
+  }
+  .socialIcons a:hover{
+    background-color: grey;
+    transition: 0.5s;
+  }
+  .footerNav{
+    margin: 30px 0;
+  }
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity:1;
+}
+.footerBottom{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color:white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+ @media screen and (max-width:700px){
+    .footerNav{
+      flex-direction: column;  
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align:center;
+        margin: 10px;
+    }
+ }
     </style>
     </head>
     <body>
@@ -224,5 +297,26 @@ nav ul li a{
                 <div class="des">Lego</div>
             </div>
         </div>
+      <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+               <a href="#"><i class="fa-brands fa-facebook"></i></a> 
+               <a href="#"><i class="fa-brands fa-instagram"></i></a> 
+               <a href="#"><i class="fa-brands fa-twitter"></i></a> 
+               <a href="#"><i class="fa-brands fa-youtube"></i></a> 
+            </div>
+            <div class="footerNav">
+                <ul>
+                 <li><a href="#">Company</a></li>  
+                 <li><a href="#">Accessibility</a></li>  
+                 <li><a href="#">Privacy Policy</a></li>  
+                 <li><a href="#">Cookie Preferences</a></li>   
+                </ul>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
+        </div>
+        </footer>
     </body>
     </html>
