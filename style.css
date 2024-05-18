@@ -140,7 +140,7 @@ nav ul li a{
 }
  form.search button {
    top: 10px;
-   right: 16px;
+   left: 16px;
   position: absolute;
   float: left;
   display: block;
