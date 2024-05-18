@@ -4,302 +4,227 @@
      <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title> TV shows </title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ <title> TV shows </title>
     <style>
-      body { 
-        background-color: #000000; 
-        overflow-x: hidden;
-      }
-      p { 
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        padding-left: 10px;
-      }
- .topnav {
-  overflow: hidden;
-  background-color: #000000;
+*{
+    box-sizing: border-box;
+    
 }
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+body { font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
 }
-
-.topnav a:hover {
-  background-color: transparent;
-  color: grey;
+.gallery{
+    border: 1px solid #000;
 }
-
-.topnav a.active {
-  background-color: grey;
-  color: white;
-}
-
-      @media screen and (max-width: 600px) {
-  .topnav a {
-    float: none;
-    display: block;
-    text-align: left;
+.gallery img {
     width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-       } 
-        
-      
-       .responsive {
-  width: 100%;
-  height: auto;
+    height: auto;
 }
- form.search button {
-   top: 10px;
-   right: 16px;
-  position: absolute;
-  float: left;
-  display: block;
-  width: 20%;
-  padding: 10px;
-  background: #000000;
-  color: white;
-  font-size: 20px;
-  border: 1px solid black;
-  border-radius: 70px;
-  cursor: pointer;
-}
-
-form.search button:hover {
-  background: grey;
-}
-       div { 
-        white-space: nowrap; 
-        margin-right: 1em;
-        margin-left: 1em;
-          }
-       #zoom {
-  padding: 60px;
-  transition: transform .2s;
-  width: 270px;
-  height: 250px;
-  
-}
-
-#zoom:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5); 
-}
-      
-       #slider {
-      overflow: hidden;
-      padding-top: 35px;
-}
-#slider figure {
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  animation: slider 20s infinite;
-}
-
-#slider figure img {
-             margin-left: 0px;
-             margin-right: 0px;
-            width: 20%;
-          float: left;
-           height: 60%; 
-        background-position: center;
-       background-repeat: no-repeat;
-      background-size: cover;
-           }
-@keyframes slider {
-  0% {
-    left: 0;
-  }
-  20% {
-    left: 0;
-  }
-  25% {
-    left: -100%;
-  }
-  45% {
-    left: -100%;
-  }
-  50% {
-    left: -200%;
-  }
-  70% {
-    left: -200%
-  }
-  75% {
-    left: -300%;
-  }
-  95% {
-    left: -300%;
-  }
-  100% {
-    left: -400%
-  }
-  footer{
-          background-color: #111
-        }
-        .footerContainer {
-            width: 100%; 
-            padding: 70px 10px 20px;
-        }
-        .socialIcons{
-            display:flex;
-            justify-content: center;
-        }
-        .socialIcons a{
-            text-decoration: none;
-            padding: 10px;
-            background-color:aliceblue;
-            margin: 10px;
-            border-radius: 50%;
-        }
-         socialIcons a i(
-            font-size: 7em;
-            color: black;
-            opacity: 0.9
-         )
-.socialIcons a:hover {
-    background-color: #111;
-    transition: 0.5
-}
-.footerNav{
-    margin:30px opx;
-}
-.footerNav ul{
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
-      .footerNav ul li a{
-        color: white;
-        margin: 20px;
-        text-decoration: none;
-        font-size: 1.3em;
-        opacity: 0.7;
-        transition: 0.5s
-      }
-      .footerNav ul li a:hover{
-        opacity:1;
-      }
-      .footerBottom{
-        background-color: #000
-        padding: 20px;
-        text-align: center;
-      }
-      .footerBottom p{
-        color:white;
-      }
-      .designer{
-        opacity: 0.7;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: 400px;
-        margin: 0px 5px;
-      }
-      @media screen and (max-width: 700px;)  {
-.footerNav ul(
-    flex-direction: column;
-)
-.footerNav ul li(
-    width: 100%;
+.des{
+    padding: 15px;
     text-align: center;
-    margin: 10px;
-)
+    font-weight: 500;
+    color:white; 
+}
+h1 {
+    color: white;
+}
+.responsive{
+    padding: 0 6px;
+    float: left;
+    width: 25%;
+}
+@media only screen and (max-width: 700px){
+    .responsive{
+        width: 50%;
+        margin: 6px 0;
+
     }
+}
+@media only screen and (max-width: 500px){
+    .responsive{
+        width: 100%;
+      
+        
+    }
+}
+
+nav {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    background-color: #000;
+    height: 80px;
+    width: 100%;
+
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+    text-decoration: none;
+
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    text-decoration: none;
+
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+a.active,a:hover{
+    background: grey;
+    transition: .5s;
+    text-decoration: none;
+
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media screen and (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+
+    }
+}
+nav ul li a{
+    font-size: 16px;
+}
+@media screen and (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+    }
+    nav ul li a{
+        font-size:20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color:grey;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
     </style>
-  </head>
-  <body>
-  <div class="topnav">
-  <a class="navbar-brand" href="Warner-Bros-Logo.png"><img src="Warner-Bros-Logo.png" style="width: 50px; height: 25px; padding-right: 100px;"></a>
- <p> <a href="index.html">Home</a></p>
-  <p><a class="active" href="movies.html">Movies</a></p>
-  <p><a href="tvshows.html">TV shows</a></p>
-    <p><a href="feedback.html"> Feedback</a></p>
-      <p><a href="collection.html">Collections</a></p>
-  <p><a href="games.html">Games&Apps</a></p>
-</div>
-     <form class="search" action="search.html" style="margin:20px;max-width:300px">
-  <button type="submit"><i class="fa fa-search"></i></button>
-</form>
-    <div id="slider">
-      <figure>
-        <img src="pearl.jpg">
-        <img src="Ginny&Georgia.jpg">
-        <img src="girl-interrupted.webp">
-        <img src="girlstrip.jpg">
-        <img src="waves.jpg">
-      </figure>
-    </div>
-    <table> 
-  <tr>
-     <p>Romance</p>
-      <div>
-      <td><a href="seeyouonvenus.html"><img id="zoom" src="See You On Venus.jpeg" class="responsive" alt="See You On Venus"  style="width:250px;height:200px;"></a></td>
-      <td><a href="other-zo.html"><img id="zoom" src="other-zoey.jpg"  class="responsive" alt="The Other Zoey"    style="width:250px;height:200px;"></a></td>
-      <td><a href="perfectfind.html"><img id="zoom" src="theperfectfind.jpeg" class="responsive" alt="The Perfect Find"  style="width:250px;height:200px;"></a></td>
-      <td><a href="lovegelato.html"><img id="zoom" src="love&gelato.jpeg" class="responsive" alt="love&gelato"   style="width:250px;height:200px;"></a></td>
-      </div>
-    </tr> 
-    </table>
-
-    <table>
-      <tr>
-       <p>Comedy</p>
-        <div>
-          <td><a href="bridesmaids.html"><img id="zoom" src="bridesmaids.jpg" class="responsive" alt="Bridesmaids"   style="width:250px;height:200px;"></a></td>
-          <td><a href="dorevenge.html"><img id="zoom" src="dorevenge.jpg" class="responsive" alt="Do Revenge"    style="width:250px;height:200px;"></a></td>
-          <td><a href="girlstrip.html"><img id="zoom" src="girlstrip.jpg" class="responsive" alt="Girls Trip"    style="width:250px;height:200px;"></a></td>
-           <td><a href="hesallthat.html"><img id="zoom" src="he'sallthat.jpg" class="responsive" alt="He's all that"    style="width:250px;height:200px;"></a></td>
-        </div>
-      </tr>
-    </table>
-
-    <table>
-      <tr>
-      <p>Indie Movies</p>
-          <div>
-            <td><a href="floproject.html"><img id="zoom" src="the-florida-project.jpg"  class="responsive" alt="The Florida Project" style="width:250px;height:200px;"></a></td>
-            <td><a href="ladybird.html"><img id="zoom" src="ladybird.jpg" class="responsive" alt="Ladybird" style="width:250px;height:200px;"></a></td>
-            <td><a href="cmbyn.html"><img id="zoom" src="cmbyn.jpeg" class="responsive" alt="Call Me By Your Name"  style="width:250px;height:200px;"></a></td>
-            <td><a href="beautifulboy.html"><img id="zoom" src="beautiful-boy.jpeg" class="responsive" alt="Beautiful Boy"  style="width:250px;height:200px;"></a></td>
-          </div>
-      </tr>
-    </table>
-    <footer>
-      div class="footerContainer">
-             <div class="socialIcons">
-               <a href="#"><i class="fa-brands fa-facebook"></i></a>
-               <a href="#"><i class="fa-brands fa-instagram"></i></a>
-               <a href="#"><i class="fa-brands fa-twitter"></i></a>
-               <a href="#"><i class="fa-brands fa-youtube"></i></a>
-               <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-             </div>
-             <div class="footerNav">
-                <ul>
-                    <li><a href="#">Company</a></li>
-                    <li><a href="#">Cookie Preferences</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Accessibility</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-             </div>
-             
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="check" >
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"><img src="Warner-Bros-Logo.png" width="80px"height="50px"></label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Movies</a></li>
+                <li><a class="active" href="index.html">Tv shows</a></li>
+                <li><a href="index.html">Collection</a></li>
+                <li><a href="index.html">Feedback</a></li>
+                <li><a href="index.html">Games and Apps</a></li>
+            </ul>
+        </nav>
+    
+           
+        <h1>Indie Movies</h1>
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="floproject.html" target="_blank"><img  src="the-florida-project.jpg" alt="the florida project" width="300" height="150"></a>
+                <div class="des">The Florida Project</div>
             </div>
-            <div class="footerBottom">
-                <p>TM & © 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span> All rights reserved.
-             </div>
-        </footer>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="ladybird.html" target="_blank"><img  src="ladybird.jpg" alt="ladybird"  width="300" height="200"></a>
+                <div class="des">Lady Bird</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="cmbyn.html" target="_blank"><img  src="cmbyn.jpeg" alt="call me by your name" width="300" height="200"></a>
+                <div class="des">CMBYN</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="beautifulboy.html" target="_blank"><img src="beautiful-boy.jpeg"   alt="beautiful boy" width="300" height="200"></a>
+                <div class="des">Beautiful Boy</div>
+            </div>
+        </div>
+        <h1>Romance</h1>
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="seeyouonvenus.html" target="_blank"><img src="seeyouonvenus.jpeg" alt="see you on venus" width="300" height="200"></a>
+                <div class="des">See You On Venus</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="other-zo.html" target="_blank"><img src="other-zoey.jpg" alt="other zoey" width="300" height="200"></a>
+                <div class="des">The Other Zoey</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="perfectfind.html" target="_blank"><img src="theperfectfind.jpeg"  alt="perfect find" width="300" height="200"></a>
+                <div class="des">The Perfect Find</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="lovegelato.html" target="_blank"><img  src="love&gelato.jpg"  alt="love and gelato" width="300" height="200"></a>
+                <div class="des">Love&Gelato</div>
+            </div>
+        </div>
     </body>
     </html>
-    </footer>
-  </body>
-</html>
