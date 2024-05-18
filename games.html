@@ -4,144 +4,225 @@
      <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title> TV shows </title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ <title> Movies </title>
     <style>
-      body { 
-        background-color: #000000; 
-        overflow-x: hidden;
-      }
-      p { 
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        padding-left: 10px;
-      }
- .topnav {
-  overflow: hidden;
-  background-color: #000000;
+*{
+    box-sizing: border-box;
+    
 }
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+body { font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
 }
-
-.topnav a:hover {
-  background-color: transparent;
-  color: grey;
+.gallery{
+    border: 1px solid #000;
 }
-
-.topnav a.active {
-  background-color: grey;
-  color: white;
-}
-
-      @media screen and (max-width: 600px) {
-  .topnav a {
-    float: none;
-    display: block;
-    text-align: left;
+.gallery img {
     width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-       } 
-        
-      
-       .responsive {
-  width: 100%;
-  height: auto;
+    height: auto;
 }
-      @media only screen and (max-width: 700px){
-.responsive {
-   width: 50%;
-   margin: 6px 0;
+.des{
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+    color:white; 
+}
+h1 {
+    color: white;
+}
+.responsive{
+    padding: 0 6px;
+    float: left;
+    width: 25%;
+}
+@media only screen and (max-width: 700px){
+    .responsive{
+        width: 50%;
+        margin: 6px 0;
 
+    }
 }
-}
-
 @media only screen and (max-width: 500px){
-.responsive {
-   width: 100%;
-}
-}
- form.search button {
-   top: 10px;
-   right: 16px;
-  position: absolute;
-  float: left;
-  display: block;
-  width: 20%;
-  padding: 10px;
-  background: #000000;
-  color: white;
-  font-size: 20px;
-  border: 1px solid black;
-  border-radius: 70px;
-  cursor: pointer;
+    .responsive{
+        width: 100%;
+      
+        
+    }
 }
 
-form.search button:hover {
-  background: grey;
+nav {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    background-color: #000;
+    height: 80px;
+    width: 100%;
+
 }
-       div { 
-        white-space: nowrap; 
-        margin-right: 1em;
-        margin-left: 1em;
-          }
-       #zoom {
-  padding: 60px;
-  transition: transform .2s;
-  width: 270px;
-  height: 250px;
-  
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+    text-decoration: none;
+
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    text-decoration: none;
+
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+a.active,a:hover{
+    background: grey;
+    transition: .5s;
+    text-decoration: none;
+
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media screen and (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+
+    }
+}
+nav ul li a{
+    font-size: 16px;
+}
+@media screen and (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+    }
+    nav ul li a{
+        font-size:20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color:grey;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
 }
 
-#zoom:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5); 
-}
-        </style>
-  </head>
+    </style>
+    </head>
     <body>
-  <div class="topnav">
-  <a class="navbar-brand" href="Warner-Bros-Logo.png"><img src="Warner-Bros-Logo.png" style="width: 50px; height: 25px; padding-right: 100px;"></a>
- <p> <a href="index.html">Home</a></p>
-  <p><a href="movies.html">Movies</a></p>
-  <p><a href="tvshows.html">TV shows</a></p>
-    <p><a href="feedback.html"> Feedback</a></p>
-      <p><a href="collection.html">Collections</a></p>
-  <p><a class="active" href="games.html">Games&Apps</a></p>
-</div>
-     <form class="search" action="search.html" style="margin:20px;max-width:300px">
-  <button type="submit"><i class="fa fa-search"></i></button>
-</form>
-<table> 
-  <tr>
-     <p>Mobile Apps</p>
-      <div>
-      <td><img id="zoom" src="as.png" class="responsive" alt="as"  style="width:250px;height:200px;"></td>
-      <td><img id="zoom" src="psych.jpeg"  class="responsive" alt="psych"    style="width:250px;height:200px;"></td>
-      <td><img id="zoom" src="heads.jpeg" class="responsive" alt="headsup"  style="width:250px;height:200px;"></td>
-      <td><img id="zoom" src="cartnet.jpeg" class="responsive" alt="CN"   style="width:250px;height:200px;"></td>
-      </div>
-    </tr> 
-    </table>
-        <table> 
-  <tr>
-     <p>Games</p>
-      <div>
-      <td><img id="zoom" src="clank.jpeg" class="responsive" alt="as"  style="width:250px;height:200px;"></td>
-      <td><img id="zoom" src="sub.jpeg"  class="responsive" alt="psych"    style="width:250px;height:200px;"></td>
-      <td><img id="zoom" src="uno.jpeg" class="responsive" alt="headsup"  style="width:250px;height:200px;"></td>
-      <td><img id="zoom" src="lego.jpeg" class="responsive" alt="CN"   style="width:250px;height:200px;"></td>
-      </div>
-    </tr> 
-        </table>
+        <nav>
+            <input type="checkbox" id="check" >
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"><img src="Warner-Bros-Logo.png" width="80px"height="70px"></label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a  href="tvshows.html">Tv shows</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a class="active" href="games.html">Games and Apps</a></li>
+            </ul>
+        </nav>
+          <h1>Mobile Apps</h1>
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="pearl.html" target="_blank"><img  src="as.png" alt="Adult Swim" width="300" height="200"></a>
+                <div class="des">ADULT SWIM</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="maid.html" target="_blank"><img  src="psych.jpeg" alt="Psych Out With Your Friends"   width="300" height="200"></a>
+                <div class="des">Psych Out With Your Friends</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="cmbyn.html" target="_blank"><img  src="heads.jpeg" alt="heads up" width="300" height="200"></a>
+                <div class="des">Heads Up</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="beautifulboy.html" target="_blank"><img src="cartnet.jpeg"   alt="cartoon network arcade" width="300" height="150"></a>
+                <div class="des">cartoon network arcade</div>
+            </div>
+        </div>
+        <h1>Games</h1>
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="saperfectstory.html" target="_blank"><img src="clank.jpeg" alt="a perfect story" width="300" height="200"></a>
+                <div class="des">Clank</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="other-zo.html" target="_blank"><img src="sub.jpeg" alt="subway surfers" width="300" height="200"></a>
+                <div class="des">Subway Surfers</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="fivefeetapart.html" target="_blank"><img src="uno.jpeg"  alt="Uno" width="300" height="200"></a>
+                <div class="des">Uno</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="brokenhearts.html" target="_blank"><img  src="lego.jpeg"  alt="Lego" width="300" height="200"></a>
+                <div class="des">Lego</div>
+            </div>
+        </div>
     </body>
-</html>
+    </html>
