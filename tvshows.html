@@ -4,86 +4,46 @@
      <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title> TV shows </title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ <title> TV shows </title>
     <style>
-
-body {
-    font-weight: 400;
-    font-family: 'Segoe UI';
-    background-color: #000000;
+*{
+    box-sizing: border-box;
+    
 }
-   
-      p { 
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        padding-left: 10px;
-      }
-     
-.topnav {
-  overflow: hidden;
-  background-color: #000000;
+body { font-family: Arial, Helvetica, sans-serif;
 }
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+.gallery{
+    border: 1px solid #000;
 }
-
-.topnav a:hover {
-  background-color: transparent;
-  color: grey;
-}
-
-.topnav a.active {
-  background-color: grey;
-  color: white;
-}
-      @media screen and (max-width: 600px) {
-  .topnav a {
-    float: none;
-    display: block;
-    text-align: left;
+.gallery img {
     width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-       } 
-        form.search button {
-   top: 10px;
-   right: 16px;
-  position: absolute;
-  float: left;
-  display: block;
-  width: 20%;
-  padding: 10px;
-  background: #000000;
-  color: white;
-  font-size: 20px;
-  border: 1px solid black;
-  border-radius: 70px;
-  cursor: pointer;
+    height: auto;
 }
+.des{
+    padding: 15px;
+    text-align: center;
+}
+.responsive{
+    padding: 0 6px;
+    float: left;
+    width: 25%;
+}
+@media only screen and (max-width: 700px){
+    .responsive{
+        width: 50%;
+        margin: 6px 0;
 
-form.search button:hover {
-  background: grey;
+    }
 }
-
-       .responsive {
-  width: 100%;
-  height: auto;
+@media only screen and (max-width: 500px){
+    .responsive{
+        width: 100%;
+      
+        
+    }
 }
- 
-       div { 
-        white-space: nowrap; 
-        margin-right: 1em;
-        margin-left: 1em;
-          }
-       #zoom {
+#zoom {
   padding: 60px;
   transition: transform .2s;
   width: 270px;
@@ -96,8 +56,7 @@ form.search button:hover {
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.5); 
 }
-      
-       #slider {
+#slider {
       overflow: hidden;
       padding-top: 35px;
 }
@@ -119,179 +78,180 @@ form.search button:hover {
        background-repeat: no-repeat;
       background-size: cover;
            }
-@keyframes slider {
-  0% {
-    left: 0;
-  }
-  20% {
-    left: 0;
-  }
-  25% {
-    left: -100%;
-  }
-  45% {
-    left: -100%;
-  }
-  50% {
-    left: -200%;
-  }
-  70% {
-    left: -200%
-  }
-  75% {
-    left: -300%;
-  }
-  95% {
-    left: -300%;
-  }
-  100% {
-    left: -400%
-  }
-    
-    .footer {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+nav {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    background-color: #000;
+    height: 80px;
+    width: 100%;
 
-         .footer {
-            padding: 40px 0;
-            background-color: white;
-         }
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
 
-         .footer .social {
-            text-align: center;
-            padding-bottom: 45px;
-            color:rgb(201, 121, 0);
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background: #333;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media screen and (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
 
-         }
+    }
+}
+nav ul li a{
+    font-size: 16px;
+}
+@media screen and (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
 
-         .footer .social a{
-            font-size: 24px;
-            color: inherit;
-            border: 1px solid white;
-            width: 40px;
-            height: 30px;
-            line-height: 38px;
-            display: inline-block;
-            text-align: center;
-            border-radius: 50%;
-            margin: 0 8px;
-            opacity: 0.75;
-         }
-         
-         .footer .social a:hover {
-            opacity: 0.9;
-         }
+    }
+    nav ul li a{
+        font-size:20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color:#0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
 
-         .footer ul {
-            margin-top: 0;
-            padding: 0;
-            list-style: none;
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 0;
-            text-align: center;
-         }
-         .footer ul li a {
-            color: inherit;
-            text-decoration: none;
-            opacity: 0.8;
-         }
-         .footer ul li {
-            display: inline-block;
-            padding: 0 15px;
-         }
-         .footer ul li a:hover {
-            opacity: 2;
-         }
-
-         .footer .copyright {
-            margin-top: 15px;
-            text-align: center;
-            font-size: 13px;
-            color:aquamarine;
-         }
     </style>
-  </head>
-  <body>
-     <div class="topnav">
-    <a class="navbar-brand" href="Warner-Bros-Logo.png"><img src="Warner-Bros-Logo.png" style="width: 50px; height: 25px; padding-right: 100px;"></a>
-  <p><a href="index.html">Home</a></p>
- <p> <a href="movies.html">Movies</a></p>
-  <p><a class="active" href="tvshows.html">TV shows</a></p>
-    <p><a href="feedback.html"> Feedback</a></p>
-      <p><a href="collection.html">Collections</a></p>
-  <p><a href="games.html">Games&Apps</a></p>
-</div>
-     <form class="search" action="search.html" style="margin:20px;max-width:300px">
-  <button type="submit"><i class="fa fa-search"></i></button>
-</form>
-    <div id="slider">
-      <figure>
-        <img src="pearl.jpg">
-        <img src="Ginny&Georgia.jpg">
-        <img src="girl-interrupted.webp">
-        <img src="girlstrip.jpg">
-        <img src="waves.jpg">
-      </figure>
-    </div>
-    <table> 
-  <tr>
-      <p>Suspensful</p>
-        <div>
-      <td><a href="thesociety.html"><img id="zoom" src="the-society.jpg"   class="responsive" style="width:250px;height:200px;"></a></td>
-      <td><a href="freeridge.html"><img id="zoom" src="freeridge.jpg"  class="responsive"  style="width:250px;height:200px;"></a></td>
-      <td><a href="swarm.html"><img id="zoom" src="swarm.png"  class="responsive"  style="width:250px;height:200px;"></a></td>
-      <td><a href="outerbanks.html"><img id="zoom" src="outer-banks.jpeg"  class="responsive"   style="width:250px;height:200px;"></a></td>
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="check" >
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"><img src="warnerlogo.png" width="50px"height="50px"></label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Movies</a></li>
+                <li><a href="index.html">Tv shows</a></li>
+                <li><a href="index.html">Collection</a></li>
+                <li><a href="index.html">Feedback</a></li>
+                <li><a href="index.html">Games and Apps</a></li>
+            </ul>
+        </nav>
+        <div id="slider">
+            <figure>
+              <img src="pearl.jpg">
+              <img src="Ginny&Georgia.jpg">
+              <img src="girl-interrupted.webp">
+              <img src="girlstrip.jpg">
+              <img src="waves.jpg">
+            </figure>
+          </div>
+        <h1>Suspensful</h1>
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="thesociety.html" target="_blank"><img id="zoom" src="the-society.jpg" width="300" height="200"></a>
+                <div class="des">The Society</div>
+            </div>
         </div>
-    </tr> 
-    </table>
 
-    <table>
-      <tr>
-        <p>Romantic TV Shows</p>
-        <div>
-          <td><a href="fleabag.html"><img id="zoom" src="fleabag.jpg" class="responsive" style="width:250px;height:200px;" ></a></td>
-          <td><a href="tsitp.html"><img id="zoom" src="tsitp.jpg"  class="responsive"  style="width:250px;height:200px;"></a></td>
-          <td><a href="fromscratch.html"><img id="zoom" src="from-scratch.jpg"  class="responsive"  style="width:250px;height:200px;"></a></td>
-           <td><a href="virginriver.html"><img id="zoom" src="virgin-river.jpg"   class="responsive" style="width:250px;height:200px;"></a></td>
-        </div> 
-      </tr>
-    </table>
-
-    <table>
-      <tr>
-        <p>Teen TV Shows</p>
-        <div>
-          <td><a href="baby.html"><img id="zoom" src="baby.jpg"  class="responsive"  style="width:250px;height:200px;""></a></td>
-          <td><a href="tsitp.html"><img id="zoom" src="tsitp.jpg"  class="responsive"  style="width:250px;height:200px;"></a></td>
-          <td><a href="heartbreakhigh.html"><img id="zoom" src="Heartbreak-high.jpg"  class="responsive" style="width:250px;height:200px;"></a></td>
-           <td><a href="ginnyandgeorgia.html"><img id="zoom" src="Ginny&Georgia.jpg"  class="responsive" style="width:250px;height:200px;"></a></td>
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="freeridge.html" target="_blank"><img id="zoom" src="freeridge.jpg"  width="300" height="200"></a>
+                <div class="des">Freeridge</div>
+            </div>
         </div>
-      </tr>
-    </table>
-  <p>All rights reserved.</p>
-      <p><a href="contactus.html">Contact Us</a></p>
-      <p><a href="help.html">Help</a></p> 
-      <p><a href="accessibility.html">Accessibility</a></p> 
-      <p><a href="cookies.html">Cookie preferences</a></p>
-   <div class="zoom">
-    <a class="insta-icon" href="https://www.facebook.com/warnerbrosent/" target="_blank">
-     <i class="fa-brands fa-instagram"></i>
-    </a> 
-   </div>
-    <div class="zoom">
-    <a class="fb-icon" href="https://www.facebook.com/warnerbrosent/" target="_blank">
-      <i class="fa-brands fa-facebook"></i>
-   </a>
-    </div>
-    <div class="zoom">
-    <a class="pin-icon" href="https://www.pinterest.com/warnerbrosent/" target="_blank">
-      <i class="fa-brands fa-pinterest"></i>
-    </a>
-    </div>
-  </footer>
 
-  </body>
-</html>
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="swarm.html" target="_blank"><img id="zoom" src="swarm.png"  width="300" height="200"></a>
+                <div class="des">Swarm</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="outerbanks.html" target="_blank"><img id="zoom" src="outer-banks.jpeg"  width="300" height="200"></a>
+                <div class="des">OBX</div>
+            </div>
+        </div>
+        <h1>Romance</h1>
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="fleabag.html" target="_blank"><img id="zoom" src="fleabag.jpg" width="300" height="200"></a>
+                <div class="des">Fleabag</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="tsitp.html" target="_blank"><img id="zoom" src="tsitp.jpg"  width="300" height="200"></a>
+                <div class="des">The Summer I Turned Pretty</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="fromscratch.html" target="_blank"><img id="zoom" src="cmbyn.jpeg"  width="300" height="200"></a>
+                <div class="des">From Scratch</div>
+            </div>
+        </div>
+
+        <div class="responsive"> 
+            <div class="gallery">
+                <a href="virginriver.html" target="_blank"><img id="zoom" src="virgin-river.jpg"  width="300" height="200"></a>
+                <div class="des">Pearl</div>
+            </div>
+        </div>
+    </body>
+    </html>
