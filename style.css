@@ -137,7 +137,23 @@ nav ul li a{
         left: 0;
     }
 }
-       .footerNav{
+      form.search button {
+  display: block;
+  width: 20%;
+  padding: 10px;
+  background: #000000;
+  color: white;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 70px;
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: grey;
+}
+
+.footerNav{
     margin: 30px 0;
   }
 .footerNav ul{
