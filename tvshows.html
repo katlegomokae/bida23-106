@@ -147,6 +147,50 @@ nav ul li a{
         left: 0;
     }
 }
+       .footerNav{
+    margin: 30px 0;
+  }
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity:1;
+}
+.footerBottom{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color:white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+ @media screen and (max-width:700px){
+    .footerNav{
+      flex-direction: column;  
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align:center;
+        margin: 10px;
+    }
+ }
 
     </style>
     </head>
@@ -171,58 +215,63 @@ nav ul li a{
         <h1>Suspensful</h1>
         <div class="responsive"> 
             <div class="gallery">
-                <a href="deadtome.html" target="_blank"><img  src="dead to me.jpg" width="300" height="150"></a>
+                <a href="deadtome.html" target="_blank"><img  src="dead to me.jpg" alt="Dead to me" width="300" height="150"></a>
                 <div class="des">Dead To Me</div>
             </div>
         </div>
 
         <div class="responsive"> 
             <div class="gallery">
-                <a href="freeridge.html" target="_blank"><img  src="freeridge.jpg"  width="300" height="200"></a>
+                <a href="freeridge.html" target="_blank"><img  src="freeridge.jpg" alt="freeridge" width="300" height="200"></a>
                 <div class="des">Freeridge</div>
             </div>
         </div>
 
         <div class="responsive"> 
             <div class="gallery">
-                <a href="swarm.html" target="_blank"><img  src="swarm.png"  width="300" height="150"></a>
-                <div class="des">Swarm</div>
+                <a href="swarm.html" target="_blank"><img  src="you.jpg"  alt="you"width="300" height="200"></a>
+                <div class="des">YOU</div>
             </div>
         </div>
 
         <div class="responsive"> 
             <div class="gallery">
-                <a href="outerbanks.html" target="_blank"><img src="outer-banks.jpeg"  width="300" height="200"></a>
+                <a href="outerbanks.html" target="_blank"><img src="outer-banks.jpeg" alt="outer banks" width="300" height="200"></a>
                 <div class="des">OBX</div>
             </div>
         </div>
           <h1>Romance</h1>
         <div class="responsive"> 
             <div class="gallery">
-                <a href="fleabag.html" target="_blank"><img src="fleabag.jpg" width="300" height="200"></a>
-                <div class="des">Fleabag</div>
+                <a href="oneday.html" target="_blank"><img src="One-Day.jpg" alt="fleabag" width="300" height="200"></a>
+                <div class="des">One Day</div>
             </div>
         </div>
 
         <div class="responsive"> 
             <div class="gallery">
-                <a href="tsitp.html" target="_blank"><img src="tsitp.jpg"  width="300" height="200"></a>
+                <a href="tsitp.html" target="_blank"><img src="tsitp.jpg" alt="The Summer I turned pretty" width="300" height="200"></a>
                 <div class="des">TSITP</div>
             </div>
         </div>
 
         <div class="responsive"> 
             <div class="gallery">
-                <a href="cmbyn.html" target="_blank"><img src="cmbyn.jpeg"  width="300" height="200"></a>
+                <a href="cmbyn.html" target="_blank"><img src="cmbyn.jpeg" alt="call me by your name" width="300" height="200"></a>
                 <div class="des">CMBYN</div>
             </div>
         </div>
 
         <div class="responsive"> 
             <div class="gallery">
-                <a href="virginriver.html" target="_blank"><img  src="virgin-river.jpg"  width="300" height="200"></a>
+                <a href="virginriver.html" target="_blank"><img  src="virgin-river.jpg" alt="virgin river" width="300" height="200"></a>
                 <div class="des">Virgin River</div>
             </div>
         </div>
+          <footer>
+            <div class="footerBottom">
+            <p>Copyright &copy;2024; <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
+        </div>
+        </footer>
     </body>
     </html>
