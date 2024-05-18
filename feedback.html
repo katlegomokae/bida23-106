@@ -5,10 +5,171 @@
 <head> 
 	<meta charset="UTF-8"> 
 	<meta name="viewport"
-		content="width=device-width, 
-				initial-scale=1.0"> 
-	
-	<style>
+		content="width=device-width, initial-scale=1.0"> 
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<title>Feedback Form</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    
+}
+nav {
+    padding: 0;
+    padding-bottom: 20px;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    background-color: #000;
+    height: 80px;
+    width: 100%;
+
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+    text-decoration: none;
+
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+   text-decoration: none;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    border-radius: 3px;
+    text-transform: uppercase;
+   text-decoration: none;
+}
+a.active,a:hover{
+    background: grey;
+    transition: .5s;
+   text-decoration: none;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media screen and (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+
+    }
+}
+nav ul li a{
+    font-size: 16px;
+}
+@media screen and (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+    }
+    nav ul li a{
+        font-size:20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color:grey;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+       form.search button {
+  display: block;
+  width: 20%;
+  padding: 10px;
+  background: #000000;
+  color: white;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 70px;
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: grey;
+}
+
+       .footerNav{
+    margin: 30px 0;
+  }
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity:1;
+}
+.footerBottom{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color:white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+ @media screen and (max-width:700px){
+    .footerNav{
+      flex-direction: column;  
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align:center;
+        margin: 10px;
+    }
+ }
+
 body { 
 	font-family: Arial, sans-serif; 
 	margin: 0; 
@@ -18,9 +179,10 @@ body {
 
 
 .container { 
-	max-width: 600px; 
+	max-width: 600px;
 	margin: 0 auto; 
 	padding: 20px; 
+    padding-top: 20px;;
 	background-color: #ffffff; 
 	border-radius: 10px; 
 	box-shadow: 0 0 10px
@@ -92,13 +254,68 @@ button:hover {
 		sans-serif; 
 } 
 
+form.search button {
+  display: block;
+  width: 20%;
+  padding: 10px;
+  background: #000000;
+  color: white;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 70px;
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: grey;
+}
+
+       .footerNav{
+    margin: 30px 0;
+  }
+
+.footerBottom{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color:white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+
     </style> 
 	<title>Survey Form</title> 
 </head> 
 
 <body> 
 
-	
+    <nav>
+        <input type="checkbox" id="check" >
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"><img src="Warner-Bros-Logo.png" width="80px"height="50px"></label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a  href="tvshows.html">Tv shows</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a class="active" href="feedback.html">Feedback</a></li>
+            <li><a href="games.html">Games and Apps</a></li>
+        </ul>
+    </nav>
+
+     <form class="search" action="search.html" style="margin:20px;max-width:300px">
+<button type="submit"><i class="fa fa-search"></i></button>
+</form>  
 	<div class="container"> 
 		<h1>Feedback <Form></Form></h1> 
 
@@ -285,30 +502,6 @@ document
 				} 
 			); 
 
-			
-			const csvContent = 
-				convertToCSV( 
-					formValues 
-				); 
-			const blob = new Blob( 
-				[csvContent], 
-				{ type: "text/csv" } 
-			); 
-
-		
-			const link = 
-				document.createElement( 
-					"a"
-				); 
-			link.href = 
-				window.URL.createObjectURL( 
-					blob 
-				); 
-			link.download = 
-				"survey_data.csv"; 
-			link.click(); 
-
-			
 			setTimeout( 
 				document 
 					.getElementById( 
@@ -348,6 +541,11 @@ function convertToCSV(objArr) {
 }
 
 </script> 
+<footer>
+    <div class="footerBottom">
+    <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
+</div>
+</footer>
 </body> 
 
 </html>
