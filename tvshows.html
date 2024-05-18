@@ -146,6 +146,22 @@ nav ul li a{
         left: 0;
     }
 }
+       form.search button {
+  display: block;
+  width: 20%;
+  padding: 10px;
+  background: #000000;
+  color: white;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 70px;
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: grey;
+}
+
        .footerNav{
     margin: 30px 0;
   }
@@ -209,8 +225,10 @@ nav ul li a{
                 <li><a href="games.html">Games and Apps</a></li>
             </ul>
         </nav>
-        <div id="slider">
-           
+
+         <form class="search" action="search.html" style="margin:20px;max-width:300px">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>  
         <h1>Suspensful</h1>
         <div class="responsive"> 
             <div class="gallery">
@@ -269,7 +287,7 @@ nav ul li a{
         </div>
           <footer>
             <div class="footerBottom">
-            <p>TM & &copy;2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
+            <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
         </div>
         </footer>
     </body>
