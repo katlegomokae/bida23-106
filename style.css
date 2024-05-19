@@ -20,6 +20,10 @@
        height: 200px;
        margin: 10px 0;
     }
+    h1{
+        color:white;
+        padding:15px;
+    }
     
     
     nav {
