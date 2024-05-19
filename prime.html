@@ -1,113 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Prime Video Collection</title>
-   <meta charset="utf-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Warner Bros.com | Home of Movies, TV Shows and Games!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
   <style>
-    p { 
-      color: white;
-       font-size: 15px;
-       font-weight: 300;
-        font-family: Arial, Helvetica, sans-serif;
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    body{
+        background-color: black;
+        color: white;
+    }
+    .heading{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         text-align: center;
-     }
-    a { 
-   text-decoration: none;
-   color: white;
-   font-style: Arial, Helvetica, sans-serif;
-   font-size: 20px;
-  }
-     a:hover {
-                background-color: rgba(255,255,255,0);
-                color: white;
+        margin: 20px auto;
+    }
+    .heading h1::after{
+        content:"";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        display: block;
+        margin: 0 auto;
+        background-color:black;
+    }
+    .heading p{
+       font-size: 18px;
+       color:#666;
+       margin-bottom: 35px; 
+    }
+    .container{
+       width: 90%;
+       margin: 0 auto;
+       padding: 10px 20px; 
+    }
+    .about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .about-image{
+        flex: 1;
+        margin-right: 40px;
+        overflow: hidden;
+    }
+    .about-image img{
+        max-width:100%;
+        height: auto;
+        display: block;
+        transition: 0.5s ease;
+    }
+    .about-image:hover img{
+        transform: scale(1.2);
+    }
+    .about-content{
+        flex: 1;
+    }
+    .about-content h2{
+        font-size: 23px;
+        margin-bottom: 15px;
+        color: white;
+    }
+    .about-content p{
+font-size: 18px;
+line-height: 1.5;
+color:white;
+    }
+    .about-content .read-more{
+        display:inline-block;
+        padding: 10px 20px;
+        background-color: white;
+        color: black;
+        font-size:  19px;
+        text-decoration: none;
+        border-radius: 25px;
+        margin-top: 15px;
+        transition: 0.3s ease;
+    }
+    .about-content .read-more:hover{
+        background-color: grey;
+    }
+    @media screen and  (max-width:768px) {
+        .heading{
+         padding: 0px 20px;   
+        }
+       .heading h1{
+        font-size: 17px;
        } 
-      .topnav {
-  overflow: hidden;
-  background-color: #000000;
-}
-
-.topnav a {
-  float: right;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px 18px;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.topnav a:hover {
-  background-color: rgba(255,255,255,0);
-  color: white;
-}
-
-.topnav a.active {
-  background-color: #000000;
-  color: grey;
-}
-  body, html {
-  height: 100%;
-  margin: 0;
-  background-color: #000000;
-}
-.bg {
-  background-image: url("primevideo.jpeg");
-  height: 75%; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-    
-    section {
-              white-space: nowrap; 
-              margin-right: 1em;
-              margin-left: 1em;
-          }
- #zoom {
-  padding: 50px;
-  transition: transform .2s;
-  width: 270px;
-  height: 250px;
-  
-}
-
-#zoom:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5); 
-}
-</style>
-</head>
+       .heading p{
+      font-size: 17px;
+      margin-bottom: 0px;
+       }
+       .container{
+        padding: 0px;
+       }
+      .about{
+        padding: 20px;
+        flex-direction: column;
+      } 
+      .about-image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+      }
+      .about-content p{
+        padding: 0px;
+        font-size: 16px;
+      }
+      .about-content .read-more{
+        font-size: 16px;
+      }
+    }
+  </style>
   <body>
-      <div class="topnav">
-      <p><a href="games&apps.html">Games&Apps</a></p>
-      <p><a class="active" href="collection.html">Collection</a></p>
-       <p><a href="feedback.html">Feedback</a></p>
-       <p><a href="tvshows.html">TV Shows</a></p>
-       <p><a href="movies.html">Movies</a></p>
-      <p><a href="index.html">Home</a></p>
-    </div> 
-   <div class="bg"></div>    
-    <br>
-    <table>
-      <tr>
-        <section>
-        <td><a href="fleabag.html"><img id="zoom" src="fleabag.jpg" alt="Fleabag" height="250px" width="198px"></td>
-        <td><a href="tsitp.html"><img id="zoom" src="tsitp.jpg" alt="The Summer I Turned Pretty" height="250px" width="200px"></td>
-        <td><a href="swarm.html"><img id="zoom"src="swarm.png" alt="Swarm" height="250px" width="198px"></td>
-        <td><a href="other-zo.html"><img id="zoom"src="other-zoey.jpg" alt="The Other Zoey" height="250px" width="198px"></td>
+  <div class="heading">
+    <h1>About Us</h1>
+    <p>Warner History</p>
+  </div>
+  <div calss="container">
+    <section class="about">
+        <div class="about-image">
+            <img src="Warner-Bros-Logo.png">
+        </div>
+        <div class="about-content">
+            
+<p>WARNER BROS. is a fully integrated entertainment company and a global leader in the creation, production, distribution, licensing and marketing of all forms of entertainment. A Warner Bros. Discovery company, the Studio is home to one of the most successful collections of brands in the world and stands at the forefront of every aspect of the entertainment industry, from feature film, television, digital and home entertainment production and worldwide distribution to DVD and Blu-ray, animation, comic books, videogames, and product and brand licensing. The company’s vast library, one of the most prestigious and valuable in the world, consists of more than 145,000 hours of programming, including 12,500 feature films and 2,400 television programs comprised of more than 150,000 individual episodes.
+
+    Warner Bros. began when the brothers Warner (Albert, Sam, Harry and Jack L.) incorporated their fledgling movie company on April 4, 1923. In 1927, the release of the world’s first “talkie,” (synchronized-sound feature film), “The Jazz Singer,” set a character and tone of creativity, courage, innovation and influence that would become synonymous with the name Warner Bros. And--as Al Jolson foretold in this milestone movie--“you ain’t heard nothin’ yet!”
+    
+    Since those early days, Warner Bros. Studios has amassed an impressive legacy based on world-class quality entertainment and technological foresight and created a diversified entertainment company with an unparalleled depth and breadth. Its century of continued success has been built on a foundation of long-term creative relationships with many of the world’s leading talent, and an unwavering dedication to excellence.
+    
+    Warner Bros. Pictures Group produces and distributes a wide-ranging, diverse slate of films each year. In 2023, Warner Bros. Pictures Group will continue to produce the industry’s broadest roster of films, featuring the Studio’s DC Super Hero titles, New Line Cinema’s horror titles, thoughtful dramas and smart comedies.
+    
+    New Line Cinema, part of Warner Bros. Entertainment since 2008, coordinates its development, production, marketing, distribution and business affairs activities with Warner Bros. Pictures Group to maximize film performance and operating efficiencies.
+    
+    DC Studios is responsible for overseeing the overall creative direction of the DC Universe across film, TV, and animation under a single banner. Spearheading the development and execution of a long-term plan for the many properties licensed from DC Comics, DC Studios is focused on continuing the tradition of high-quality storytelling for the DCU across audio-visual media, while building a sustainable growth business out of the iconic franchise. DC Studios also works collaboratively across every division of Warner Bros. Discovery, including film, TV, games, consumer products, live events, networks and more to help realize the vast potential of the DCU.
+    
+    The Warner Bros. Television Group oversees and grows the entire portfolio of Warner Bros.’ television production businesses, including scripted and unscripted programming, and animation. WBTVG production divisions include Warner Bros. Television, one of the industry’s leading suppliers of live-action scripted programming; Warner Bros. Unscripted Television, which produces award-winning unscripted series through the Warner Horizon, Telepictures, and Shed Media production labels; and three animation studios: Warner Bros. Animation, Cartoon Network Studios, and Hanna-Barbera Studios Europe. As of March 2023, these divisions are producing more than 100 live-action scripted dramas, comedies, limited series, unscripted programs, and animated series, movies, and specials for Warner Bros. Discovery’s HBO Max, external streaming platforms, cable, traditional broadcast networks, and the first-run syndication marketplace in the U.S.
+    
+    Warner Bros. Discovery Home Entertainment distributes the movies, television, animation, and digital content produced by Warner Bros. Discovery to the homes and screens of millions through physical Blu-ray Disc and DVD retail sales, and digital transactions on major streaming, video-on-demand cable, satellite, digital, and mobile channels.  WBDHE is part of Warner Bros. Discovery Content Sales, one of the world’s largest distributors of entertainment programming.
+    
+    Warner Bros. Discovery Global Brands and Experiences is the global division that drives opportunities for consumers to engage with WBD’s leading entertainment brands and franchises. Through its strategic franchise development group and global commercial businesses, GBE creates lasting connections to WBD’s iconic characters, talent, and storytelling. GBE operates WBD’s Global Consumer Products, Global Themed Entertainment, and world-renowned comic and publishing powerhouse DC.
+    
+    Warner Bros. Games is a premier worldwide publisher, developer, licensor and distributor of entertainment content for the interactive space across all platforms, including console, handheld, mobile and PC-based gaming for both internal and third-party game titles.</p>
+     <a href="" class="read-more"></a>   
+</div>
         </section>
-      </tr>
-      <tr>
-        <section>
-         <td><p><a href="fleabag.html">Fleabag</p></td> 
-        <td><p><a href="tsitp.html">The Summer I Turned Pretty</p></td>
-        <td><p><a href="swarm.html">Swarm</p></td>
-        <td><p><a href="other-zo.html">The Other Zoey</p></td>
-        </section>
-      </tr>
-      </table>
+  </div>
   </body>
-</html>
