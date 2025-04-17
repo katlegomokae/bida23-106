@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AccessCtrl - Voice Navigation Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+    .status {
+      margin-top: 10px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to AccessCtrl Voice Navigation</h1>
+  <video id="movie" width="600" controls>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+    Your browser does not support HTML video.
+  </video>
+
+  <br><br>
+  <button onclick="startListening()">🎤 Start Voice Control</button>
+  <p class="status" id="status">Click the mic to start speaking...</p>
+
+  <script>
+    // Check for browser support
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+
+    recognition.continuous = false;
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+
+    function startListening() {
+      recognition.start();
+      document.getElementById('status').innerText = "Listening...";
+    }
+
+    recognition.onresult = (event) => {
+      const command = event.results[0][0].transcript.toLowerCase();
+      document.getElementById('status').innerText = You said: "${command}";
+
+      // Handle voice commands
+      if (command.includes("play")) {
+        document.getElementById("movie").play();
+      } else if (command.includes("pause")) {
+        document.getElementById("movie").pause();
+      } else if (command.includes("scroll down")) {
+        window.scrollBy(0, 300);
+      } else if (command.includes("scroll up")) {
+        window.scrollBy(0, -300);
+      } else {
+        document.getElementById('status').innerText += " (Command not recognized)";
+      }
+    };
+
+    recognition.onerror = (event) => {
+      document.getElementById('status').innerText = Error: ${event.error};
+    };
+  </script>
+
+</body>
+</html>
