@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Voice Command Media Player</title>
+</head>
+<body>
+  <h1>🎙️ Voice Controlled Media Player</h1>
+  
+  <button onclick="startListening()">🎤 Start Listening</button>
+
+  <video id="myVideo" width="600" controls>
+    <source src="trailer.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    const video = document.getElementById('myVideo');
+
+    function startListening() {
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = 'en-US';
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      recognition.start();
+      console.log("Listening for commands...");
+
+      recognition.onresult = function(event) {
+        const command = event.results[0][0].transcript.toLowerCase();
+        console.log("You said:", command);
+
+        if (command.includes("play")) {
+          video.play();
+        } else if (command.includes("pause")) {
+          video.pause();
+        } else if (command.includes("next")) {
+          alert("Next trailer feature to be implemented.");
+        } else {
+          alert("Command not recognized.");
+        }
+      };
+
+      recognition.onerror = function(event) {
+        console.error("Speech recognition error:", event.error);
+      };
+    }
+  </script>
+</body>
+</html>
