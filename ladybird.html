@@ -77,7 +77,7 @@
     </li>
   </ul>
 </nav>
-
+  <button onclick="startListening()">🎤 Start Listening</button>
     <video controls autoplay id="myVideo">
   <source  src="ladybirdtr.mp4" type="video/mp4">
     </video>
@@ -85,5 +85,37 @@
       <p>As senior year comes to an end, Lady Bird must strive to navigate through the ups and downs in her relationships while trying to get into a prestigious college and become popular.</p>
     <br>
     <p>Cast:Saoirse Ronan, Lucas Hedges, Timothee Chalamet....</p>
+    <script>
+    const video = document.getElementById('myVideo');
+
+    function startListening() {
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = 'en-US';
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      recognition.start();
+      console.log("Listening for commands...");
+
+      recognition.onresult = function(event) {
+        const command = event.results[0][0].transcript.toLowerCase();
+        console.log("You said:", command);
+
+        if (command.includes("play")) {
+          video.play();
+        } else if (command.includes("pause")) {
+          video.pause();
+        } else if (command.includes("next")) {
+          alert("Next trailer feature to be implemented.");
+        } else {
+          alert("Command not recognized.");
+        }
+      };
+
+      recognition.onerror = function(event) {
+        console.error("Speech recognition error:", event.error);
+      };
+    }
+  </script>
 </body>
 </html> 
