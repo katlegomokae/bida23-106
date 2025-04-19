@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <style>
+  
   *{
     box-sizing: border-box;
     
@@ -158,6 +159,31 @@ video {
      min-width: 320px;
      min-height: 180px;
 }
+
+  #micButton {
+      width: 80px;
+      height: 80px;
+      background-color: #28a745;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
+
+    #micButton:hover {
+      transform: scale(1.1);
+    }
+
+    #micButton::before {
+      content: "🎤";
+      font-size: 30px;
+      color: white;
+    }
+
 </style>
   </head>
   <body>
@@ -187,7 +213,40 @@ video {
     <br>
     <p>Cast:Mia Goth, David Corenswet, Alistair, Sewel....</p>
      </article>
-  
+  <button id="micButton" title="Click to start listening"></button>
+    <script>
+    const video = document.getElementById('myVideo');
+    const micButton = document.getElementById('micButton');
+
+    micButton.addEventListener('click', () => {
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = 'en-US';
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      recognition.start();
+      console.log("Listening for voice command...");
+
+      recognition.onresult = function(event) {
+        const command = event.results[0][0].transcript.toLowerCase();
+        console.log("Recognized:", command);
+
+        if (command.includes("play")) {
+          video.play();
+        } else if (command.includes("pause")) {
+          video.pause();
+        } else if (command.includes("next")) {
+          alert("Next trailer feature not yet implemented.");
+        } else {
+          alert("Unrecognized command: " + command);
+        }
+      };
+
+      recognition.onerror = function(event) {
+        console.error("Speech recognition error:", event.error);
+      };
+    });
+    </script>
   <footer>
     <div class="footerBottom">
     <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
