@@ -160,29 +160,7 @@ video {
      min-height: 180px;
 }
 
-  #micButton {
-      width: 80px;
-      height: 80px;
-      background-color: #28a745;
-      border-radius: 50%;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      transition: transform 0.2s ease;
-    }
-
-    #micButton:hover {
-      transform: scale(1.1);
-    }
-
-    #micButton::before {
-      content: "🎤";
-      font-size: 30px;
-      color: white;
-    }
+  
 
 </style>
   </head>
@@ -215,39 +193,50 @@ video {
     <p>Cast:Mia Goth, David Corenswet, Alistair, Sewel....</p>
      </article>
   <button id="micButton" title="Click to start listening"></button>
-    <script>
+  
+  <script>
     const video = document.getElementById('myVideo');
-    const micButton = document.getElementById('micButton');
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
 
-    micButton.addEventListener('click', () => {
-      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-      recognition.lang = 'en-US';
-      recognition.interimResults = false;
-      recognition.maxAlternatives = 1;
+    recognition.continuous = true; // Keeps listening
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
 
+    // Start listening when page loads
+    window.onload = () => {
       recognition.start();
-      console.log("Listening for voice command...");
+      console.log("Voice recognition started.");
+    };
 
-      recognition.onresult = function(event) {
-        const command = event.results[0][0].transcript.toLowerCase();
-        console.log("Recognized:", command);
+    recognition.onresult = (event) => {
+      const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
+      console.log("Heard:", transcript);
 
-        if (command.includes("play")) {
-          video.play();
-        } else if (command.includes("pause")) {
-          video.pause();
-        } else if (command.includes("next")) {
-          alert("Next trailer feature not yet implemented.");
-        } else {
-          alert("Unrecognized command: " + command);
-        }
-      };
+      if (transcript.includes("play")) {
+        video.play();
+      } else if (transcript.includes("pause")) {
+        video.pause();
+      } else if (transcript.includes("next")) {
+        alert("Next trailer feature not yet implemented.");
+      }
+    };
 
-      recognition.onerror = function(event) {
-        console.error("Speech recognition error:", event.error);
-      };
-    });
-    </script>
+    recognition.onerror = (event) => {
+      console.error("Speech recognition error:", event.error);
+      // Restart after error (if safe)
+      if (event.error !== "not-allowed") {
+        recognition.stop();
+        setTimeout(() => recognition.start(), 1000);
+      }
+    };
+
+    // Restart if it stops
+    recognition.onend = () => {
+      console.log("Recognition stopped, restarting...");
+      recognition.start();
+    };
+  </script> 
   <footer>
     <div class="footerBottom">
     <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
