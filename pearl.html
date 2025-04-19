@@ -160,7 +160,14 @@ video {
      min-height: 180px;
 }
 
-  
+ .speaker-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      font-size: 24px;
+      color: green;
+    } 
 
 </style>
   </head>
@@ -187,8 +194,9 @@ video {
    <video id="myVideo" width="600" controls>
   <source src="pearltrailer.mp4" type="video/mp4">
 </video>
+    <div class="speaker-button" onclick="readDescription()">🔊</div>
      <article>
-    <p>Trapped on an isolated farm, Pearl must tend to her ailing father under the watch of her mother. Lusting for the glamorous life she's seen in movies, Pearl's temptations and repressions collide.</p>
+    <p id="description">Trapped on an isolated farm, Pearl must tend to her ailing father under the watch of her mother. Lusting for the glamorous life she's seen in movies, Pearl's temptations and repressions collide.</p>
     <br>
     <p>Cast:Mia Goth, David Corenswet, Alistair, Sewel....</p>
      </article>
@@ -236,6 +244,22 @@ video {
       console.log("Recognition stopped, restarting...");
       recognition.start();
     };
+
+     function readDescription() {
+      const description = document.getElementById("description").textContent;
+
+      const utterance = new SpeechSynthesisUtterance(description);
+      utterance.lang = 'en-US';
+      utterance.rate = 1;     // Speed (0.1 - 10)
+      utterance.pitch = 1;    // Pitch (0 - 2)
+
+      // Optional: cancel any previous speech
+      window.speechSynthesis.cancel();
+
+      // Speak it
+      window.speechSynthesis.speak(utterance);
+    }
+    
   </script> 
   <footer>
     <div class="footerBottom">
