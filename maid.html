@@ -186,7 +186,65 @@ iframe {
     <br>
     <p>Cast:Margret Qualley, Andie Mcdowell, Nick Robinson....</p>
   </article>
-  
+  <script>
+    const video = document.getElementById('myVideo');
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+
+    recognition.continuous = true; // Keeps listening
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+
+    // Start listening when page loads
+    window.onload = () => {
+      recognition.start();
+      console.log("Voice recognition started.");
+    };
+
+    recognition.onresult = (event) => {
+      const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
+      console.log("Heard:", transcript);
+
+      if (transcript.includes("play")) {
+        video.play();
+      } else if (transcript.includes("pause")) {
+        video.pause();
+      } else if (transcript.includes("next")) {
+        alert("Next trailer feature not yet implemented.");
+      }
+    };
+
+    recognition.onerror = (event) => {
+      console.error("Speech recognition error:", event.error);
+      // Restart after error (if safe)
+      if (event.error !== "not-allowed") {
+        recognition.stop();
+        setTimeout(() => recognition.start(), 1000);
+      }
+    };
+
+    // Restart if it stops
+    recognition.onend = () => {
+      console.log("Recognition stopped, restarting...");
+      recognition.start();
+    };
+
+     function readDescription() {
+      const description = document.getElementById("description").textContent;
+
+      const utterance = new SpeechSynthesisUtterance(description);
+      utterance.lang = 'en-US';
+      utterance.rate = 1;     // Speed (0.1 - 10)
+      utterance.pitch = 1;    // Pitch (0 - 2)
+
+      // Optional: cancel any previous speech
+      window.speechSynthesis.cancel();
+
+      // Speak it
+      window.speechSynthesis.speak(utterance);
+    }
+    
+  </script> 
 
   <footer>
     <div class="footerBottom">
