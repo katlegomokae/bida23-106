@@ -179,12 +179,7 @@ iframe {
 <form class="search" action="search.html" style="margin:20px;max-width:300px">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
-    <iframe id="ytplayer" width="560" height="315"
-  src="https://www.youtube.com/embed/cLd0dN25i5g?si=UnjLzC39BS9UfUQI"
-  title="YouTube video player"
-  frameborder="0"
-  allow="aaccelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-</iframe>
+    
 
 <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/cLd0dN25i5g?si=UnjLzC39BS9UfUQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
     <article>
@@ -193,7 +188,8 @@ iframe {
     <br>
     <p>Cast:Margret Qualley, Andie Mcdowell, Nick Robinson....</p>
   </article>
-   <script src="https://www.youtube.com/embed/cLd0dN25i5g?si=UnjLzC39BS9UfUQI">
+   <script src="https://www.youtube.com/embed/cLd0dN25i5g?si=UnjLzC39BS9UfUQI"></script>
+    <script>
   let player;
 
   function onYouTubeIframeAPIReady() {
@@ -216,6 +212,19 @@ iframe {
     player.pauseVideo();
   }
 
+      if (transcript.includes("next")) {
+  // Load another video
+  player.loadVideoById("NEW_VIDEO_ID");
+}
+    </script>
+    <iframe id="ytplayer" width="560" height="315"
+  src="https://www.youtube.com/embed/cLd0dN25i5g?si=UnjLzC39BS9UfUQI"
+  title="YouTube video player"
+  frameborder="0"
+  allow="aaccelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+    
+<script>
  
   window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   const recognition = new SpeechRecognition();
@@ -237,10 +246,6 @@ iframe {
   window.onload = () => {
     recognition.start();
   };
-     if (transcript.includes("next")) {
-  // Load another video
-  player.loadVideoById("NEW_VIDEO_ID");
-}
 
 </script>
 
