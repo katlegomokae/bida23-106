@@ -179,74 +179,70 @@ iframe {
 <form class="search" action="search.html" style="margin:20px;max-width:300px">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
-     <video id="myVideo">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cLd0dN25i5g?si=UnjLzC39BS9UfUQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </video>
-       <article>
+    <iframe id="ytplayer" width="560" height="315"
+  src="https://www.youtube.com/embed/cLd0dN25i5g?si=UnjLzC39BS9UfUQI"
+  title="YouTube video player"
+  frameborder="0"
+  allow="aaccelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+
+<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/cLd0dN25i5g?si=UnjLzC39BS9UfUQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+    <article>
     <p>
   <p>A single mother who turns to housekeeping to barely make ends meet as she battles against poverty, homelessness, and bureaucracy.</p>
     <br>
     <p>Cast:Margret Qualley, Andie Mcdowell, Nick Robinson....</p>
   </article>
-  <script>
-    const video = document.getElementById('myVideo');
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    const recognition = new SpeechRecognition();
+   <script src="https://www.youtube.com/embed/cLd0dN25i5g?si=UnjLzC39BS9UfUQI">
+  let player;
 
-    recognition.continuous = true; // Keeps listening
-    recognition.lang = 'en-US';
-    recognition.interimResults = false;
-
-    // Start listening when page loads
-    window.onload = () => {
-      recognition.start();
-      console.log("Voice recognition started.");
-    };
-
-    recognition.onresult = (event) => {
-      const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
-      console.log("Heard:", transcript);
-
-      if (transcript.includes("play")) {
-        video.play();
-      } else if (transcript.includes("pause")) {
-        video.pause();
-      } else if (transcript.includes("next")) {
-        alert("Next trailer feature not yet implemented.");
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('ytplayer', {
+      events: {
+        'onReady': onPlayerReady
       }
-    };
+    });
+  }
 
-    recognition.onerror = (event) => {
-      console.error("Speech recognition error:", event.error);
-      // Restart after error (if safe)
-      if (event.error !== "not-allowed") {
-        recognition.stop();
-        setTimeout(() => recognition.start(), 1000);
-      }
-    };
+  function onPlayerReady(event) {
+    console.log("YouTube Player is ready!");
+  }
 
-    // Restart if it stops
-    recognition.onend = () => {
-      console.log("Recognition stopped, restarting...");
-      recognition.start();
-    };
+  function playVideo() {
+    player.playVideo();
+  }
 
-     function readDescription() {
-      const description = document.getElementById("description").textContent;
+  function pauseVideo() {
+    player.pauseVideo();
+  }
 
-      const utterance = new SpeechSynthesisUtterance(description);
-      utterance.lang = 'en-US';
-      utterance.rate = 1;     // Speed (0.1 - 10)
-      utterance.pitch = 1;    // Pitch (0 - 2)
+ 
+  window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const recognition = new SpeechRecognition();
+  recognition.continuous = true;
+  recognition.lang = 'en-US';
 
-      // Optional: cancel any previous speech
-      window.speechSynthesis.cancel();
+  recognition.onresult = function(event) {
+    const transcript = event.results[event.results.length - 1][0].transcript.trim().toLowerCase();
+    console.log("Heard:", transcript);
 
-      // Speak it
-      window.speechSynthesis.speak(utterance);
+    if (transcript.includes("play")) {
+      playVideo();
+    } else if (transcript.includes("pause")) {
+      pauseVideo();
     }
-    
-  </script> 
+  };
+
+  // Start listening when page loads
+  window.onload = () => {
+    recognition.start();
+  };
+     if (transcript.includes("next")) {
+  // Load another video
+  player.loadVideoById("NEW_VIDEO_ID");
+}
+
+</script>
 
   <footer>
     <div class="footerBottom">
