@@ -187,12 +187,7 @@ video {
     <br>
     <p>Cast:Timothee Chalamet, Armie Hammer, Michael Stulbarg, Esther Garrel....</p>
    </article>
-  <footer>
-    <div class="footerBottom">
-    <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
-</div>
-</footer>
-  <script>
+     <script>
     const video = document.getElementById('myVideo');
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
@@ -234,6 +229,28 @@ video {
       console.log("Recognition stopped, restarting...");
       recognition.start();
     };
-  </script>
+
+     function readDescription() {
+      const description = document.getElementById("description").textContent;
+
+      const utterance = new SpeechSynthesisUtterance(description);
+      utterance.lang = 'en-US';
+      utterance.rate = 1;     // Speed (0.1 - 10)
+      utterance.pitch = 1;    // Pitch (0 - 2)
+
+      // Optional: cancel any previous speech
+      window.speechSynthesis.cancel();
+
+      // Speak it
+      window.speechSynthesis.speak(utterance);
+    }
+    
+  </script> 
+  <footer>
+    <div class="footerBottom">
+    <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
+</div>
+</footer>
+  
 </body>
 </html>
