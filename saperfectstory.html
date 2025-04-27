@@ -180,11 +180,31 @@ iframe {
 </form>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/okXeeY7iE1Y?si=5VyASliy66T5UWf6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <article>
- <p>Margot and David come from different worlds; she is heiress to a hotel empire, while he has to work three jobs to make ends meet; however, when they cross paths, they realize they can help each other win back the loves of their lives.</p>
-  <br>
+ <p id="description">Margot and David come from different worlds; she is heiress to a hotel empire, while he has to work three jobs to make ends meet; however, when they cross paths, they realize they can help each other win back the loves of their lives.</p>
+  <button class="speaker-button" onclick="readDescription()">
+      <i class="fas fa-volume-up"></i>
+    </button>
+      <br>
   <p>Cast:Alvaro Mel, Anna Castillo, Mario Emito....</p>
     </article>
+<script>
+  function readDescription() {
+  const description = document.getElementById("description").textContent;
 
+  const utterance = new SpeechSynthesisUtterance(description);
+  utterance.lang = 'en-US';
+  utterance.rate = 1;
+  utterance.pitch = 1;
+
+  // Cancel any ongoing speech
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+  }
+
+  window.speechSynthesis.speak(utterance);
+}
+
+</script>
   <footer>
     <div class="footerBottom">
     <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
