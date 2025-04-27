@@ -194,6 +194,9 @@ video {
 
 <article>
    <p id="description">Gloria, Ines, Demi, and Cameron unleash a curse bringing dark misfortune into their lives.</p>
+   <button class="speaker-button" onclick="readDescription()">
+      <i class="fas fa-volume-up"></i>
+    </button>
     <br>
    <p>Cast:Tenzing Norgay Trainor, Bryanna Salaz,Ciara Riley Wilson, Keyla Monterroso Mejia....</p>
 </article>
@@ -240,21 +243,22 @@ video {
       recognition.start();
     };
 
-     function readDescription() {
-      const description = document.getElementById("description").textContent;
+    function readDescription() {
+  const description = document.getElementById("description").textContent;
 
-      const utterance = new SpeechSynthesisUtterance(description);
-      utterance.lang = 'en-US';
-      utterance.rate = 1;     // Speed (0.1 - 10)
-      utterance.pitch = 1;    // Pitch (0 - 2)
+  const utterance = new SpeechSynthesisUtterance(description);
+  utterance.lang = 'en-US';
+  utterance.rate = 1;
+  utterance.pitch = 1;
 
-      // Optional: cancel any previous speech
-      window.speechSynthesis.cancel();
+  // Cancel any ongoing speech
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+  }
 
-      // Speak it
-      window.speechSynthesis.speak(utterance);
-    }
-    
+  window.speechSynthesis.speak(utterance);
+}
+
   </script> 
   <footer>
     <div class="footerBottom">
