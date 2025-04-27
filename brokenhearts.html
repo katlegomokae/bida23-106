@@ -192,6 +192,9 @@ video {
 </video>
     <article>
     <p id="description">Lucy is devastated after her boyfriend breaks up with her. But when she meets Nick, a hotelier, she decides to create a gallery where people can leave memorabilia from their past relationships.</p>
+      <button class="speaker-button" onclick="readDescription()">
+      <i class="fas fa-volume-up"></i>
+    </button>
     <br>
     <p>Cast:Dacre Montgomery, Geraldine Viswanathan, Utkarsh Ambudkar....</p>
     </article>
@@ -239,20 +242,21 @@ video {
     };
 
      function readDescription() {
-      const description = document.getElementById("description").textContent;
+  const description = document.getElementById("description").textContent;
 
-      const utterance = new SpeechSynthesisUtterance(description);
-      utterance.lang = 'en-US';
-      utterance.rate = 1;     // Speed (0.1 - 10)
-      utterance.pitch = 1;    // Pitch (0 - 2)
+  const utterance = new SpeechSynthesisUtterance(description);
+  utterance.lang = 'en-US';
+  utterance.rate = 1;
+  utterance.pitch = 1;
 
-      // Optional: cancel any previous speech
-      window.speechSynthesis.cancel();
+  // Cancel any ongoing speech
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+  }
 
-      // Speak it
-      window.speechSynthesis.speak(utterance);
-    }
-    
+  window.speechSynthesis.speak(utterance);
+}
+
   </script> 
   <footer>
     <div class="footerBottom">
