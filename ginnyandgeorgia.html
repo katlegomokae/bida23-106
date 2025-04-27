@@ -183,10 +183,31 @@ video {
   <source  src="g&gtrailer.mp4" type="video/mp4">
     </video>
     <article>
-   <p>Teenage Ginny and her family yearn to put down roots in a picturesque New England town after years on the run.</p>
-    <br>
+   <p id="description">Teenage Ginny and her family yearn to put down roots in a picturesque New England town after years on the run.</p>
+    <button class="speaker-button" onclick="readDescription()">
+      <i class="fas fa-volume-up"></i>
+    </button>
+      <br>
     <p>Cast:Antonia Gentry, Brianna Howey, Felix Mallard....</p>
     </article>
+    <script>
+      function readDescription() {
+  const description = document.getElementById("description").textContent;
+
+  const utterance = new SpeechSynthesisUtterance(description);
+  utterance.lang = 'en-US';
+  utterance.rate = 1;
+  utterance.pitch = 1;
+
+  // Cancel any ongoing speech
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+  }
+
+  window.speechSynthesis.speak(utterance);
+}
+
+    </script>
   <footer>
     <div class="footerBottom">
     <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
