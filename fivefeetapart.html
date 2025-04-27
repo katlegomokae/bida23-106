@@ -182,12 +182,32 @@ iframe {
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Kwg07npuJhw?si=442W1Wsquvsmz_Ex" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <article>
     <p>
-  <p>Stella and Will, both cystic fibrosis patients, develop an unlikely relationship despite the threat of cross-infection. However, they do away with their restrictions to experience togetherness.</p>
+  <p id="description">Stella and Will, both cystic fibrosis patients, develop an unlikely relationship despite the threat of cross-infection. However, they do away with their restrictions to experience togetherness.</p>
+    <button class="speaker-button" onclick="readDescription()">
+      <i class="fas fa-volume-up"></i>
+    </button>
     <br>
     <p>Cast:Cole Sprouse, Hayley Lou Richardson, Emily Baldoni....</p>
   </article>
   
+<script>
+  function readDescription() {
+  const description = document.getElementById("description").textContent;
 
+  const utterance = new SpeechSynthesisUtterance(description);
+  utterance.lang = 'en-US';
+  utterance.rate = 1;
+  utterance.pitch = 1;
+
+  // Cancel any ongoing speech
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+  }
+
+  window.speechSynthesis.speak(utterance);
+}
+
+</script>
   <footer>
     <div class="footerBottom">
     <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
