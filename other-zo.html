@@ -183,10 +183,31 @@ video {
   <source src="toz.mp4" type="video/mp4">
     </video>
 <article>
-<p>Zoey is a brilliant college student who's determined to challenge the conventional ideas of love and dating. Her life soon gets turned upside down when an amnesiac mistakenly believes she's his girlfriend, who also happens to share the name Zoey.</p>
-    <br>
+<p id="description">Zoey is a brilliant college student who's determined to challenge the conventional ideas of love and dating. Her life soon gets turned upside down when an amnesiac mistakenly believes she's his girlfriend, who also happens to share the name Zoey.</p>
+  <button class="speaker-button" onclick="readDescription()">
+      <i class="fas fa-volume-up"></i>
+    </button>  
+  <br>
     <p>Cast:Josephine Langord, Drew Starkey, Archie Renaux....</p>
 </article>
+    <script>
+      function readDescription() {
+  const description = document.getElementById("description").textContent;
+
+  const utterance = new SpeechSynthesisUtterance(description);
+  utterance.lang = 'en-US';
+  utterance.rate = 1;
+  utterance.pitch = 1;
+
+  // Cancel any ongoing speech
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+  }
+
+  window.speechSynthesis.speak(utterance);
+}
+
+    </script>
   <footer>
     <div class="footerBottom">
     <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
