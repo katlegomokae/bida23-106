@@ -182,10 +182,29 @@ iframe {
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8NR8w8s9zWA?si=Q67H5iufkZEs_QHG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <article>
   <p>Father and son David and Nic Sheff face immense challenges when Nic starts using crystal meth. Thereafter, his father tries to find a way to iron out their problems and help Nic with his addiction..</p>
+    <button class="speaker-button" onclick="readDescription()">
+      <i class="fas fa-volume-up"></i>
+    </button>
     <br>
     <p>Cast:Timothee Chalamet, Steve Carell, Amy Ryan....</p>
   </article>
-  
+    <script>
+  function readDescription() {
+  const description = document.getElementById("description").textContent;
+
+  const utterance = new SpeechSynthesisUtterance(description);
+  utterance.lang = 'en-US';
+  utterance.rate = 1;
+  utterance.pitch = 1;
+
+  // Cancel any ongoing speech
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+  }
+
+  window.speechSynthesis.speak(utterance);
+}
+    </script>
 
   <footer>
     <div class="footerBottom">
