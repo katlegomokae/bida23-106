@@ -185,7 +185,10 @@ iframe {
     <article>
     <p>
   <p>A single mother who turns to housekeeping to barely make ends meet as she battles against poverty, homelessness, and bureaucracy.</p>
-    <br>
+   <button class="speaker-button" onclick="readDescription()">
+      <i class="fas fa-volume-up"></i>
+    </button>
+      <br>
     <p>Cast:Margret Qualley, Andie Mcdowell, Nick Robinson....</p>
   </article>
    <script src="https://www.youtube.com/embed/cLd0dN25i5g?si=UnjLzC39BS9UfUQI"></script>
@@ -246,6 +249,21 @@ iframe {
   window.onload = () => {
     recognition.start();
   };
+function readDescription() {
+  const description = document.getElementById("description").textContent;
+
+  const utterance = new SpeechSynthesisUtterance(description);
+  utterance.lang = 'en-US';
+  utterance.rate = 1;
+  utterance.pitch = 1;
+
+  // Cancel any ongoing speech
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+  }
+
+  window.speechSynthesis.speak(utterance);
+}
 
 </script>
 
