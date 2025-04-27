@@ -182,11 +182,31 @@ iframe {
 </form>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UFJvNxfsntA?si=gL3ECBbRpJ2fFmCl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <article>
-<p>A married couple moving into their dream home is being threatened by terrifying letters from a stalker, signed- “The Watcher”.</p>
+<p id="description">A married couple moving into their dream home is being threatened by terrifying letters from a stalker, signed- “The Watcher”.</p>
+    <button class="speaker-button" onclick="readDescription()">
+      <i class="fas fa-volume-up"></i>
+    </button>
     <br>
     <p>Cast:Isabel Gravitt, Bobby Cannavale, Naomi Watts....</p>
   </article>
-  
+  <script>
+    function readDescription() {
+  const description = document.getElementById("description").textContent;
+
+  const utterance = new SpeechSynthesisUtterance(description);
+  utterance.lang = 'en-US';
+  utterance.rate = 1;
+  utterance.pitch = 1;
+
+  // Cancel any ongoing speech
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+  }
+
+  window.speechSynthesis.speak(utterance);
+}
+
+  </script>
 
   <footer>
     <div class="footerBottom">
