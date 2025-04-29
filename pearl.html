@@ -195,7 +195,7 @@ video {
   <source src="pearltrailer.mp4" type="video/mp4">
 </video>
 
-</video>
+
     <div class="speaker-button" onclick="readDescription()">🔊</div>
      <article>
     <p id="description">Trapped on an isolated farm, Pearl must tend to her ailing father under the watch of her mother. Lusting for the glamorous life she's seen in movies, Pearl's temptations and repressions collide.</p>
@@ -260,6 +260,26 @@ video {
       // Speak it
       window.speechSynthesis.speak(utterance);
     }
+
+ <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+<script>
+  const video = document.getElementById("video");
+  const socket = io("http://localhost:5000");
+
+  socket.on("gesture", (data) => {
+    const command = data.command;
+    console.log("Received gesture:", command);
+
+    if (command === "play") {
+      video.play();
+    } else if (command === "pause") {
+      video.pause();
+    } else if (command === "next") {
+      video.currentTime += 10; // jump 10 seconds forward
+    }
+  });
+</script>
+
     
   </script> 
   <footer>
