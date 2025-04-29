@@ -202,86 +202,77 @@ video {
     <br>
     <p>Cast:Mia Goth, David Corenswet, Alistair, Sewel....</p>
      </article>
-  
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+
   <script>
-    const video = document.getElementById('myVideo');
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    const recognition = new SpeechRecognition();
+      const video = document.getElementById('myVideo');
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const recognition = new SpeechRecognition();
 
-    recognition.continuous = true; // Keeps listening
-    recognition.lang = 'en-US';
-    recognition.interimResults = false;
+      recognition.continuous = true;
+      recognition.lang = 'en-US';
+      recognition.interimResults = false;
 
-    // Start listening when page loads
-    window.onload = () => {
-      recognition.start();
-      console.log("Voice recognition started.");
-    };
+      // Start voice recognition on load
+      window.onload = () => {
+        recognition.start();
+        console.log("Voice recognition started.");
+      };
 
-    recognition.onresult = (event) => {
-      const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
-      console.log("Heard:", transcript);
+      recognition.onresult = (event) => {
+        const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
+        console.log("Heard (voice):", transcript);
 
-      if (transcript.includes("play")) {
-        video.play();
-      } else if (transcript.includes("pause")) {
-        video.pause();
-      } else if (transcript.includes("next")) {
-        alert("Next trailer feature not yet implemented.");
+        if (transcript.includes("play")) {
+          video.play();
+        } else if (transcript.includes("pause")) {
+          video.pause();
+        } else if (transcript.includes("next")) {
+          video.currentTime += 10;
+        }
+      };
+
+      recognition.onerror = (event) => {
+        console.error("Speech recognition error:", event.error);
+        if (event.error !== "not-allowed") {
+          recognition.stop();
+          setTimeout(() => recognition.start(), 1000);
+        }
+      };
+
+      recognition.onend = () => {
+        console.log("Recognition stopped, restarting...");
+        recognition.start();
+      };
+
+      function readDescription() {
+        const description = document.getElementById("description").textContent;
+        const utterance = new SpeechSynthesisUtterance(description);
+        utterance.lang = 'en-US';
+        utterance.rate = 1;
+        utterance.pitch = 1;
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utterance);
       }
-    };
 
-    recognition.onerror = (event) => {
-      console.error("Speech recognition error:", event.error);
-      // Restart after error (if safe)
-      if (event.error !== "not-allowed") {
-        recognition.stop();
-        setTimeout(() => recognition.start(), 1000);
-      }
-    };
+      // Gesture handling from server
+      const socket = io("http://localhost:5000");
 
-    // Restart if it stops
-    recognition.onend = () => {
-      console.log("Recognition stopped, restarting...");
-      recognition.start();
-    };
+      socket.on("gesture", (data) => {
+        const command = data.command;
+        console.log("Received gesture:", command);
 
-     function readDescription() {
-      const description = document.getElementById("description").textContent;
-
-      const utterance = new SpeechSynthesisUtterance(description);
-      utterance.lang = 'en-US';
-      utterance.rate = 1;     // Speed (0.1 - 10)
-      utterance.pitch = 1;    // Pitch (0 - 2)
-
-      // Optional: cancel any previous speech
-      window.speechSynthesis.cancel();
-
-      // Speak it
-      window.speechSynthesis.speak(utterance);
-    }
-
- <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
-<script>
-  const video = document.getElementById("video");
-  const socket = io("http://localhost:5000");
-
-  socket.on("gesture", (data) => {
-    const command = data.command;
-    console.log("Received gesture:", command);
-
-    if (command === "play") {
-      video.play();
-    } else if (command === "pause") {
-      video.pause();
-    } else if (command === "next") {
-      video.currentTime += 10; // jump 10 seconds forward
-    }
-  });
-</script>
-
+        if (command === "play") {
+          video.play();
+        } else if (command === "pause") {
+          video.pause();
+        } else if (command === "next") {
+          video.currentTime += 10;
+        }
+      });
+    </script>
     
-  </script> 
+ 
   <footer>
     <div class="footerBottom">
     <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
