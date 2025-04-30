@@ -1,0 +1,27 @@
+
+
+
+/* overlay.css */
+.accessibility-panel {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 10000;
+  display: flex;
+  gap: 5px;
+  border-radius: 5px;
+}
+
+.accessibility-panel button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.high-contrast {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
