@@ -199,7 +199,7 @@ video {
     <p>Cast:Dacre Montgomery, Geraldine Viswanathan, Utkarsh Ambudkar....</p>
     </article>
      <script>
-    const video = document.getElementById('myVideo');
+  const video = document.getElementById('myVideo');
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
 
@@ -240,7 +240,6 @@ video {
       console.log("Recognition stopped, restarting...");
       recognition.start();
     };
-
      function readDescription() {
   const description = document.getElementById("description").textContent;
 
@@ -256,6 +255,14 @@ video {
 
   window.speechSynthesis.speak(utterance);
 }
+
+
+
+
+
+
+
+      
 
   </script> 
   <footer>
