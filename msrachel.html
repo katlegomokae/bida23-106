@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pearl</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<style>
+  
+  *{
+    box-sizing: border-box;
+    
+}
+body { font-family: Arial, Helvetica, sans-serif;
+      background-color: black;
+}
+p{ 
+    color: white;
+    padding-left: 15px;
+}
+nav {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    background-color: #000;
+    height: 80px;
+    width: 100%;
+
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+    text-decoration: none;
+
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+   text-decoration: none;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    border-radius: 3px;
+    text-transform: uppercase;
+   text-decoration: none;
+}
+a.active,a:hover{
+    background: grey;
+    transition: .5s;
+   text-decoration: none;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media screen and (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+
+    }
+}
+nav ul li a{
+    font-size: 16px;
+}
+@media screen and (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+    }
+    nav ul li a{
+        font-size:20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color:grey;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+      form.search button {
+  display: block;
+  width: 20%;
+  padding: 10px;
+  background: #000000;
+  color: white;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 70px;
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: grey;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+  padding-top: 20px;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+video {
+     display: block;
+     margin: 1em auto;
+     width: 80%;
+     height: calc(.5625 * 80vw);
+     max-width: 1280px;
+     max-height: 720px;
+     min-width: 320px;
+     min-height: 180px;
+}
+
+ .speaker-button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      cursor: pointer;
+      font-size: 24px;
+      color: gray;
+    } 
+
+</style>
+  </head>
+  <body>
+  <nav>
+            <input type="checkbox" id="check" >
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"><img src="Warner-Bros-Logo.png" width="80px"height="50px"></label>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="tvshows.html">Tv shows</a></li>
+               <li><a href="search.html">Collection</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="games.html">Kids</a></li>
+            </ul>
+        </nav>
+<form class="search" action="search.html" style="margin:20px;max-width:300px">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+ <!--<video controls autoplay>-->
+   <video id="myVideo" width="600" controls>
+  <source src="Ms Rachel.mp4" type="video/mp4">
+</video>
+
+
+    <div class="speaker-button" onclick="readDescription()">🔊</div>
+     <article>
+    <p id="description">Ms. Rachel - Toddler Learning Videos," focuses on educational content for infants, toddlers, and preschoolers.</p>
+    <br>
+    
+     </article>
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+
+  <script>
+      const video = document.getElementById('myVideo');
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const recognition = new SpeechRecognition();
+
+      recognition.continuous = true;
+      recognition.lang = 'en-US';
+      recognition.interimResults = false;
+
+      // Start voice recognition on load
+      window.onload = () => {
+        recognition.start();
+        console.log("Voice recognition started.");
+      };
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
+        console.log("Heard (voice):", transcript);
+
+        if (transcript.includes("play")) {
+          video.play();
+        } else if (transcript.includes("pause")) {
+          video.pause();
+        } else if (transcript.includes("next")) {
+          video.currentTime += 10;
+        }
+      };
+
+      recognition.onerror = (event) => {
+        console.error("Speech recognition error:", event.error);
+        if (event.error !== "not-allowed") {
+          recognition.stop();
+          setTimeout(() => recognition.start(), 1000);
+        }
+      };
+
+      recognition.onend = () => {
+        console.log("Recognition stopped, restarting...");
+        recognition.start();
+      };
+
+      function readDescription() {
+        const description = document.getElementById("description").textContent;
+        const utterance = new SpeechSynthesisUtterance(description);
+        utterance.lang = 'en-US';
+        utterance.rate = 1;
+        utterance.pitch = 1;
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utterance);
+      }
+
+      // Gesture handling from server
+      const socket = io("http://localhost:5000");
+
+      socket.on("gesture", (data) => {
+        const command = data.command;
+        console.log("Received gesture:", command);
+
+        if (command === "play") {
+          video.play();
+        } else if (command === "pause") {
+          video.pause();
+        } else if (command === "next") {
+          video.currentTime += 10;
+        }
+      });
+    </script>
+    
+ 
+  <footer>
+    <div class="footerBottom">
+    <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
+</div>
+</footer>
+</body>
+</html>
