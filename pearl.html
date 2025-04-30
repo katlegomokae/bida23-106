@@ -206,45 +206,46 @@ video {
 
   <script>
       const video = document.getElementById('myVideo');
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      const recognition = new SpeechRecognition();
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
 
-      recognition.continuous = true;
-      recognition.lang = 'en-US';
-      recognition.interimResults = false;
+    recognition.continuous = true; // Keeps listening
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
 
-      // Start voice recognition on load
-      window.onload = () => {
-        recognition.start();
-        console.log("Voice recognition started.");
-      };
+    // Start listening when page loads
+    window.onload = () => {
+      recognition.start();
+      console.log("Voice recognition started.");
+    };
 
-      recognition.onresult = (event) => {
-        const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
-        console.log("Heard (voice):", transcript);
+    recognition.onresult = (event) => {
+      const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
+      console.log("Heard:", transcript);
 
-        if (transcript.includes("play")) {
-          video.play();
-        } else if (transcript.includes("pause")) {
-          video.pause();
-        } else if (transcript.includes("next")) {
-          video.currentTime += 10;
-        }
-      };
+      if (transcript.includes("play")) {
+        video.play();
+      } else if (transcript.includes("pause")) {
+        video.pause();
+      } else if (transcript.includes("next")) {
+        alert("Next trailer feature not yet implemented.");
+      }
+    };
 
-      recognition.onerror = (event) => {
-        console.error("Speech recognition error:", event.error);
-        if (event.error !== "not-allowed") {
-          recognition.stop();
-          setTimeout(() => recognition.start(), 1000);
-        }
-      };
+    recognition.onerror = (event) => {
+      console.error("Speech recognition error:", event.error);
+      // Restart after error (if safe)
+      if (event.error !== "not-allowed") {
+        recognition.stop();
+        setTimeout(() => recognition.start(), 1000);
+      }
+    };
 
-      recognition.onend = () => {
-        console.log("Recognition stopped, restarting...");
-        recognition.start();
-      };
-
+    // Restart if it stops
+    recognition.onend = () => {
+      console.log("Recognition stopped, restarting...");
+      recognition.start();
+    };
       function readDescription() {
         const description = document.getElementById("description").textContent;
         const utterance = new SpeechSynthesisUtterance(description);
