@@ -17,3 +17,30 @@ function initVoiceCommand() {
   recognition.start();
 }
 
+// Font size adjustment
+let fontSize = 16;
+function adjustFontSize(change) {
+  fontSize += change;
+  document.body.style.fontSize = ${fontSize}px;
+}
+
+// High Contrast Toggle
+let darkMode = false;
+function toggleContrast() {
+  darkMode = !darkMode;
+  document.body.classList.toggle('high-contrast', darkMode);
+}
+
+// Overlay UI
+function createAccessibilityOverlay() {
+  const panel = document.createElement('div');
+  panel.className = 'accessibility-panel';
+  panel.innerHTML = `
+    <button onclick="adjustFontSize(2)">A+</button>
+    <button onclick="adjustFontSize(-2)">A-</button>
+    <button onclick="toggleContrast()">🌓 Contrast</button>
+    <button onclick="speakPage()">🔊 Read</button>
+  `;
+  document.body.appendChild(panel);
+}
+
