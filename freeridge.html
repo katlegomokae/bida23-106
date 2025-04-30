@@ -202,62 +202,93 @@ video {
 </article>
     <script>
     const video = document.getElementById('myVideo');
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    const recognition = new SpeechRecognition();
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const recognition = new SpeechRecognition();
 
-    recognition.continuous = true; // Keeps listening
-    recognition.lang = 'en-US';
-    recognition.interimResults = false;
+  recognition.continuous = true;
+  recognition.lang = 'en-US';
+  recognition.interimResults = false;
 
-    // Start listening when page loads
-    window.onload = () => {
-      recognition.start();
-      console.log("Voice recognition started.");
-    };
+  // Start voice recognition on load
+  window.onload = () => {
+    recognition.start();
+    console.log("Voice recognition started.");
+  };
 
-    recognition.onresult = (event) => {
-      const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
-      console.log("Heard:", transcript);
+  recognition.onresult = (event) => {
+    const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
+    console.log("Heard (voice):", transcript);
 
-      if (transcript.includes("play")) {
-        video.play();
-      } else if (transcript.includes("pause")) {
-        video.pause();
-      } else if (transcript.includes("next")) {
-        alert("Next trailer feature not yet implemented.");
+    // Video controls
+    if (transcript.includes("play")) {
+      video.play();
+    } else if (transcript.includes("pause")) {
+      video.pause();
+    } else if (transcript.includes("next")) {
+      video.currentTime += 10;
+    }
+
+    // Page navigation
+    else if (transcript.includes("home")) {
+      document.getElementById("nav-home").click();
+    } else if (transcript.includes("movies")) {
+      document.getElementById("nav-movies").click();
+    } else if (transcript.includes("kids")) {
+      document.getElementById("nav-kids").click();
+    } else if (transcript.includes("collection")) {
+      document.getElementById("nav-collection").click();
+    } else if (transcript.includes("feedback")) {
+      document.getElementById("nav-feedback").click();
+    }
+
+    // Search command
+    else if (transcript.startsWith("search")) {
+      const movieName = transcript.replace("search", "").trim();
+      if (movieName) {
+        document.getElementById("search-box").value = movieName;
+        document.getElementById("search-btn").click();
       }
-    };
+    }
+  };
 
-    recognition.onerror = (event) => {
-      console.error("Speech recognition error:", event.error);
-      // Restart after error (if safe)
-      if (event.error !== "not-allowed") {
-        recognition.stop();
-        setTimeout(() => recognition.start(), 1000);
-      }
-    };
+  recognition.onerror = (event) => {
+    console.error("Speech recognition error:", event.error);
+    if (event.error !== "not-allowed") {
+      recognition.stop();
+      setTimeout(() => recognition.start(), 1000);
+    }
+  };
 
-    // Restart if it stops
-    recognition.onend = () => {
-      console.log("Recognition stopped, restarting...");
-      recognition.start();
-    };
+  recognition.onend = () => {
+    console.log("Recognition stopped, restarting...");
+    recognition.start();
+  };
 
-    function readDescription() {
-  const description = document.getElementById("description").textContent;
-
-  const utterance = new SpeechSynthesisUtterance(description);
-  utterance.lang = 'en-US';
-  utterance.rate = 1;
-  utterance.pitch = 1;
-
-  // Cancel any ongoing speech
-  if (window.speechSynthesis.speaking) {
+  function readDescription() {
+    const description = document.getElementById("description").textContent;
+    const utterance = new SpeechSynthesisUtterance(description);
+    utterance.lang = 'en-US';
+    utterance.rate = 1;
+    utterance.pitch = 1;
     window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utterance);
   }
 
-  window.speechSynthesis.speak(utterance);
-}
+  // Gesture handling from server
+  const socket = io("http://localhost:5000");
+
+  socket.on("gesture", (data) => {
+    const command = data.command;
+    console.log("Received gesture:", command);
+
+    if (command === "play") {
+      video.play();
+    } else if (command === "pause") {
+      video.pause();
+    } else if (command === "next") {
+      video.currentTime += 10;
+    }
+  });
 
   </script> 
   <footer>
