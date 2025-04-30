@@ -193,7 +193,8 @@ video {
 </article>
      <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
     <script>
-  const video = document.getElementById('myVideo');
+   <script>
+      const video = document.getElementById('myVideo');
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       const recognition = new SpeechRecognition();
 
@@ -232,23 +233,18 @@ video {
         console.log("Recognition stopped, restarting...");
         recognition.start();
       };
-      
+
       function readDescription() {
-  const description = document.getElementById("description").textContent;
+        const description = document.getElementById("description").textContent;
+        const utterance = new SpeechSynthesisUtterance(description);
+        utterance.lang = 'en-US';
+        utterance.rate = 1;
+        utterance.pitch = 1;
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utterance);
+      }
 
-  const utterance = new SpeechSynthesisUtterance(description);
-  utterance.lang = 'en-US';
-  utterance.rate = 1;
-  utterance.pitch = 1;
-
-  // Cancel any ongoing speech
-  if (window.speechSynthesis.speaking) {
-    window.speechSynthesis.cancel();
-  }
-
-  window.speechSynthesis.speak(utterance);
-}
- // Gesture handling from server
+      // Gesture handling from server
       const socket = io("http://localhost:5000");
 
       socket.on("gesture", (data) => {
@@ -264,6 +260,8 @@ video {
         }
       });
     </script>
+    
+ 
   <footer>
     <div class="footerBottom">
     <p>TM & &copy; 2024 <span class="designer"> Warner Bros. Entertainment Inc.</span></p>
