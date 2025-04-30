@@ -192,47 +192,41 @@ video {
     <p>Cast:Alexandra Breckenridge, Martin Henderson, Tim Matheson....</p>
 </article>
      <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
-    <script>
-   <script>
-      const video = document.getElementById('myVideo');
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+   
+<script>
+    const video = document.getElementById("video");
+
+    // Microphone access + speech recognition
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SpeechRecognition) {
       const recognition = new SpeechRecognition();
-
       recognition.continuous = true;
-      recognition.lang = 'en-US';
-      recognition.interimResults = false;
-
-      // Start voice recognition on load
-      window.onload = () => {
-        recognition.start();
-        console.log("Voice recognition started.");
-      };
+      recognition.lang = "en-US";
 
       recognition.onresult = (event) => {
         const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
-        console.log("Heard (voice):", transcript);
-
-        if (transcript.includes("play")) {
-          video.play();
-        } else if (transcript.includes("pause")) {
-          video.pause();
-        } else if (transcript.includes("next")) {
-          video.currentTime += 10;
-        }
+        console.log("Heard:", transcript);
+        if (transcript.includes("play")) video.play();
+        else if (transcript.includes("pause")) video.pause();
+        else if (transcript.includes("next")) video.currentTime += 10;
       };
 
-      recognition.onerror = (event) => {
-        console.error("Speech recognition error:", event.error);
-        if (event.error !== "not-allowed") {
-          recognition.stop();
-          setTimeout(() => recognition.start(), 1000);
-        }
-      };
+      recognition.onerror = (e) => console.error("Recognition error:", e.error);
+      recognition.onend = () => recognition.start(); // restart on end
 
-      recognition.onend = () => {
-        console.log("Recognition stopped, restarting...");
-        recognition.start();
-      };
+      recognition.start();
+      console.log("Voice recognition started");
+    } else {
+      alert("Speech recognition not supported in your browser.");
+    }
+
+    // Text to speech
+    function readDescription() {
+      const description = document.getElementById("description").innerText;
+      const utterance = new SpeechSynthesisUtterance(description);
+      utterance.lang = 'en-US';
+      window.speechSynthesis.speak(utterance);
+    }
 
       function readDescription() {
         const description = document.getElementById("description").textContent;
